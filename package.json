@@ -8,7 +8,8 @@
     "serve": "npx http-server . -p 8080"
   },
   "devDependencies": {
-    "@playwright/test": "^1.48.0"
+    "@playwright/test": "^1.48.0",
+    "http-server": "^14.1.1"
   },
   "author": "Muhammad Arslan <marslan5103@gmail.com>",
   "license": "MIT"
