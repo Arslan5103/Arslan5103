@@ -92,8 +92,10 @@ test.describe('Contact Form Validation & Honeypot Defense', () => {
     await page.locator('#cEmail').fill('bot@spam.com');
     await page.locator('#cSubject').fill('Spam Subject');
     await page.locator('#cMessage').fill('Buy our spam products now!');
-    // Fill the hidden honeypot
-    await page.locator('#website_hp').fill('http://spam-link.com');
+    // Fill the hidden honeypot (bots set hidden input values directly)
+    await page.locator('#website_hp').evaluate((el: HTMLInputElement) => {
+      el.value = 'http://spam-link.com';
+    });
     await page.getByRole('button', { name: /Send Message/i }).click();
 
     // Success banner should NOT show
