@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case Study: Leadly.ai — Muhammad Arslan | SQA Engineer</title>
+  <meta name="description" content="SQA Case Study: How Muhammad Arslan validated Leadly.ai sales outreach sequences, prevented worker crashes, and verified RBAC security permissions." />
+  <meta name="author" content="Muhammad Arslan" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="glow-orb glow-orb-1" aria-hidden="true"></div>
+  <div class="glow-orb glow-orb-2" aria-hidden="true"></div>
+
+  <!-- Shared Header -->
+  <header class="site-header" id="top">
+    <div class="container nav-container">
+      <a href="../index.html" class="brand" aria-label="Muhammad Arslan Home">
+        <div class="brand-monogram">
+          <span class="mono">MA</span>
+          <span class="brand-pulse-dot" title="Available for SQA Roles"></span>
+        </div>
+        <div class="brand-info">
+          <span class="brand-name">Muhammad Arslan</span>
+          <span class="brand-role mono">SQA ENGINEER • HATZS DIMENSIONS</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main Navigation">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="../about.html" class="nav-link">About</a>
+        <a href="../experience.html" class="nav-link">Experience</a>
+        <a href="../projects.html" class="nav-link active">Projects</a>
+        <a href="../skills.html" class="nav-link">Skills</a>
+        <a href="../qa-artifacts.html" class="nav-link">QA Artifacts</a>
+        <a href="../certifications.html" class="nav-link">Certifications</a>
+        <a href="../contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle Light/Dark Theme" title="Switch Theme">
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
+
+        <a href="../assets/cv.pdf" download class="btn btn-primary btn-sm">Download CV</a>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" type="button" aria-label="Toggle Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumbs -->
+  <nav class="breadcrumbs-bar" aria-label="Breadcrumb">
+    <div class="container">
+      <ol class="breadcrumbs-list">
+        <li><a href="../index.html">Home</a></li>
+        <li class="breadcrumbs-separator" aria-hidden="true">/</li>
+        <li><a href="../projects.html">Projects</a></li>
+        <li class="breadcrumbs-separator" aria-hidden="true">/</li>
+        <li class="breadcrumbs-current" aria-current="page">Leadly.ai</li>
+      </ol>
+    </div>
+  </nav>
+
+  <main>
+    <header class="case-study-hero">
+      <div class="container">
+        <div class="page-header-badge mono">ENTERPRISE CASE STUDY • 8-SECTION SPEC</div>
+        <h1 class="page-title">Leadly.ai — Outreach Engine &amp; RBAC Validation</h1>
+        <p class="page-subtitle">
+          Auditing asynchronous email campaign pipelines, catching unescaped UTF-8 SQL crashes, and validating multi-tenant role-based access security.
+        </p>
+
+        <!-- Meta Grid: Section 1 -->
+        <div class="case-meta-grid">
+          <div class="case-meta-item">
+            <small>Domain</small>
+            <span>B2B Sales &amp; AI Outreach SaaS</span>
+          </div>
+          <div class="case-meta-item">
+            <small>Role</small>
+            <span>Associate SQA Engineer</span>
+          </div>
+          <div class="case-meta-item">
+            <small>Duration</small>
+            <span>Dec 2025 – Present</span>
+          </div>
+          <div class="case-meta-item">
+            <small>Team Size</small>
+            <span>Cross-functional engineering &amp; product team</span>
+          </div>
+          <div class="case-meta-item">
+            <small>Key Result</small>
+            <span style="color: var(--primary);">Prevented Critical Queue Crash</span>
+          </div>
+          <div class="case-meta-item">
+            <small>Tools</small>
+            <span>Postman, Playwright, SQL, DevTools, Jira</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <!-- Section 1: Project Overview -->
+      <section class="cs-section">
+        <div class="cs-section-header">
+          <span class="cs-section-number">01</span>
+          <h2 class="cs-section-title">Project Overview</h2>
+        </div>
+        <div class="cs-content-box">
+          <p>
+            <strong>Leadly.ai</strong> is an enterprise sales engagement and automated outreach SaaS platform. Sales teams use it to import large prospect lists, enrich company data, configure multi-channel outreach sequences (email, scheduled voice calls, LinkedIn tasks), and track deal conversions.
+          </p>
+          <p>
+            As Associate SQA Engineer, I owned test design and execution across campaign builders, bulk CSV ingestion routines, webhook event deliverability, and strict workspace permission isolation (Admin vs. SDR vs. Read-Only).
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 2: The Challenge -->
+      <section class="cs-section">
+        <div class="cs-section-header">
+          <span class="cs-section-number">02</span>
+          <h2 class="cs-section-title">The Challenge</h2>
+        </div>
+        <div class="cs-content-box">
+          <p>
+            High-volume asynchronous workers present subtle failure modes. During peak email outreach execution, contact lists often include international character sets, accents, and punctuation (e.g., apostrophes in names such as <em>O'Connor</em>).
+          </p>
+          <p>
+            Additionally, non-admin SDR users could occasionally trigger bulk actions due to missing API authorization checks on the backend endpoint, even though the frontend button was hidden.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 3: Test Strategy & Plan -->
+      <section class="cs-section">
+        <div class="cs-section-header">
+          <span class="cs-section-number">03</span>
+          <h2 class="cs-section-title">Test Strategy &amp; Plan</h2>
+        </div>
+        <div class="cs-content-box">
+          <p>
+            My strategy prioritized end-to-end data integrity and negative security testing:
+          </p>
+          <ul style="padding-left: 20px; color: var(--text-secondary); line-height: 1.7; display: flex; flex-direction: column; gap: 8px;">
+            <li><strong>Data Ingestion Edge Cases:</strong> Generated test CSV datasets containing 500+ international names, emojis, malformed email addresses, and SQL injection probes.</li>
+            <li><strong>Negative RBAC API Testing:</strong> Authored Postman test suites sending authenticated requests with SDR tokens against restricted Admin endpoints (e.g., <code>POST /api/v1/billing</code>, <code>DELETE /api/v1/leads/bulk</code>).</li>
+            <li><strong>Worker Queue Stress:</strong> Monitored BullMQ job execution logs under mock concurrency to assert zero dropped outreach messages.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Section 4: Execution & Artifacts -->
+      <section class="cs-section">
+        <div class="cs-section-header">
+          <span class="cs-section-number">04</span>
+          <h2 class="cs-section-title">Execution &amp; Artifacts</h2>
+        </div>
+        <div class="cs-content-box">
+          <p>
+            Authored <strong>115+ test cases</strong> in Jira and conducted detailed backend audits.
+          </p>
+
+          <!-- Bug Card: BUG-LDL-209 -->
+          <div class="bug-ticket-card" style="margin-top: 20px;">
+            <div class="bug-ticket-header">
+              <div>
+                <span class="bug-id-tag">BUG-LDL-209</span>
+                <h3 class="bug-title">Email queue worker crashed on CSV leads containing unescaped apostrophes</h3>
+              </div>
+              <div class="bug-meta-pills">
+                <span class="badge-pill crit">Severity: Critical</span>
+                <span class="badge-pill high">Priority: P1</span>
+                <span class="badge-pill pass">Status: Verified &amp; Closed</span>
+              </div>
+            </div>
+
+            <div class="bug-steps-box">
+              <strong style="display: block; font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); margin-bottom: 6px;">Steps to Reproduce</strong>
+              <ol>
+                <li>Upload CSV with names like "Patrick O'Connor" via Campaign Import.</li>
+                <li>Assign variables {{first_name}} and {{last_name}} in outreach template.</li>
+                <li>Activate outreach campaign and monitor background queue worker.</li>
+              </ol>
+            </div>
+
+            <div class="bug-details-grid">
+              <div class="bug-field">
+                <strong>Expected Result</strong>
+                <p>Apostrophe escaped cleanly; email dispatches with "Dear Patrick O'Connor".</p>
+              </div>
+              <div class="bug-field">
+                <strong>Actual Result</strong>
+                <p>Unescaped quote broke SQL query interpolation, crashing worker process and dropping 142 leads.</p>
+              </div>
+            </div>
+
+            <div class="bug-impact-banner">
+              <strong>Business Impact:</strong> Severe campaign stall and prospect loss. Detected during staging regression before customer data was impacted.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: Automation (Playwright) -->
+      <section class="cs-section">
+        <div class="cs-section-header">
+          <span class="cs-section-number">05</span>
+          <h2 class="cs-section-title">Automation &amp; Playwright Suite</h2>
+        </div>
+        <div class="cs-content-box">
+          <p>
+            Engineered automated RBAC boundary checks ensuring lower-tier roles cannot bypass permissions:
+          </p>
+
+          <div class="code-window">
+            <div class="code-window-bar">
+              <div class="code-window-dots">
+                <span></span><span></span><span></span>
+              </div>
+              <span class="mono">tests/e2e/leadly-rbac.spec.js</span>
+            </div>
+            <pre><code>const { test, expect } = require('@playwright/test');
+
+test.describe('Leadly.ai — RBAC Permission Boundaries', () => {
+  test('SDR role cannot access admin billing or trigger bulk lead export', async ({ page, request }) => {
+    // 1. Authenticate as SDR user
+    await page.goto('/login');
+    await page.getByLabel('Email').fill('sdr-tester@leadly.internal');
+    await page.getByLabel('Password').fill('SecureTestPass123!');
+    await page.getByRole('button', { name: /sign in/i }).click();
+
+    // 2. Direct navigation attempt to Admin route
+    await page.goto('/settings/billing');
+    await expect(page).toHaveURL(/\/dashboard/);
+    await expect(page.getByText('Access Restricted')).toBeVisible();
+
+    // 3. Negative API contract assertion
+    const response = await request.post('/api/v1/leads/export-bulk', {
+      headers: { 'Authorization': 'Bearer SDR_SESSION_TOKEN' }
+    });
+    expect(response.status()).toBe(403);
+    const body = await response.json();
+    expect(body.error).toBe('INSUFFICIENT_PERMISSIONS');
+  });
+});</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6: Results & Impact -->
+      <section class="cs-section">
+        <div class="cs-section-header">
+          <span class="cs-section-number">06</span>
+          <h2 class="cs-section-title">Results &amp; Impact</h2>
+        </div>
+        <div class="cs-content-box">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+            <div style="background: var(--surface-raised); padding: 20px; border-radius: 10px; text-align: center;">
+              <span class="mono" style="font-size: 2rem; font-weight: 800; color: var(--primary);">24</span>
+              <span style="display: block; font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;">Total Defects Logged</span>
+              <small style="color: var(--text-secondary); font-size: 0.75rem;">4 Critical, 10 High, 7 Medium, 3 Low</small>
+            </div>
+            <div style="background: var(--surface-raised); padding: 20px; border-radius: 10px; text-align: center;">
+              <span class="mono" style="font-size: 2rem; font-weight: 800; color: var(--accent);">83%</span>
+              <span style="display: block; font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;">Testing Acceleration</span>
+              <small style="color: var(--text-secondary); font-size: 0.75rem;">Reduced sequence validation from 12h to 2h</small>
+            </div>
+            <div style="background: var(--surface-raised); padding: 20px; border-radius: 10px; text-align: center;">
+              <span class="mono" style="font-size: 2rem; font-weight: 800; color: var(--fail);">0</span>
+              <span style="display: block; font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;">Data Leak Incidents</span>
+              <small style="color: var(--text-secondary); font-size: 0.75rem;">100% RBAC security verification</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 7: Key Learnings -->
+      <section class="cs-section">
+        <div class="cs-section-header">
+          <span class="cs-section-number">07</span>
+          <h2 class="cs-section-title">Key Learnings &amp; Reflections</h2>
+        </div>
+        <div class="cs-content-box">
+          <p>
+            Security testing cannot rely on client-side UI visibility alone. Even if a button is absent from the DOM, backend endpoints must always be tested with unauthorized tokens to prevent privilege escalation.
+          </p>
+          <p>
+            Furthermore, automated sanitization tests on user-supplied strings are critical to ensuring background job queues remain resilient in production.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 8: Links & References -->
+      <section class="cs-section">
+        <div class="cs-section-header">
+          <span class="cs-section-number">08</span>
+          <h2 class="cs-section-title">Links &amp; Artifacts</h2>
+        </div>
+        <div class="cs-content-box" style="display: flex; gap: 14px; flex-wrap: wrap;">
+          <a href="../qa-artifacts.html" class="btn btn-primary btn-sm">Inspect Full QA Artifacts</a>
+          <a href="https://github.com/Arslan5103" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">GitHub Repository ↗</a>
+          <a href="../projects.html" class="btn btn-secondary btn-sm">← All Projects</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Shared Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-monogram"><span class="mono">MA</span></div>
+          <div>
+            <div class="brand-name">Muhammad Arslan</div>
+            <div class="brand-role mono">ASSOCIATE SQA ENGINEER • LAHORE, PAKISTAN</div>
+          </div>
+        </div>
+        <div class="footer-links">
+          <a href="../index.html">Home</a>
+          <a href="../about.html">About</a>
+          <a href="../experience.html">Experience</a>
+          <a href="../projects.html">Projects</a>
+          <a href="../skills.html">Skills</a>
+          <a href="../qa-artifacts.html">QA Artifacts</a>
+          <a href="../certifications.html">Certifications</a>
+          <a href="../contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Muhammad Arslan. Engineered for zero defects and high availability.</p>
+        <div class="footer-status-pill mono">
+          <span class="status-dot"></span>
+          <span>SYSTEM STATUS: ALL TEST SUITES PASSING</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
+

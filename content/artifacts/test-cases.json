@@ -1,0 +1,118 @@
+[
+  {
+    "id": "TC-DIQ-001",
+    "project": "DealerIQ AI",
+    "module": "Paperwork & Deals",
+    "title": "Verify deal paperwork fee recalculation when adding line-item accessory",
+    "type": "Functional / Regression",
+    "priority": "P1 - High",
+    "preconditions": "User logged in as Sales Manager with active draft deal #9482 ($42,000 MSRP).",
+    "steps": [
+      "Navigate to Deals > Active Pipeline > Select Deal #9482.",
+      "Click on 'Paperwork & Fees' tab.",
+      "Click 'Add Custom Accessory' and enter Name: 'Ceramic Coating', Amount: '$850.00'.",
+      "Verify state before switching tabs.",
+      "Click 'Carrier Shipment' tab, then click back to 'Paperwork & Fees' tab."
+    ],
+    "expectedResult": "Subtotal updates to $42,850.00, applicable sales tax recalculates automatically, and added accessory persists after switching tabs.",
+    "status": "PASS"
+  },
+  {
+    "id": "TC-DIQ-002",
+    "project": "DealerIQ AI",
+    "module": "AI Telephony",
+    "title": "Idempotent handling of duplicate webhook payloads on carrier retry",
+    "type": "API / Backend",
+    "priority": "P1 - Critical",
+    "preconditions": "Postman configured with Staging bearer token; mock telephony service initialized.",
+    "steps": [
+      "Send POST request to /api/v1/telephony/webhook with CallSID 'CA-98234-XYZ' and status 'COMPLETED'.",
+      "Record response status code and execution time.",
+      "Immediately resend identical payload within 350ms to simulate network retry."
+    ],
+    "expectedResult": "First request returns 200 OK with single log record; second request returns 200 OK with header 'X-Duplicate-Discarded: true' without generating duplicate CRM activities.",
+    "status": "PASS"
+  },
+  {
+    "id": "TC-DIQ-003",
+    "project": "DealerIQ AI",
+    "module": "Lead Chat & Filters",
+    "title": "Preserve active multi-criteria filters during column header sorting",
+    "type": "UI/UX / State",
+    "priority": "P2 - Medium",
+    "preconditions": "Lead list contains at least 50 leads with diverse status tags.",
+    "steps": [
+      "In Leads table, apply filter 'Unread AI Follow-Up' and status 'Contacted'.",
+      "Confirm filtered list displays exactly 8 matching rows.",
+      "Click the 'Last Contacted At' column header to reverse sort order."
+    ],
+    "expectedResult": "Sort direction reverses while maintaining both filter chips active; list remains strictly filtered to the 8 relevant rows.",
+    "status": "PASS"
+  },
+  {
+    "id": "TC-BFR-001",
+    "project": "Befer AI",
+    "module": "Geofencing & Booking",
+    "title": "Boundary Value Analysis on 25.0km service radius constraint",
+    "type": "Boundary Value Analysis",
+    "priority": "P1 - High",
+    "preconditions": "Service provider location configured at (31.5204° N, 74.3587° E) with max service radius set to 25.0 km.",
+    "steps": [
+      "Test input at 24.9 km (Sub-boundary: Valid).",
+      "Test input at 25.0 km (Exact boundary: Valid).",
+      "Test input at 25.1 km (Super-boundary: Invalid).",
+      "Verify client UI alert and server response payload."
+    ],
+    "expectedResult": "24.9 km and 25.0 km proceed to slot selection; 25.1 km displays localized error message: 'Selected address is 0.1km outside service zone'.",
+    "status": "PASS"
+  },
+  {
+    "id": "TC-BFR-002",
+    "project": "Befer AI",
+    "module": "Iframe Widget",
+    "title": "Cross-origin iframe dynamic resize and modal positioning on mobile viewport",
+    "type": "UI / Cross-Browser",
+    "priority": "P2 - High",
+    "preconditions": "Booking widget embedded into third-party HTTPS test container on iOS Safari (viewport 390x844).",
+    "steps": [
+      "Open embed demo page on Mobile Safari.",
+      "Select service type and advance to date picker calendar.",
+      "Select 10:30 AM slot to open confirmation drawer.",
+      "Verify postMessage height dispatch event."
+    ],
+    "expectedResult": "Parent container expands dynamically to match iframe scrollHeight; CTA button remains fully tappable above the fold with no double scrollbars.",
+    "status": "PASS"
+  },
+  {
+    "id": "TC-LDL-001",
+    "project": "Leadly.ai",
+    "module": "RBAC & Security",
+    "title": "Enforce Role-Based Access Control on workspace bulk lead export",
+    "type": "Security / API",
+    "priority": "P1 - Critical",
+    "preconditions": "User authenticated with SDR role (standard non-admin privileges).",
+    "steps": [
+      "Navigate to Leads overview page in browser.",
+      "Verify 'Export All to CSV' button presence.",
+      "Intercept request or execute manual cURL with SDR JWT: POST /api/v1/export/leads."
+    ],
+    "expectedResult": "Export button is not rendered in the UI; API returns 403 Forbidden with payload: {'error': 'INSUFFICIENT_PERMISSIONS', 'requiredRole': 'ADMIN'}.",
+    "status": "PASS"
+  },
+  {
+    "id": "TC-LDL-002",
+    "project": "Leadly.ai",
+    "module": "Outreach Engine",
+    "title": "CSV lead ingestion with unescaped international names and UTF-8 characters",
+    "type": "Data Ingestion / Edge Case",
+    "priority": "P1 - High",
+    "preconditions": "Sample CSV prepared with 250 records containing accents (é, ñ, ü, ø) and apostrophes (O'Connor, D'Angelo).",
+    "steps": [
+      "Upload test CSV via Import Wizard.",
+      "Map column 'Full Name' and 'Email'.",
+      "Execute import and review summary log."
+    ],
+    "expectedResult": "All 250 records parsed and stored accurately in Postgres database with zero SQL string escape failures or truncated fields.",
+    "status": "PASS"
+  }
+]

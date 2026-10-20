@@ -1,0 +1,67 @@
+{
+  "documentId": "TP-DIQ-2026-Q1",
+  "title": "Master Test Plan: Automotive Dealership CRM (DealerIQ AI)",
+  "version": "1.3",
+  "author": "Muhammad Arslan (Associate SQA Engineer)",
+  "status": "APPROVED & EXECUTED",
+  "lastUpdated": "2026-03-15",
+  "overview": "This test plan outlines the quality assurance strategy, test scope, environment configurations, execution workflow, and acceptance criteria for validating DealerIQ AI release cycles at Hatzs Dimensions.",
+  "scope": {
+    "inScope": [
+      "AI Telephony & Voice Agent call disposition logging and webhook retries",
+      "Lead pipeline management, drag-and-drop Kanban status updates",
+      "Deal negotiation module: vehicle trade-in appraisals, dealer fee calculations, tax logic",
+      "Paperwork document generation and carrier shipment dispatch status",
+      "Role-Based Access Control (Admin, Sales Manager, BDC Rep, Viewer)",
+      "REST API contract testing via Postman (Auth, Leads, Deals, Webhooks)",
+      "Cross-browser compatibility (Chrome, Edge, Safari, Firefox)"
+    ],
+    "outOfScope": [
+      "Core AI LLM model training weights and fine-tuning datasets",
+      "Direct carrier logistics telematics hardware sensors",
+      "Payment gateway banking infrastructure compliance (handled by external provider)"
+    ]
+  },
+  "strategy": {
+    "methodology": "Agile SQA with shift-left API validation and exploratory risk-based passes",
+    "testLevels": [
+      "Smoke & Sanity Testing on fresh deployments",
+      "Detailed Functional Testing on new feature tickets",
+      "Regression Testing before production deployments",
+      "API Testing using Postman collections with automated schema assertions",
+      "End-to-End Automation with Playwright (Chromium/WebKit)",
+      "UI/UX Cross-Browser and Responsive Testing"
+    ]
+  },
+  "environments": [
+    {
+      "name": "Staging / QA",
+      "url": "https://staging-crm.dealeriq.internal",
+      "browsers": ["Google Chrome 130+", "Microsoft Edge 130+", "Apple Safari 18+"],
+      "database": "PostgreSQL 16 replica with sanitized test seeds"
+    },
+    {
+      "name": "Sandbox Telephony",
+      "url": "https://telephony-mock.dealeriq.internal",
+      "purpose": "Simulating Twilio / carrier webhooks and retry backoff intervals"
+    }
+  ],
+  "entryCriteria": [
+    "Feature code deployed to Staging with clean build status",
+    "Jira ticket has clear acceptance criteria and Figma designs attached",
+    "Smoke test suite passes 100% on target environment"
+  ],
+  "exitCriteria": [
+    "100% of planned regression test cases executed",
+    "0 open Critical or High severity defects",
+    "All medium severity bugs documented with stakeholder sign-off",
+    "Automated smoke and regression suite passing on CI/CD pipeline",
+    "QA sign-off report issued to engineering lead and product manager"
+  ],
+  "defectManagement": {
+    "tool": "Jira / ClickUp",
+    "severities": ["Critical (S1)", "High (S2)", "Medium (S3)", "Low (S4)"],
+    "priorities": ["P1 (Immediate Fix)", "P2 (Next Sprint)", "P3 (Backlog)"],
+    "workflow": "Open -> In Development -> Ready for Retest -> QA Verified -> Closed"
+  }
+}

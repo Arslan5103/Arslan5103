@@ -1,0 +1,74 @@
+{
+  "title": "Leadly.ai — AI Lead Generation & Outreach Automation",
+  "slug": "leadly",
+  "type": ["Web", "API", "Automation", "Functional"],
+  "domain": "B2B SaaS & AI Outreach",
+  "role": "Associate SQA Engineer",
+  "duration": "Dec 2025 – Present",
+  "teamSize": "Cross-functional engineering & product team",
+  "tools": ["Postman", "Playwright", "SQL", "Chrome DevTools", "Jira"],
+  "keyResult": "Validated complex outreach sequence triggers, rate limiting, and RBAC across 3 user tiers",
+  "featured": true,
+  "overview": {
+    "product": "Leadly.ai is an intelligent B2B sales acceleration platform offering automated multi-step email outreach campaigns, contact enrichment, real-time lead qualification, and webhook integrations with third-party CRMs.",
+    "domain": "B2B SaaS / Sales Engagement",
+    "role": "Associate SQA Engineer handling campaign engine validation, API contract verification, permission matrices, and regression suites.",
+    "duration": "Dec 2025 – Present"
+  },
+  "challenge": "High-volume email sequence queues under concurrent lead import frequently triggered rate limit drops or sent duplicate outreach steps. Additionally, role-based permission boundaries between workspace Admins and SDRs leaked sensitive lead export actions.",
+  "testStrategy": {
+    "scope": "Campaign builder drag-and-drop, automated sequence execution, CSV lead ingestion & mapping, webhook payload delivery, and RBAC matrix.",
+    "testTypes": ["Functional Testing", "API Testing (Postman)", "RBAC Permission Testing", "Boundary Testing", "Regression Testing"],
+    "environments": ["Staging environment", "Sandbox SMTP trap server", "Postgres replica"],
+    "tools": ["Postman", "Playwright", "SQL", "Chrome DevTools", "Jira"]
+  },
+  "execution": {
+    "testCasesWritten": 115,
+    "sampleTestCases": [
+      {
+        "id": "TC-LDL-01",
+        "title": "Outreach Sequence Delay & Condition Branching",
+        "steps": "Configure 3-step sequence: Step 1 Email, Wait 2 Days, Step 2 Follow-up if 'No Reply'. Advance mock timestamp.",
+        "expected": "Step 2 executes only for non-responders after exact 48-hour delay window.",
+        "actual": "Condition correctly evaluated; replied leads excluded from step 2.",
+        "status": "PASS"
+      },
+      {
+        "id": "TC-LDL-02",
+        "title": "RBAC Verification: SDR Restricted from Bulk Lead Deletion",
+        "steps": "Authenticate as SDR role; attempt direct UI delete and API DELETE request /api/v1/leads/bulk.",
+        "expected": "UI action disabled; API returns 403 Forbidden with structured error payload.",
+        "actual": "403 Forbidden returned; audit log records unauthorized attempt.",
+        "status": "PASS"
+      }
+    ],
+    "sampleBug": {
+      "id": "BUG-LDL-209",
+      "severity": "Critical",
+      "priority": "P1",
+      "environment": "Staging • API / Backend Worker",
+      "steps": "1. Import CSV containing 500 leads with international special characters in name fields.\n2. Trigger automated sequence with template variable {{first_name}}.\n3. Inspect queue worker logs.",
+      "expected": "UTF-8 encoding preserved, all 500 sequence jobs queued without error.",
+      "actual": "Unescaped single quote in names caused worker process crash, dropping 142 leads from campaign.",
+      "impact": "Would cause high lead loss and silent outreach failures in production. Caught and resolved prior to feature launch."
+    }
+  },
+  "automation": {
+    "framework": "Playwright (JavaScript) & Postman Collections",
+    "pattern": "API-driven test seeding with UI assertion validation",
+    "snippet": "test('RBAC: SDR cannot access billing settings', async ({ page }) => {\n  await page.goto('/settings/billing');\n  await expect(page.getByRole('heading', { name: /access denied/i })).toBeVisible();\n  await expect(page).toHaveURL(/\\/dashboard/);\n});",
+    "ciIntegration": "Postman Newman collection runs on every backend deployment."
+  },
+  "results": {
+    "bugsFound": 24,
+    "severitySplit": "4 Critical, 10 High, 7 Medium, 3 Low",
+    "regressionTimeSaved": "Reduced end-to-end campaign testing from 12 hours to 2 hours",
+    "releaseQuality": "Zero data leakage incidents across multi-tenant workspaces"
+  },
+  "learnings": "RBAC and data-ingestion pipelines require automated API contract validation before UI testing to catch schema violations and permission flaws immediately.",
+  "links": {
+    "repo": "https://github.com/Arslan5103",
+    "demo": "",
+    "report": "qa-artifacts.html"
+  }
+}

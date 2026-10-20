@@ -1,0 +1,91 @@
+[
+  {
+    "id": "BUG-DIQ-418",
+    "project": "DealerIQ AI",
+    "title": "State reset in Deal Paperwork fees table upon navigating to Carrier Shipment tab",
+    "severity": "High",
+    "priority": "P1",
+    "status": "Verified & Closed",
+    "environment": "Staging (v2.4.1) • Chrome 130 / macOS Sonoma",
+    "reporter": "Muhammad Arslan (Associate SQA Engineer)",
+    "preconditions": "User logged into CRM as Sales Manager. Deal #9482 opened with $42,850 calculated paperwork fees.",
+    "stepsToReproduce": [
+      "1. Navigate to Deals > Pipeline > Open Deal #9482.",
+      "2. Verify active paperwork shows itemized accessory fee ($850.00) and Total = $42,850.00.",
+      "3. Click 'Carrier Shipment' tab to review delivery dispatch.",
+      "4. Click back to 'Paperwork & Fees' tab.",
+      "5. Observe the accessories table and total calculation field."
+    ],
+    "expectedBehavior": "The paperwork state and line items should persist in memory/cache across tab switches within the same deal session.",
+    "actualBehavior": "Navigating away unmounts component without syncing draft state, causing the accessories table to clear and resetting the calculation total to base MSRP.",
+    "businessImpact": "High risk of sales reps sending inaccurate or discounted contracts to car buyers during live desk negotiations.",
+    "rootCause": "React tab state was re-initializing from URL search params without reading unsaved local state cache.",
+    "fixVerification": "State persistence hook implemented with local storage fallback; verified across Chrome, Edge, and Safari."
+  },
+  {
+    "id": "BUG-DIQ-392",
+    "project": "DealerIQ AI",
+    "title": "Unread AI Chat filter drops silently when user clicks column sort header",
+    "severity": "Medium",
+    "priority": "P2",
+    "status": "Verified & Closed",
+    "environment": "Staging (v2.4.0) • Edge 130 / Windows 11",
+    "reporter": "Muhammad Arslan (Associate SQA Engineer)",
+    "preconditions": "Lead inbox contains mixed unread and read conversations.",
+    "stepsToReproduce": [
+      "1. Go to AI Conversations inbox.",
+      "2. Click filter chip: 'Unread AI Follow-Up'.",
+      "3. Verify table filters down to 14 unread leads.",
+      "4. Click 'Last Activity' column header to sort descending."
+    ],
+    "expectedBehavior": "Table sorts records by timestamp while keeping 'Unread AI Follow-Up' filter active.",
+    "actualBehavior": "Sorting query parameter overwrites the filter query parameter (?sort=desc instead of ?filter=unread&sort=desc), reloading all 400+ leads.",
+    "businessImpact": "BDC reps missed critical hot leads because their prioritized inbox view kept resetting during routine sorting.",
+    "rootCause": "URL query param builder replaced all search params instead of merging new sort keys with existing filter state.",
+    "fixVerification": "Updated router hook with query-string merger. Verified sorting works with single and composite filter chips."
+  },
+  {
+    "id": "BUG-BFR-104",
+    "project": "Befer AI",
+    "title": "Embeddable booking modal fails to expand height on iOS Safari iframe container",
+    "severity": "High",
+    "priority": "P2",
+    "status": "Verified & Closed",
+    "environment": "Production Staging • iPhone 14 Pro / Safari iOS 17.4",
+    "reporter": "Muhammad Arslan (Associate SQA Engineer)",
+    "preconditions": "Befer widget script embedded into third-party HTTPS client website.",
+    "stepsToReproduce": [
+      "1. Open client booking page on an iPhone running Safari.",
+      "2. Select service category and pick tomorrow's date.",
+      "3. Tap 2:00 PM time slot to trigger confirmation step.",
+      "4. Observe container height and 'Confirm Appointment' CTA."
+    ],
+    "expectedBehavior": "Parent window dynamically resizes iframe container using window.postMessage payload so the entire form is accessible.",
+    "actualBehavior": "Container remains constrained to fixed 320px height, pushing the confirmation CTA below viewport without allowing vertical scroll.",
+    "businessImpact": "100% bounce rate on mobile Safari users attempting to finalize booking confirmations on client websites.",
+    "rootCause": "ResizeObserver callback was suppressed by iOS Safari cross-origin iframe security policy when document body height recalculated.",
+    "fixVerification": "Implemented explicit postMessage event listener with client-side polyfill. Verified across iOS Safari, Chrome Mobile, and iPadOS."
+  },
+  {
+    "id": "BUG-LDL-209",
+    "project": "Leadly.ai",
+    "title": "Backend email worker crashed on CSV leads containing unescaped apostrophes in names",
+    "severity": "Critical",
+    "priority": "P1",
+    "status": "Verified & Closed",
+    "environment": "Staging (v1.8.2) • Node.js / PostgreSQL",
+    "reporter": "Muhammad Arslan (Associate SQA Engineer)",
+    "preconditions": "Workspace admin uploading lead contact lists for active sequence campaigns.",
+    "stepsToReproduce": [
+      "1. Prepare CSV with lead names such as \"Patrick O'Connor\" or \"Sarah D'Angelo\".",
+      "2. Upload via Campaign > Add Contacts > CSV Import.",
+      "3. Trigger sequence activation.",
+      "4. Monitor background BullMQ job queue."
+    ],
+    "expectedBehavior": "All names properly sanitized and stored; campaign sequence dispatches smoothly to all imported leads.",
+    "actualBehavior": "Apostrophe caused raw SQL string interpolation failure in email template compiler, crashing worker process and dropping remaining queue.",
+    "businessImpact": "Critical data loss: entire batches of prospect emails failed to send, leaving campaigns stalled.",
+    "rootCause": "Dynamic template string replacement bypassed parameterized query sanitization in the email template engine.",
+    "fixVerification": "Added parameterized template variable sanitizer and automated Postman test with multi-lingual edge case strings."
+  }
+]

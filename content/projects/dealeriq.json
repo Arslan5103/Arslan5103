@@ -1,0 +1,83 @@
+{
+  "title": "DealerIQ AI — Automotive Dealership CRM",
+  "slug": "dealeriq",
+  "type": ["Web", "API", "Regression", "Automation"],
+  "domain": "Automotive AI CRM",
+  "role": "Associate SQA Engineer",
+  "duration": "Dec 2025 – Present",
+  "teamSize": "Cross-functional engineering & product team",
+  "tools": ["Jira", "Postman", "SQL", "Chrome DevTools", "Playwright"],
+  "keyResult": "Identified and resolved 7 critical regressions in 1 pre-release cycle before client demo",
+  "featured": true,
+  "overview": {
+    "product": "DealerIQ AI is a high-volume automotive CRM platform providing AI voice calling agents, conversational chat bots, lead pipeline tracking, vehicle appraisals, deal contracts, paperwork generation, and carrier shipment dispatch.",
+    "domain": "Automotive Retail & Telephony AI",
+    "role": "Associate SQA Engineer responsible for end-to-end regression validation, REST API checks, and release gate certification.",
+    "duration": "Dec 2025 – Present"
+  },
+  "challenge": "High concurrency workflows between telephony webhooks and browser state led to race conditions. Re-routing between deal negotiation and carrier shipment tabs desynchronized paperwork fee calculations and silently dropped active filters.",
+  "testStrategy": {
+    "scope": "Authentication, lead lifecycle, AI call webhooks, deal contracts, fee calculation engine, and shipment tracking.",
+    "testTypes": ["Functional Testing", "Regression Testing", "API Contract Validation", "Smoke & Sanity", "Cross-Browser", "UI/UX Audit"],
+    "environments": ["Staging (macOS Chrome 130, Windows Edge, Safari 18)", "Pre-production telephony sandbox"],
+    "tools": ["Postman", "SQL", "Chrome DevTools", "Jira", "Playwright (JS)"]
+  },
+  "execution": {
+    "testCasesWritten": 140,
+    "sampleTestCases": [
+      {
+        "id": "TC-DIQ-01",
+        "title": "AI Voice Webhook Deduplication on NO_ANSWER",
+        "steps": "Simulate telephony provider webhook with duplicate CallSID within 400ms retry window.",
+        "expected": "Idempotency key prevents second record; exactly 1 fallback SMS queued.",
+        "actual": "Single SMS queued, lead timeline reflects 1 log entry.",
+        "status": "PASS"
+      },
+      {
+        "id": "TC-DIQ-02",
+        "title": "Deal Paperwork Fee Persistence Across Tab Switch",
+        "steps": "Load Deal #9482, add custom dealer addon ($450), navigate to Shipment tab, return to Paperwork.",
+        "expected": "Line-item fee calculation preserves $450 addon without state reset.",
+        "actual": "State preserved; calculations match total.",
+        "status": "PASS"
+      },
+      {
+        "id": "TC-DIQ-03",
+        "title": "Unread AI Chat Filter Persistence During Table Sort",
+        "steps": "Apply filter 'Unread AI Follow-Up', click 'Last Contacted' sort column header.",
+        "expected": "Table re-sorts while maintaining active filter criteria.",
+        "actual": "Filter remains applied; table sorted correctly.",
+        "status": "PASS"
+      }
+    ],
+    "sampleBug": {
+      "id": "BUG-DIQ-418",
+      "severity": "High",
+      "priority": "P1",
+      "environment": "Staging • Chrome 130 / macOS",
+      "steps": "1. Open Deal #9482 with active paperwork.\n2. Apply chat filter 'Unread AI Follow-Up'.\n3. Click Shipment Navigation tab to switch view.\n4. Inspect fee table network response (GET /api/v1/deals/paperwork).",
+      "expected": "Shipment tab loads while preserving active paperwork calculation total ($42,850.00).",
+      "actual": "Stale query parameter resets deal context, clearing chat filter and displaying $0.00 total.",
+      "impact": "Would have caused dealership sales managers to misquote paperwork during customer checkout. Prevented pre-release."
+    }
+  },
+  "automation": {
+    "framework": "Playwright (JavaScript)",
+    "pattern": "Page Object Model (POM) with isolated fixture states",
+    "snippet": "const { test, expect } = require('@playwright/test');\n\ntest('should create deal prospect and verify appointment slot lock', async ({ page }) => {\n  await page.goto('/dashboard/deals');\n  await page.getByRole('button', { name: /new deal/i }).click();\n  await page.getByLabel('Customer Name').fill('Test Buyer');\n  await page.getByLabel('Phone').fill('+923099731256');\n  await page.getByRole('button', { name: /save deal/i }).click();\n  await expect(page.getByText('Deal created successfully')).toBeVisible();\n});",
+    "ciIntegration": "Runs headless on pull requests via GitHub Actions across Chromium and WebKit."
+  },
+  "results": {
+    "bugsFound": 28,
+    "severitySplit": "5 Critical, 12 High, 8 Medium, 3 Low",
+    "regressionTimeSaved": "Reduced release sign-off cycle from 2 days to 3.5 hours",
+    "releaseQuality": "Zero high-severity escapes into client demonstrations or production"
+  },
+  "learnings": "Early cross-functional alignment between frontend React state and telephony webhook idempotency keys is essential to prevent ghost events in real-time CRM dashboards.",
+  "links": {
+    "repo": "https://github.com/Arslan5103",
+    "demo": "",
+    "report": "qa-artifacts.html"
+  }
+}
+

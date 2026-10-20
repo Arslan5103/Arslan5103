@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Associate Software Quality Assurance Engineer",
+    "company": "Hatzs Dimensions Pvt. Ltd.",
+    "location": "Lahore, Pakistan (On-site / Hybrid)",
+    "start": "Dec 2025",
+    "end": "Present",
+    "highlights": [
+      "Delivered end-to-end software quality assurance across CRM, SaaS, AI-powered, and web applications (DealerIQ AI, Befer AI, Leadly.ai, Broker OS, StephanAI) ensuring stable, user-ready product releases.",
+      "Designed and maintained test cases, test scenarios, test plans, QA status reports, defect reports, and regression suites based on business requirements and user workflows.",
+      "Validated critical business workflows including lead pipelines, appointment scheduling, AI voice calls, AI chats, paperwork, shipment navigation, forms, filters, and role-based permissions.",
+      "Reported and tracked defects in Jira and ClickUp with granular reproduction steps, DevTools logs, severity/priority ratings, and business impact assessments.",
+      "Collaborated with developers and stakeholders to verify fixes, clarify requirements, conduct impact analyses, and eliminate production regressions."
+    ],
+    "tools": ["Jira", "ClickUp", "Postman", "SQL", "Playwright", "Chrome DevTools", "Git"],
+    "testingTypes": ["Manual", "Functional", "Regression", "Smoke & Sanity", "API", "UI/UX", "Cross-Browser", "E2E"]
+  },
+  {
+    "title": "Software Quality Assurance Engineer (Intern)",
+    "company": "Nexskill (NEXSkills Training Institute)",
+    "location": "Lahore, Pakistan",
+    "start": "Sep 2024",
+    "end": "Nov 2025",
+    "highlights": [
+      "Completed hands-on SQA training covering SDLC, STLC, QA/QC, manual testing, functional, regression, smoke, and exploratory testing.",
+      "Designed and executed test cases and test plans using Boundary Value Analysis (BVA), Equivalence Partitioning (EP), Decision Tables, and Use Case Testing.",
+      "Practiced bug reporting, defect lifecycle management, severity/priority analysis, SQL database validation, and Jira-based defect management.",
+      "Gained practical exposure to REST API testing with Postman, HTTP methods, and backend workflow validation."
+    ],
+    "tools": ["Jira", "Postman", "SQL", "Chrome DevTools", "Apache JMeter"],
+    "testingTypes": ["Manual", "Functional", "Regression", "API", "Mobile", "Performance Concepts"]
+  }
+]
+

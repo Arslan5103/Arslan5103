@@ -1,0 +1,36 @@
+{
+  "name": "Muhammad Arslan",
+  "title": "SQA Engineer",
+  "headline": "SQA Engineer | Software Quality Assurance | Manual & API Testing | Playwright (JavaScript) | Postman, SQL, Jira | CRM & SaaS Applications",
+  "valueStatement": "I help engineering teams ship stable, zero-defect releases by catching critical bugs early and automating regression suites.",
+  "location": "Lahore, Pakistan",
+  "openTo": "Remote / Hybrid / On-site",
+  "about": [
+    "Software Quality Assurance (SQA) Engineer focused on manual testing, API testing, and reliable releases for CRM, SaaS, and AI-powered web applications.",
+    "At Hatzs Dimensions, I turn requirements and business workflows into test scenarios, test cases, and actionable defect reports. I work with developers to reproduce issues, verify fixes, and validate applications before releases and client demonstrations.",
+    "What I bring to teams: Functional, regression, smoke, sanity, and exploratory testing across end-to-end workflows; API testing with Postman and database validation with SQL; UI/UX, responsive, and cross-browser testing; and high-signal defect reports with reproduction steps, evidence, severity, and business impact.",
+    "My project experience includes DealerIQ AI, Befer AI, Leadly.ai, Broker OS, and StephanAI. In one dealership CRM regression cycle, I identified and reported seven defects affecting paperwork, shipment navigation, data accuracy, form validation, and chat filters. I am actively developing Playwright automation skills with JavaScript for end-to-end web and API testing."
+  ],
+  "email": "marslan5103@gmail.com",
+  "phone": "+92 309 9731256",
+  "linkedin": "https://www.linkedin.com/in/muhammad-arslan-0374a6259",
+  "github": "https://github.com/Arslan5103",
+  "calendly": "",
+  "cvFile": "cv.pdf",
+  "stats": {
+    "yearsExperience": "1+",
+    "projectsTested": "5+",
+    "testCasesWritten": "500+",
+    "bugsReported": "120+",
+    "criticalRegressionsCaught": "7 in 1 CRM sprint"
+  },
+  "education": [
+    {
+      "degree": "Bachelor in Software Engineering",
+      "school": "The Superior University (Gold Campus, Lahore)",
+      "years": "Graduated"
+    }
+  ],
+  "languages": ["English", "Urdu"]
+}
+

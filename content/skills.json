@@ -1,0 +1,83 @@
+{
+  "categories": [
+    {
+      "name": "Manual Testing",
+      "description": "Functional and exploratory verification across business workflows and edge boundaries.",
+      "skills": [
+        { "name": "Functional Testing", "level": "Daily" },
+        { "name": "Regression Testing", "level": "Daily" },
+        { "name": "Smoke & Sanity Testing", "level": "Daily" },
+        { "name": "Exploratory Testing", "level": "Daily" },
+        { "name": "End-to-End (E2E) Testing", "level": "Daily" },
+        { "name": "Integration Testing", "level": "Regular" },
+        { "name": "Black Box, White Box & Gray Box", "level": "Regular" },
+        { "name": "Cross-Browser & Responsive Audits", "level": "Daily" },
+        { "name": "UI/UX Verification & Website Audit", "level": "Daily" }
+      ]
+    },
+    {
+      "name": "API Testing",
+      "description": "Validating endpoint contracts, schemas, headers, status codes, and payloads.",
+      "skills": [
+        { "name": "Postman", "level": "Daily" },
+        { "name": "REST API Testing (GET, POST, PUT, DELETE)", "level": "Daily" },
+        { "name": "Request/Response Validation", "level": "Daily" },
+        { "name": "JSON Schema & Contract Assertions", "level": "Regular" },
+        { "name": "Webhook & Event Verification", "level": "Regular" }
+      ]
+    },
+    {
+      "name": "Automation",
+      "description": "Scripting automated browser tests and repeatable regression pipelines.",
+      "skills": [
+        { "name": "Playwright", "level": "Regular" },
+        { "name": "JavaScript for Testing", "level": "Regular" },
+        { "name": "Page Object Model (POM) Design", "level": "Regular" },
+        { "name": "CI/CT Test Execution", "level": "Familiar" }
+      ]
+    },
+    {
+      "name": "Performance Testing",
+      "description": "Evaluating system response times, concurrent request capacity, and SLA limits.",
+      "skills": [
+        { "name": "Apache JMeter", "level": "Regular" },
+        { "name": "Load & Concurrency Testing", "level": "Regular" },
+        { "name": "Response Latency Benchmarking", "level": "Regular" }
+      ]
+    },
+    {
+      "name": "Mobile & Cross-Platform",
+      "description": "Auditing layouts and responsive touch behaviors across real devices.",
+      "skills": [
+        { "name": "Mobile Responsive Testing", "level": "Daily" },
+        { "name": "Cross-Device Viewport Verification", "level": "Daily" },
+        { "name": "Chrome Device Mode & Emulation", "level": "Daily" }
+      ]
+    },
+    {
+      "name": "Tools & Process",
+      "description": "Managing defect lifecycles and collaborating within Agile sprint cycles.",
+      "skills": [
+        { "name": "Jira", "level": "Daily" },
+        { "name": "ClickUp", "level": "Daily" },
+        { "name": "Trello", "level": "Regular" },
+        { "name": "Chrome DevTools (Console/Network)", "level": "Daily" },
+        { "name": "Git & GitHub", "level": "Regular" },
+        { "name": "Agile / Scrum Sprint Ceremonies", "level": "Daily" },
+        { "name": "SDLC & STLC Governance", "level": "Daily" },
+        { "name": "Boundary Value Analysis (BVA)", "level": "Daily" },
+        { "name": "Equivalence Partitioning (EP)", "level": "Daily" }
+      ]
+    },
+    {
+      "name": "Languages & Data",
+      "description": "Backend database validation and automated scripting languages.",
+      "skills": [
+        { "name": "SQL (Queries, Joins, Integrity Checks)", "level": "Daily" },
+        { "name": "JavaScript", "level": "Regular" },
+        { "name": "HTML5 & CSS3", "level": "Regular" }
+      ]
+    }
+  ]
+}
+

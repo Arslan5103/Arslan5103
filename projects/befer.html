@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case Study: Befer AI — Muhammad Arslan | SQA Engineer</title>
+  <meta name="description" content="SQA Case Study: How Muhammad Arslan validated Befer AI iframe booking flows, applied Boundary Value Analysis to geofencing, and automated regression testing." />
+  <meta name="author" content="Muhammad Arslan" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="glow-orb glow-orb-1" aria-hidden="true"></div>
+  <div class="glow-orb glow-orb-2" aria-hidden="true"></div>
+
+  <!-- Shared Header -->
+  <header class="site-header" id="top">
+    <div class="container nav-container">
+      <a href="../index.html" class="brand" aria-label="Muhammad Arslan Home">
+        <div class="brand-monogram">
+          <span class="mono">MA</span>
+          <span class="brand-pulse-dot" title="Available for SQA Roles"></span>
+        </div>
+        <div class="brand-info">
+          <span class="brand-name">Muhammad Arslan</span>
+          <span class="brand-role mono">SQA ENGINEER • HATZS DIMENSIONS</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main Navigation">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="../about.html" class="nav-link">About</a>
+        <a href="../experience.html" class="nav-link">Experience</a>
+        <a href="../projects.html" class="nav-link active">Projects</a>
+        <a href="../skills.html" class="nav-link">Skills</a>
+        <a href="../qa-artifacts.html" class="nav-link">QA Artifacts</a>
+        <a href="../certifications.html" class="nav-link">Certifications</a>
+        <a href="../contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle Light/Dark Theme" title="Switch Theme">
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
+
+        <a href="../assets/cv.pdf" download class="btn btn-primary btn-sm">Download CV</a>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" type="button" aria-label="Toggle Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumbs -->
+  <nav class="breadcrumbs-bar" aria-label="Breadcrumb">
+    <div class="container">
+      <ol class="breadcrumbs-list">
+        <li><a href="../index.html">Home</a></li>
+        <li class="breadcrumbs-separator" aria-hidden="true">/</li>
+        <li><a href="../projects.html">Projects</a></li>
+        <li class="breadcrumbs-separator" aria-hidden="true">/</li>
+        <li class="breadcrumbs-current" aria-current="page">Befer AI</li>
+      </ol>
+    </div>
+  </nav>
+
+  <main>
+    <header class="case-study-hero">
+      <div class="container">
+        <div class="page-header-badge mono">ENTERPRISE CASE STUDY • 8-SECTION SPEC</div>
+        <h1 class="page-title">Befer AI — Embedded Booking Engine &amp; Geofencing</h1>
+        <p class="page-subtitle">
+          Applying Boundary Value Analysis to geographic radius constraints, cross-origin iframe security testing, and appointment booking lifecycle validation.
+        </p>
+
+        <!-- Meta Grid: Section 1 -->
+        <div class="case-meta-grid">
+          <div class="case-meta-item">
+            <small>Domain</small>
+            <span>Field Services &amp; Appointment SaaS</span>
+          </div>
+          <div class="case-meta-item">
+            <small>Role</small>
+            <span>Associate SQA Engineer</span>
+          </div>
+          <div class="case-meta-item">
+            <small>Duration</small>
+            <span>Dec 2025 – Present</span>
+          </div>
+          <div class="case-meta-item">
+            <small>Team Size</small>
+            <span>5 Engineers, 1 Product Manager</span>
+          </div>
+          <div class="case-meta-item">
+            <small>Key Result</small>
+            <span style="color: var(--primary);">100% Boundary Precision</span>
+          </div>
+          <div class="case-meta-item">
+            <small>Tools</small>
+            <span>Jira, Postman, SQL, DevTools, Playwright</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <!-- Section 1: Project Overview -->
+      <section class="cs-section">
+        <div class="cs-section-header">
+          <span class="cs-section-number">01</span>
+          <h2 class="cs-section-title">Project Overview</h2>
+        </div>
+        <div class="cs-content-box">
+          <p>
+            <strong>Befer AI</strong> is an intelligent appointment booking and lead acceleration platform designed for field service businesses (HVAC contractors, plumbing professionals, solar installers). The system features embeddable cross-origin booking widgets, real-time calendar slot locking, geospatial distance filtering, and automated outbound telephony dialers.
+          </p>
+          <p>
+            My role involved authoring end-to-end test specifications, validating geospatial boundary conditions, stress-testing iframe postMessage communications across mobile browsers, and certifying dialer state transitions.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 2: The Challenge -->
+      <section class="cs-section">
+        <div class="cs-section-header">
+          <span class="cs-section-number">02</span>
+          <h2 class="cs-section-title">The Challenge</h2>
+        </div>
+        <div class="cs-content-box">
+          <p>
+            Service businesses incur severe financial loss if technicians are dispatched outside their contracted territory. Testing revealed that floating-point mathematical rounding in geospatial queries permitted appointments at 25.04km when the hard threshold was 25.0km.
+          </p>
+          <p>
+            Additionally, on iOS Safari, cross-origin iframes suppressed ResizeObserver events, causing the embed container to clip at a fixed 320px height and hiding the confirmation CTA button.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 3: Test Strategy & Plan -->
+      <section class="cs-section">
+        <div class="cs-section-header">
+          <span class="cs-section-number">03</span>
+          <h2 class="cs-section-title">Test Strategy &amp; Plan</h2>
+        </div>
+        <div class="cs-content-box">
+          <p>
+            I engineered a multi-tiered test strategy combining black-box boundary testing and API schema validation:
+          </p>
+          <ul style="padding-left: 20px; color: var(--text-secondary); line-height: 1.7; display: flex; flex-direction: column; gap: 8px;">
+            <li><strong>Boundary Value Analysis (BVA):</strong> Systematically evaluated test points at 24.9km (valid), 25.0km (exact threshold), and 25.1km (invalid out-of-zone) to eliminate rounding errors.</li>
+            <li><strong>Cross-Origin Iframe Testing:</strong> Simulated multiple parent host containers with varied Content Security Policies (CSP) and mobile viewports.</li>
+            <li><strong>Concurrency &amp; Race Conditions:</strong> Simulated simultaneous attempts to book the same appointment slot to verify ACID database row locking.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Section 4: Execution & Artifacts -->
+      <section class="cs-section">
+        <div class="cs-section-header">
+          <span class="cs-section-number">04</span>
+          <h2 class="cs-section-title">Execution &amp; Artifacts</h2>
+        </div>
+        <div class="cs-content-box">
+          <p>
+            Designed <strong>95+ test cases</strong> in Jira and executed exploratory sweeps across iOS Safari, Android Chrome, and desktop viewports.
+          </p>
+
+          <!-- Bug Card: BUG-BFR-104 -->
+          <div class="bug-ticket-card" style="margin-top: 20px;">
+            <div class="bug-ticket-header">
+              <div>
+                <span class="bug-id-tag">BUG-BFR-104</span>
+                <h3 class="bug-title">Iframe modal clipped at fixed 320px on mobile Safari, hiding confirmation CTA</h3>
+              </div>
+              <div class="bug-meta-pills">
+                <span class="badge-pill crit">Severity: High</span>
+                <span class="badge-pill high">Priority: P2</span>
+                <span class="badge-pill pass">Status: Verified &amp; Closed</span>
+              </div>
+            </div>
+
+            <div class="bug-steps-box">
+              <strong style="display: block; font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); margin-bottom: 6px;">Steps to Reproduce</strong>
+              <ol>
+                <li>Open client contractor website containing Befer embed on an iPhone 14 running Safari.</li>
+                <li>Select service category and pick an available date.</li>
+                <li>Tap 2:00 PM time slot to trigger confirmation view.</li>
+                <li>Observe container height.</li>
+              </ol>
+            </div>
+
+            <div class="bug-details-grid">
+              <div class="bug-field">
+                <strong>Expected Result</strong>
+                <p>Parent window dynamically expands iframe height via postMessage so Confirm button is visible.</p>
+              </div>
+              <div class="bug-field">
+                <strong>Actual Result</strong>
+                <p>Container clipped at 320px; confirmation button inaccessible below the viewport fold.</p>
+              </div>
+            </div>
+
+            <div class="bug-impact-banner">
+              <strong>Business Impact:</strong> 100% conversion drop-off for mobile iOS users attempting to complete bookings. Fixed via cross-origin window messaging listener.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: Automation (Playwright) -->
+      <section class="cs-section">
+        <div class="cs-section-header">
+          <span class="cs-section-number">05</span>
+          <h2 class="cs-section-title">Automation &amp; Playwright Suite</h2>
+        </div>
+        <div class="cs-content-box">
+          <p>
+            Automating iframe interactions requires specialized frame locators. I authored robust Playwright suites simulating parent-to-frame interactions:
+          </p>
+
+          <div class="code-window">
+            <div class="code-window-bar">
+              <div class="code-window-dots">
+                <span></span><span></span><span></span>
+              </div>
+              <span class="mono">tests/e2e/befer-booking-iframe.spec.js</span>
+            </div>
+            <pre><code>const { test, expect } = require('@playwright/test');
+
+test.describe('Befer AI — Iframe Booking &amp; Slot Locking', () => {
+  test('should lock slot and expand container on appointment submission', async ({ page }) => {
+    await page.goto('/contractor-demo-embed');
+
+    // Locate cross-domain iframe
+    const bookingFrame = page.frameLocator('#befer-booking-frame');
+
+    // Select service and input boundary address
+    await bookingFrame.getByRole('combobox', { name: /service/i }).selectOption('HVAC Inspection');
+    await bookingFrame.getByPlaceholder('Service Address').fill('Lahore Cantt 24.9km');
+    await bookingFrame.getByRole('button', { name: /check availability/i }).click();
+
+    // Pick 10:00 AM slot
+    await bookingFrame.getByRole('button', { name: '10:00 AM' }).click();
+
+    // Verify slot lock and confirmation button visibility
+    const confirmBtn = bookingFrame.getByRole('button', { name: /confirm appointment/i });
+    await expect(confirmBtn).toBeVisible();
+    await confirmBtn.click();
+
+    // Assert booking reservation confirmation
+    await expect(bookingFrame.getByText('Appointment Confirmed')).toBeVisible();
+  });
+});</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6: Results & Impact -->
+      <section class="cs-section">
+        <div class="cs-section-header">
+          <span class="cs-section-number">06</span>
+          <h2 class="cs-section-title">Results &amp; Impact</h2>
+        </div>
+        <div class="cs-content-box">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+            <div style="background: var(--surface-raised); padding: 20px; border-radius: 10px; text-align: center;">
+              <span class="mono" style="font-size: 2rem; font-weight: 800; color: var(--primary);">21</span>
+              <span style="display: block; font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;">Total Defects Logged</span>
+              <small style="color: var(--text-secondary); font-size: 0.75rem;">3 Critical, 9 High, 7 Medium, 2 Low</small>
+            </div>
+            <div style="background: var(--surface-raised); padding: 20px; border-radius: 10px; text-align: center;">
+              <span class="mono" style="font-size: 2rem; font-weight: 800; color: var(--accent);">80%</span>
+              <span style="display: block; font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;">Cycle Acceleration</span>
+              <small style="color: var(--text-secondary); font-size: 0.75rem;">Cut verification from 8 hrs to 1.5 hrs</small>
+            </div>
+            <div style="background: var(--surface-raised); padding: 20px; border-radius: 10px; text-align: center;">
+              <span class="mono" style="font-size: 2rem; font-weight: 800; color: var(--fail);">0</span>
+              <span style="display: block; font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;">Out-of-Area Dispatches</span>
+              <small style="color: var(--text-secondary); font-size: 0.75rem;">Zero client service complaints</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 7: Key Learnings -->
+      <section class="cs-section">
+        <div class="cs-section-header">
+          <span class="cs-section-number">07</span>
+          <h2 class="cs-section-title">Key Learnings &amp; Reflections</h2>
+        </div>
+        <div class="cs-content-box">
+          <p>
+            Formal test design techniques like Boundary Value Analysis are not merely theoretical textbook exercises; they are the most effective way to detect subtle numerical errors in database queries and mathematical distance algorithms.
+          </p>
+          <p>
+            Furthermore, cross-origin security sandboxes in mobile Safari behave differently than desktop Chromium. Responsive testing must always incorporate physical device passes.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 8: Links & References -->
+      <section class="cs-section">
+        <div class="cs-section-header">
+          <span class="cs-section-number">08</span>
+          <h2 class="cs-section-title">Links &amp; Artifacts</h2>
+        </div>
+        <div class="cs-content-box" style="display: flex; gap: 14px; flex-wrap: wrap;">
+          <a href="../qa-artifacts.html" class="btn btn-primary btn-sm">Inspect Full QA Artifacts</a>
+          <a href="https://github.com/Arslan5103" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">GitHub Repository ↗</a>
+          <a href="../projects.html" class="btn btn-secondary btn-sm">← All Projects</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Shared Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-monogram"><span class="mono">MA</span></div>
+          <div>
+            <div class="brand-name">Muhammad Arslan</div>
+            <div class="brand-role mono">ASSOCIATE SQA ENGINEER • LAHORE, PAKISTAN</div>
+          </div>
+        </div>
+        <div class="footer-links">
+          <a href="../index.html">Home</a>
+          <a href="../about.html">About</a>
+          <a href="../experience.html">Experience</a>
+          <a href="../projects.html">Projects</a>
+          <a href="../skills.html">Skills</a>
+          <a href="../qa-artifacts.html">QA Artifacts</a>
+          <a href="../certifications.html">Certifications</a>
+          <a href="../contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Muhammad Arslan. Engineered for zero defects and high availability.</p>
+        <div class="footer-status-pill mono">
+          <span class="status-dot"></span>
+          <span>SYSTEM STATUS: ALL TEST SUITES PASSING</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
+

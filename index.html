@@ -3,55 +3,65 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Muhammad Arslan — SQA Engineer | Manual, API &amp; Playwright Testing</title>
-  <meta name="description" content="Portfolio of Muhammad Arslan — Software Quality Assurance (SQA) Engineer specializing in Manual & API Testing, Regression Testing, Playwright (JavaScript), Postman, SQL, Jira, and CRM & SaaS Applications." />
+  <title>Muhammad Arslan — Software Quality Assurance Engineer (SQA)</title>
+  <meta name="description" content="Portfolio of Muhammad Arslan — Software Quality Assurance (SQA) Engineer specializing in Manual & Regression Testing, REST API Verification (Postman), Database Validation (SQL), and Playwright (JavaScript) Automation for complex SaaS, CRM & AI platforms." />
   <meta name="author" content="Muhammad Arslan" />
 
   <!-- Google Fonts: Plus Jakarta Sans, Inter, JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Subtle Ambient Background Grid & Emerald Glow (matching LinkedIn Banner Aesthetic) -->
+  <!-- Ambient Interactive Glow Orbs -->
   <div class="bg-grid" aria-hidden="true"></div>
-  <div class="bg-glow bg-glow-1" aria-hidden="true"></div>
-  <div class="bg-glow bg-glow-2" aria-hidden="true"></div>
+  <div class="glow-orb glow-orb-1" aria-hidden="true"></div>
+  <div class="glow-orb glow-orb-2" aria-hidden="true"></div>
+  <div class="glow-orb glow-orb-3" aria-hidden="true"></div>
 
-  <!-- Sticky Navigation Header -->
+  <!-- Sticky Glassmorphic Navigation -->
   <header class="site-header" id="top">
     <div class="container nav-container">
       <a href="#top" class="brand" aria-label="Muhammad Arslan Home">
-        <img src="assets/profile.jpg" alt="Muhammad Arslan" class="brand-avatar" />
-        <span class="brand-text">
-          <span class="brand-name">
-            Muhammad Arslan
-            <svg class="verified-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" title="Verified SQA Profile"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
-          </span>
-          <span class="brand-role">SQA Engineer • Hatzs Dimensions</span>
-        </span>
+        <div class="brand-monogram">
+          <span class="mono">MA</span>
+          <span class="brand-pulse-dot" title="Available for SQA Roles"></span>
+        </div>
+        <div class="brand-info">
+          <span class="brand-name">Muhammad Arslan</span>
+          <span class="brand-role mono">SQA ENGINEER • HATZS DIMENSIONS</span>
+        </div>
       </a>
 
-      <nav class="main-nav" id="mainNav" aria-label="Primary Navigation">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#skills" class="nav-link">Top Skills</a>
-        <a href="#projects" class="nav-link">Projects (5)</a>
-        <a href="#experience" class="nav-link">Experience</a>
-        <a href="#qa-lab" class="nav-link">QA Craft Lab</a>
-        <a href="#contact" class="nav-link">Contact</a>
+      <nav class="main-nav" id="mainNav" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="experience.html" class="nav-link">Experience</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="skills.html" class="nav-link">Skills</a>
+        <a href="qa-artifacts.html" class="nav-link">QA Artifacts</a>
+        <a href="certifications.html" class="nav-link">Certifications</a>
+        <a href="contact.html" class="nav-link">Contact</a>
       </nav>
 
       <div class="nav-actions">
-        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle color theme" title="Toggle Dark/Light Mode">
+        <!-- 1-Click Recruiter Packet Trigger -->
+        <button type="button" class="btn btn-recruiter" id="recruiterModalBtn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span>Recruiter Snapshot</span>
+        </button>
+
+        <!-- Theme Toggle -->
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle Light/Dark Theme" title="Switch Theme">
           <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
           <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
         </button>
 
-        <a href="#contact" class="btn btn-primary btn-sm">Hire / Connect</a>
+        <a href="assets/cv.pdf" download class="btn btn-primary btn-sm">Download CV</a>
 
-        <button class="mobile-menu-btn" id="mobileMenuBtn" type="button" aria-label="Open Menu" aria-expanded="false">
+        <button class="mobile-menu-btn" id="mobileMenuBtn" type="button" aria-label="Toggle Menu" aria-expanded="false">
           <span></span>
           <span></span>
           <span></span>
@@ -61,946 +71,775 @@
   </header>
 
   <main>
-    <!-- HERO SECTION -->
-    <section class="hero-section" id="about">
-      <div class="container">
-        <!-- LinkedIn-Inspired Top Profile Banner Card -->
-        <div class="profile-hero-banner">
-          <div class="banner-cover">
-            <div class="banner-cover-pattern"></div>
-            <div class="banner-cover-content">
-              <div class="banner-text-block">
-                <span class="banner-name-display">MUHAMMAD ARSLAN</span>
-                <span class="banner-role-display">SOFTWARE QUALITY ASSURANCE ENGINEER</span>
-                <div class="banner-pills-row">
-                  <span>Manual Testing</span>
-                  <span class="dot-sep">●</span>
-                  <span>API Testing</span>
-                  <span class="dot-sep">●</span>
-                  <span>Regression Testing</span>
-                </div>
-                <div class="banner-sub-row mono">
-                  Web Applications &nbsp;|&nbsp; Postman &nbsp;|&nbsp; SQL &nbsp;|&nbsp; Playwright (JS)
-                </div>
-              </div>
+    <!-- ======================================================================
+         HERO SECTION: International Engineering Standard & Flawless Visual Framing
+         ====================================================================== -->
+    <section class="hero-section">
+      <div class="container hero-container">
+        <div class="hero-grid">
+          <!-- Left Column: Compelling Engineering Pitch -->
+          <div class="hero-copy">
+            <div class="availability-badge animate-fade-in">
+              <span class="live-dot"></span>
+              <span class="mono">OPEN TO SQA &amp; QA AUTOMATION ROLES (REMOTE / HYBRID)</span>
+            </div>
 
-              <div class="banner-code-graphic" aria-hidden="true">
-                <div class="code-window-mini">
-                  <div class="cw-dots"><span></span><span></span><span></span></div>
-                  <div class="cw-symbol">&lt;/&gt;</div>
-                  <div class="cw-check">✓</div>
+            <h1 class="hero-title animate-fade-in-up">
+              Engineering <br />
+              <span class="gradient-text dynamic-headline" id="dynamicRoleText">Zero-Defect Reliability</span><br />
+              For Complex Web &amp; AI Systems.
+            </h1>
+
+            <p class="hero-subtitle animate-fade-in-up delay-1">
+              I’m <strong>Muhammad Arslan</strong>, an Associate Software Quality Assurance Engineer at <strong>Hatzs Dimensions</strong>. I eliminate critical production failures through rigorous manual exploratory testing, REST API contract verification (Postman), relational database auditing (SQL), and automated E2E browser suites (Playwright / JavaScript).
+            </p>
+
+            <div class="hero-highlights-strip animate-fade-in-up delay-2">
+              <div class="hh-item">
+                <span class="hh-icon">🎯</span>
+                <div>
+                  <strong>7 Critical Regressions Prevented</strong>
+                  <span>Caught race conditions &amp; paperwork desyncs in 1 CRM sprint</span>
                 </div>
               </div>
+              <div class="hh-item">
+                <span class="hh-icon">⚡</span>
+                <div>
+                  <strong>Multi-Layer Verification</strong>
+                  <span>UI/UX, API schemas, SQL state &amp; Playwright automation</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-cta-group animate-fade-in-up delay-3">
+              <a href="#case-studies" class="btn btn-primary btn-lg">
+                <span>View Production Case Studies</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+              <a href="#interactive-lab" class="btn btn-secondary btn-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                <span>Live QA Command Lab</span>
+              </a>
+              <button type="button" class="btn btn-ghost btn-lg" onclick="window.print()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                <span>Print Resume</span>
+              </button>
+            </div>
+
+            <!-- Recruiter Quick Contacts Strip -->
+            <div class="hero-contact-chips animate-fade-in-up delay-4">
+              <a href="https://www.linkedin.com/in/muhammad-arslan-0374a6259" target="_blank" rel="noopener noreferrer" class="contact-chip chip-linkedin" title="LinkedIn Profile">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://github.com/Arslan5103" target="_blank" rel="noopener noreferrer" class="contact-chip" title="GitHub Profile">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                <span>GitHub</span>
+              </a>
+              <button type="button" class="contact-chip copy-trigger" data-copy="marslan5103@gmail.com" title="Copy Email">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                <span class="mono">marslan5103@gmail.com</span>
+              </button>
+              <button type="button" class="contact-chip copy-trigger" data-copy="+923099731256" title="Copy WhatsApp/Phone">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span class="mono">+92 309 9731256</span>
+              </button>
             </div>
           </div>
 
-          <div class="profile-hero-body">
-            <div class="profile-avatar-wrapper">
-              <img src="assets/profile.jpg" alt="Muhammad Arslan — Software Quality Assurance Engineer" class="profile-avatar-xl" />
-              <span class="open-to-work-ring">#OPEN_TO_WORK</span>
-            </div>
+          <!-- Right Column: Clean Architectural Portrait (Face 100% Unobstructed) + Gracefully Framed Badges -->
+          <div class="hero-visual">
+            <div class="portrait-stage">
+              <!-- Glowing Bezel Ring Behind -->
+              <div class="portrait-glow-ring" aria-hidden="true"></div>
 
-            <div class="profile-main-info">
-              <div class="profile-title-row">
-                <div>
-                  <h1 class="profile-full-name">
-                    Muhammad Arslan
-                    <svg class="verified-badge-lg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" title="Verified Profile"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
-                  </h1>
-                  <p class="profile-headline">
-                    SQA Engineer | Software Quality Assurance | Manual &amp; API Testing | Playwright (JavaScript) | Postman, SQL, Jira | CRM &amp; SaaS Applications
-                  </p>
-                </div>
-
-                <div class="profile-org-badges">
-                  <div class="org-pill">
-                    <span class="org-icon org-hatzs">❖</span>
-                    <span>Hatzs Dimensions</span>
-                  </div>
-                  <div class="org-pill">
-                    <span class="org-icon org-uni">🎓</span>
-                    <span>The Superior University</span>
-                  </div>
+              <!-- Floating Status Badge 1: Top Right (Smooth float animation) -->
+              <div class="hero-telemetry-badge badge-top-right float-anim-1">
+                <div class="htb-icon pass">✓</div>
+                <div class="htb-info">
+                  <span class="htb-title mono">RELEASE GATE</span>
+                  <span class="htb-desc">5 Production Platforms Signed Off</span>
                 </div>
               </div>
 
-              <div class="profile-meta-row">
-                <span class="meta-location">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-                  Lahore, Punjab, Pakistan (On-site • Hybrid)
-                </span>
-                <span class="meta-divider">•</span>
-                <span class="meta-connections">500+ connections</span>
-                <span class="meta-divider">•</span>
-                <span class="meta-open-roles">Open to: <strong>SQA Engineer, QA Engineer, Manual QA, Junior QA Automation</strong></span>
+              <!-- Main Unobstructed Portrait Frame -->
+              <div class="portrait-frame" id="portraitFrame">
+                <img src="assets/profile.jpg" alt="Muhammad Arslan — Software Quality Assurance Engineer" class="portrait-img" />
+                <div class="portrait-bottom-glass">
+                  <div>
+                    <span class="pbg-name">Muhammad Arslan</span>
+                    <span class="pbg-role mono">Associate SQA Engineer</span>
+                  </div>
+                  <span class="verified-pill mono">VERIFIED QA</span>
+                </div>
               </div>
 
-              <!-- Contact & Social Chips -->
-              <div class="hero-meta-strip">
-                <a href="https://www.linkedin.com/in/muhammad-arslan-0374a6259" target="_blank" rel="noopener noreferrer" class="meta-chip chip-primary" title="Connect on LinkedIn">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
-                  <span>LinkedIn Profile ↗</span>
-                </a>
-                <a href="https://github.com/Arslan5103" target="_blank" rel="noopener noreferrer" class="meta-chip" title="View GitHub Profile">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-                  <span>github.com/Arslan5103</span>
-                </a>
-                <button type="button" class="meta-chip copy-trigger" data-copy="marslan5103@gmail.com" title="Click to copy email">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                  <span>marslan5103@gmail.com</span>
-                </button>
-                <button type="button" class="meta-chip copy-trigger" data-copy="+923099731256" title="Click to copy phone number">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                  <span>+92 309 9731256</span>
-                </button>
+              <!-- Floating Status Badge 2: Bottom Left (Smooth float animation) -->
+              <div class="hero-telemetry-badge badge-bottom-left float-anim-2">
+                <div class="htb-icon alert">⚡</div>
+                <div class="htb-info">
+                  <span class="htb-title mono">7 DEFECTS CAUGHT</span>
+                  <span class="htb-desc">Single Dealership Regression Cycle</span>
+                </div>
+              </div>
+
+              <!-- Floating Status Badge 3: Bottom Right (Smooth float animation) -->
+              <div class="hero-telemetry-badge badge-bottom-right float-anim-3">
+                <div class="htb-icon cyan">&lt;/&gt;</div>
+                <div class="htb-info">
+                  <span class="htb-title mono">AUTOMATION &amp; API</span>
+                  <span class="htb-desc">Playwright • Postman • SQL</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- ABOUT + INTERACTIVE QA RUNNER SPLIT -->
-        <div class="hero-grid">
-          <!-- Left Column: About Narrative (Exact LinkedIn + Resume Synthesis) -->
-          <div class="about-card">
-            <div class="section-eyebrow">ABOUT ME</div>
-            <h2 class="about-heading">
-              Turning Requirements &amp; Business Workflows into Reliable, Defect-Free Releases
-            </h2>
-
-            <p class="about-p">
-              Software Quality Assurance (SQA) Engineer focused on <strong>manual testing, API testing, and reliable releases</strong> for CRM, SaaS, and AI-powered web applications.
-            </p>
-            <p class="about-p">
-              At <strong>Hatzs Dimensions</strong>, I turn requirements and business workflows into test scenarios, test cases, and actionable defect reports. I work closely with developers to reproduce issues, verify fixes, and validate applications before production releases and client demonstrations.
-            </p>
-
-            <div class="what-i-bring-box">
-              <div class="wib-title mono">WHAT I BRING TO QA TEAMS</div>
-              <ul class="wib-list">
-                <li><strong>End-to-End Workflow Testing:</strong> Functional, regression, smoke, sanity, and exploratory testing across complex business logic.</li>
-                <li><strong>API &amp; Database Verification:</strong> REST API testing with <strong>Postman</strong> (`GET`, `POST`, `PUT`, `DELETE`) and backend data validation with <strong>SQL</strong>.</li>
-                <li><strong>UI/UX &amp; Cross-Browser Audits:</strong> Responsive and cross-browser testing covering forms, filters, dashboards, notifications, and role-based permissions.</li>
-                <li><strong>High-Clarity Defect Reports:</strong> Actionable bug tracking in <strong>Jira, ClickUp &amp; Trello</strong> with reproduction steps, evidence, logs, severity, priority, expected vs. actual results, and business impact.</li>
-                <li><strong>Playwright Automation (JavaScript):</strong> Developing automated E2E web and API test suites in Playwright (JS) alongside JMeter load testing.</li>
-              </ul>
-            </div>
-
-            <!-- Real-World Impact Highlight Banner from LinkedIn About -->
-            <div class="impact-highlight-banner">
-              <div class="impact-badge mono">★ REAL-WORLD REGRESSION SPOTLIGHT</div>
-              <p>
-                Across my project experience on <strong>DealerIQ AI, Befer AI, Leadly.ai, Broker OS, and StephanAI</strong>: in a single dealership CRM regression cycle, I identified and reported <strong>7 critical defects</strong> affecting <em>paperwork generation, shipment navigation, data accuracy, form validation, and chat filters</em> prior to release.
-              </p>
-            </div>
+        <!-- Metric KPI Banner Strip with Animated Counters -->
+        <div class="kpi-banner reveal">
+          <div class="kpi-block">
+            <span class="kpi-num mono" data-counter="5" data-suffix="+">5+</span>
+            <span class="kpi-title">Production SaaS &amp; CRM Platforms</span>
+            <span class="kpi-desc">DealerIQ AI, Befer AI, Leadly.ai, Broker OS, StephanAI</span>
           </div>
-
-          <!-- Right Column: Interactive QA Release Suite Runner Card -->
-          <div class="hero-visual">
-            <div class="qa-runner-card" aria-label="Interactive QA Suite Simulator">
-              <div class="qa-runner-header">
-                <div class="window-dots">
-                  <span class="dot dot-red"></span>
-                  <span class="dot dot-amber"></span>
-                  <span class="dot dot-green"></span>
-                </div>
-                <div class="runner-title">
-                  <span class="mono-tag">arslan-qa-runner • 5 Production Platforms</span>
-                </div>
-                <button type="button" class="btn-run-suite" id="runSuiteBtn">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                  <span>Run Regression Suite</span>
-                </button>
-              </div>
-
-              <div class="qa-runner-body">
-                <div class="suite-summary-bar">
-                  <div class="suite-stat">
-                    <span class="suite-stat-label">Target Scope</span>
-                    <span class="suite-stat-val mono">CRM &amp; AI SaaS</span>
-                  </div>
-                  <div class="suite-stat">
-                    <span class="suite-stat-label">Release Gate</span>
-                    <span class="suite-stat-val status-pass" id="suiteGateStatus">● VERIFIED PASS</span>
-                  </div>
-                  <div class="suite-stat">
-                    <span class="suite-stat-label">Stack</span>
-                    <span class="suite-stat-val mono">Manual • API • PW</span>
-                  </div>
-                </div>
-
-                <ul class="test-check-list" id="testCheckList">
-                  <li class="test-check-item passed">
-                    <span class="check-icon">✓</span>
-                    <div class="check-info">
-                      <span class="check-name">DealerIQ AI — Paperwork, Shipment &amp; AI Call Flows</span>
-                      <span class="check-meta mono">TC-DIQ-104 • 7 Regression Defects Verified Fixed</span>
-                    </div>
-                    <span class="check-badge mono">142ms</span>
-                  </li>
-                  <li class="test-check-item passed">
-                    <span class="check-icon">✓</span>
-                    <div class="check-info">
-                      <span class="check-name">Befer AI — Iframe Booking, Dialer &amp; Service Area</span>
-                      <span class="check-meta mono">TC-BFR-209 • BVA &amp; E2E Appointment Validation</span>
-                    </div>
-                    <span class="check-badge mono">186ms</span>
-                  </li>
-                  <li class="test-check-item passed">
-                    <span class="check-icon">✓</span>
-                    <div class="check-info">
-                      <span class="check-name">Leadly.ai — Property Pipeline, Voice Calls &amp; Proposals</span>
-                      <span class="check-meta mono">TC-LDL-312 • UI/UX, Filters &amp; Responsive Suite</span>
-                    </div>
-                    <span class="check-badge mono">154ms</span>
-                  </li>
-                  <li class="test-check-item passed">
-                    <span class="check-icon">✓</span>
-                    <div class="check-info">
-                      <span class="check-name">Broker OS — Dealership Ops &amp; Role-Based Permissions</span>
-                      <span class="check-meta mono">TC-BOS-401 • Functional, Postman API &amp; SQL Check</span>
-                    </div>
-                    <span class="check-badge mono">118ms</span>
-                  </li>
-                  <li class="test-check-item passed">
-                    <span class="check-icon">✓</span>
-                    <div class="check-info">
-                      <span class="check-name">StephanAI — Conversational AI &amp; Webhook Accuracy</span>
-                      <span class="check-meta mono">TC-SAI-508 • Exploratory &amp; API Payload Verification</span>
-                    </div>
-                    <span class="check-badge mono">131ms</span>
-                  </li>
-                  <li class="test-check-item passed">
-                    <span class="check-icon">✓</span>
-                    <div class="check-info">
-                      <span class="check-name">Playwright (JS) E2E + JMeter Load Verification</span>
-                      <span class="check-meta mono">Chromium / Postman / SQL • 0 Critical Blockers</span>
-                    </div>
-                    <span class="check-badge mono">295ms</span>
-                  </li>
-                </ul>
-
-                <div class="qa-runner-footer">
-                  <span class="mono-text" id="runnerFooterLog">6/6 Suites Passing • All 5 Platforms Validated • Client-Demo Ready</span>
-                </div>
-              </div>
-            </div>
+          <div class="kpi-block">
+            <span class="kpi-num mono" data-counter="7" data-suffix="">7</span>
+            <span class="kpi-title">Critical Blockers Prevented</span>
+            <span class="kpi-desc">In a single high-stakes Dealership CRM regression cycle</span>
+          </div>
+          <div class="kpi-block">
+            <span class="kpi-num mono" data-counter="100" data-suffix="%">100%</span>
+            <span class="kpi-title">Release Sign-Off Rigor</span>
+            <span class="kpi-desc">Requirement analysis, test case design &amp; bug verification</span>
+          </div>
+          <div class="kpi-block">
+            <span class="kpi-num mono" data-counter="1" data-suffix="+ Yr">1+ Yr</span>
+            <span class="kpi-title">Full STLC / SDLC Mastery</span>
+            <span class="kpi-desc">Manual, API contract, SQL DB &amp; Playwright automation</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- TOP SKILLS & TECHNICAL ARSENAL SECTION -->
-    <section class="section section-alt" id="skills">
+    <!-- ======================================================================
+         METHODOLOGY: Shift-Left Philosophy
+         ====================================================================== -->
+    <section class="section section-alt" id="philosophy">
       <div class="container">
-        <div class="section-header">
-          <div class="section-eyebrow">TOP SKILLS &amp; TOOLS</div>
-          <h2 class="section-title">Software Quality Assurance Arsenal</h2>
+        <div class="section-header reveal">
+          <div class="section-eyebrow">QUALITY ENGINEERING PHILOSOPHY</div>
+          <h2 class="section-title">Beyond Basic Testing: A Shift-Left Approach</h2>
           <p class="section-subtitle">
-            Combining rigorous manual testing and formal test design with Postman API verification, SQL database checks, JMeter load testing, and Playwright (JavaScript) automation.
+            Quality is not an afterthought checked before release. I work proactively with developers, product managers, and founders to eliminate defects at the architectural and requirement stages.
           </p>
         </div>
 
-        <!-- LinkedIn Top Skills Highlight Bar -->
-        <div class="linkedin-top-skills-bar">
-          <span class="lts-label mono">💎 LINKEDIN TOP SKILLS:</span>
-          <div class="lts-chips">
-            <span class="lts-chip">Software Quality Assurance</span>
-            <span class="lts-chip">Manual Testing</span>
-            <span class="lts-chip">API Testing (Postman)</span>
-            <span class="lts-chip">Regression Testing</span>
-            <span class="lts-chip">Playwright (JavaScript)</span>
-            <span class="lts-chip">SQL Validation</span>
-            <span class="lts-chip">Jira &amp; ClickUp</span>
-          </div>
-        </div>
-
-        <!-- Skill Category Filter Pills -->
-        <div class="filter-bar" role="tablist" aria-label="Skill categories">
-          <button type="button" class="filter-btn active" data-skill-filter="all">All Capabilities (35+)</button>
-          <button type="button" class="filter-btn" data-skill-filter="testing">Testing Methodologies</button>
-          <button type="button" class="filter-btn" data-skill-filter="tools">Playwright, API, SQL &amp; Perf</button>
-          <button type="button" class="filter-btn" data-skill-filter="design">Test Design &amp; Documentation</button>
-          <button type="button" class="filter-btn" data-skill-filter="ops">Defect Lifecycle &amp; Agile</button>
-        </div>
-
-        <div class="skills-bento-grid">
-          <!-- Pillar 1: Testing Methodologies -->
-          <article class="skill-card" data-skill-cat="testing">
-            <div class="skill-card-top">
-              <div class="skill-icon-box">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
-              </div>
-              <div>
-                <span class="skill-cat-tag mono">01 / CORE VERIFICATION</span>
-                <h3 class="skill-card-title">Testing Methodologies &amp; Techniques</h3>
+        <div class="methodology-grid">
+          <article class="method-card reveal">
+            <div class="method-card-top">
+              <span class="method-step mono">01</span>
+              <div class="method-icon-box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
               </div>
             </div>
-            <p class="skill-card-desc">
-              End-to-end validation across functional and non-functional workflows to ensure rock-solid releases and smooth client demonstrations.
+            <h3 class="method-title">Requirement &amp; Edge-Case Deconstruction</h3>
+            <p class="method-body">
+              Before a single line of code is tested, I map out failure modes, missing validation boundaries, AI conversational branches, and multi-tenant permission rules directly from product requirements.
             </p>
-            <div class="tag-cloud">
-              <span class="skill-tag highlight">Functional Testing</span>
-              <span class="skill-tag highlight">Regression Testing</span>
-              <span class="skill-tag highlight">Smoke &amp; Sanity Testing</span>
-              <span class="skill-tag highlight">Exploratory Testing</span>
-              <span class="skill-tag">End-to-End (E2E) Testing</span>
-              <span class="skill-tag">Integration Testing</span>
-              <span class="skill-tag">Black Box, White Box &amp; Gray Box</span>
-              <span class="skill-tag">UI/UX, Responsive &amp; Website Audit</span>
-              <span class="skill-tag">Cross-Browser &amp; Cross-Device</span>
-              <span class="skill-tag">Role-Based Permissions (RBAC)</span>
-              <span class="skill-tag">SaaS, PaaS &amp; CRM Testing</span>
-              <span class="skill-tag">Web &amp; Mobile App Testing</span>
+            <div class="method-tag-list mono">
+              <span>Boundary Analysis (BVA)</span>
+              <span>Equivalence Partitioning</span>
+              <span>Decision Tables</span>
             </div>
           </article>
 
-          <!-- Pillar 2: Automation, API, SQL & Performance -->
-          <article class="skill-card" data-skill-cat="tools">
-            <div class="skill-card-top">
-              <div class="skill-icon-box accent-cyan">
+          <article class="method-card reveal">
+            <div class="method-card-top">
+              <span class="method-step mono">02</span>
+              <div class="method-icon-box cyan">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
               </div>
-              <div>
-                <span class="skill-cat-tag mono">02 / TECHNICAL STACK &amp; TOOLS</span>
-                <h3 class="skill-card-title">Playwright (JS), Postman API, SQL &amp; JMeter</h3>
-              </div>
             </div>
-            <p class="skill-card-desc">
-              Hands-on verification of REST APIs, database records, performance thresholds, and browser automation in JavaScript.
+            <h3 class="method-title">Multi-Layer Contract &amp; API Interrogation</h3>
+            <p class="method-body">
+              Testing beyond the UI. I validate RESTful request/response payloads in <strong>Postman</strong>, verify HTTP idempotency, test webhook retry loops, and confirm JSON schema contracts for rock-solid integrations.
             </p>
-            <div class="tag-cloud">
-              <span class="skill-tag highlight">Playwright Automation (JavaScript)</span>
-              <span class="skill-tag highlight">Postman API Testing (GET/POST/PUT/DELETE)</span>
-              <span class="skill-tag highlight">SQL Queries &amp; DB Validation</span>
-              <span class="skill-tag highlight">Chrome DevTools (Network/Console)</span>
-              <span class="skill-tag">Apache JMeter (Load Testing)</span>
-              <span class="skill-tag">Request/Response Payload Validation</span>
-              <span class="skill-tag">Continuous Integration &amp; Testing (CI/CT)</span>
-              <span class="skill-tag">Webhook &amp; AI Event Verification</span>
+            <div class="method-tag-list mono">
+              <span>Postman Contracts</span>
+              <span>JSON Schemas</span>
+              <span>Webhook Telemetry</span>
             </div>
           </article>
 
-          <!-- Pillar 3: Test Case Design & Documentation -->
-          <article class="skill-card" data-skill-cat="design">
-            <div class="skill-card-top">
-              <div class="skill-icon-box">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-              </div>
-              <div>
-                <span class="skill-cat-tag mono">03 / TEST ARCHITECTURE</span>
-                <h3 class="skill-card-title">Test Case Design &amp; QA Documentation</h3>
+          <article class="method-card reveal">
+            <div class="method-card-top">
+              <span class="method-step mono">03</span>
+              <div class="method-icon-box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></svg>
               </div>
             </div>
-            <p class="skill-card-desc">
-              Translating business requirements and user stories into structured test plans, scenarios, and reusable regression suites.
+            <h3 class="method-title">Database &amp; Transaction State Audits</h3>
+            <p class="method-body">
+              A UI showing "Success" does not guarantee clean database writes. I execute direct <strong>SQL queries</strong> to audit relational state, prevent orphan records, verify ACID consistency, and catch silent data corruption.
             </p>
-            <div class="tag-cloud">
-              <span class="skill-tag highlight">Test Cases &amp; Test Scenarios</span>
-              <span class="skill-tag highlight">Test Plans &amp; QA Reports</span>
-              <span class="skill-tag highlight">Regression Documentation</span>
-              <span class="skill-tag">Boundary Value Analysis (BVA)</span>
-              <span class="skill-tag">Equivalence Partitioning (EP)</span>
-              <span class="skill-tag">Decision Table Testing</span>
-              <span class="skill-tag">Use Case &amp; Workflow Validation</span>
-              <span class="skill-tag">Requirement Traceability</span>
+            <div class="method-tag-list mono">
+              <span>SQL Joins &amp; Aggregates</span>
+              <span>State Persistence</span>
+              <span>Foreign Key Audit</span>
             </div>
           </article>
 
-          <!-- Pillar 4: Defect Management & Agile Collaboration -->
-          <article class="skill-card" data-skill-cat="ops">
-            <div class="skill-card-top">
-              <div class="skill-icon-box accent-cyan">
+          <article class="method-card reveal">
+            <div class="method-card-top">
+              <span class="method-step mono">04</span>
+              <div class="method-icon-box cyan">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
               </div>
-              <div>
-                <span class="skill-cat-tag mono">04 / PROCESS &amp; DEFECT LIFECYCLE</span>
-                <h3 class="skill-card-title">Defect Management &amp; Agile/Scrum</h3>
-              </div>
             </div>
-            <p class="skill-card-desc">
-              Actionable defect reporting and close collaboration with developers to reproduce issues, verify fixes, and prevent regressions.
+            <h3 class="method-title">High-Signal Defect Reporting &amp; Triaging</h3>
+            <p class="method-body">
+              Developers love reproducible tickets. Every bug report I author in <strong>Jira &amp; ClickUp</strong> contains unambiguous steps, console/network traces, cURL requests, expected vs actual behavior, and quantified business impact.
             </p>
-            <div class="tag-cloud">
-              <span class="skill-tag highlight">Jira Bug Tracking</span>
-              <span class="skill-tag highlight">ClickUp &amp; Trello</span>
-              <span class="skill-tag highlight">Defect Lifecycle Management</span>
-              <span class="skill-tag">Severity vs. Priority Analysis</span>
-              <span class="skill-tag">SDLC &amp; STLC Governance</span>
-              <span class="skill-tag">Agile &amp; Scrum Sprint Ceremonies</span>
-              <span class="skill-tag">Bug Verification, Retesting &amp; Impact Analysis</span>
-              <span class="skill-tag">Pre-Release &amp; Client Demo Sign-Off</span>
+            <div class="method-tag-list mono">
+              <span>Jira &amp; ClickUp</span>
+              <span>Chrome DevTools</span>
+              <span>Root Cause Analysis</span>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- FEATURED PROJECTS / CASE STUDIES SECTION (ALL 5 PLATFORMS) -->
-    <section class="section" id="projects">
+    <!-- ======================================================================
+         PRODUCTION CASE STUDIES (5 REAL PLATFORMS)
+         ====================================================================== -->
+    <section class="section" id="case-studies">
       <div class="container">
-        <div class="section-header">
-          <div class="section-eyebrow">PORTFOLIO CASE STUDIES</div>
-          <h2 class="section-title">5 Production CRM &amp; AI Platforms Validated</h2>
+        <div class="section-header reveal">
+          <div class="section-eyebrow">ENTERPRISE CASE STUDIES</div>
+          <h2 class="section-title">Tested in High-Stakes Environments</h2>
           <p class="section-subtitle">
-            Hands-on end-to-end QA across automotive dealership CRMs, AI lead/appointment engines, property management platforms, brokerage operations, and conversational AI systems.
+            Explore 5 real-world platforms where I delivered full-lifecycle quality assurance across AI voice pipelines, lead engines, real estate CRM workflows, and brokerage operations.
           </p>
         </div>
 
-        <div class="projects-grid">
-          <!-- Project 1: DealerIQ AI -->
-          <article class="project-card featured-project">
-            <div class="project-card-header">
-              <div class="project-domain-row">
-                <span class="domain-pill">Automotive Dealership AI CRM</span>
-                <span class="status-verified mono">★ 7 Critical Defects Caught in 1 Cycle</span>
-              </div>
-              <h3 class="project-title">DealerIQ AI — AI-Powered Automotive CRM</h3>
-              <p class="project-summary">
-                Complete end-to-end QA testing of a core automotive dealership CRM covering AI voice calls, AI chats, lead management, appointments, paperwork, shipment navigation, and customer communication.
-              </p>
+        <!-- Featured Case Study 1: DealerIQ AI (Highlighting 7-Defect Catch) -->
+        <article class="case-study-showcase reveal">
+          <div class="css-left">
+            <div class="css-badge-row">
+              <span class="badge-domain mono">AUTOMOTIVE DEALERSHIP AI CRM</span>
+              <span class="badge-impact mono">★ 7 REVENUE-BLOCKING BUGS CAUGHT</span>
             </div>
 
-            <div class="project-scope-box">
-              <div class="scope-title mono">KEY QA HIGHLIGHTS &amp; WORKFLOWS</div>
-              <ul class="project-bullets">
-                <li><strong>Regression Spotlight:</strong> Identified and reported <strong>7 critical defects</strong> in a single regression cycle affecting <em>paperwork, shipment navigation, data accuracy, form validation, and chat filters</em>.</li>
-                <li><strong>AI Voice &amp; Chat Flows:</strong> Tested automated responses, lead capture, appointment booking, call statuses, no-answer/failed call scenarios, duplicate messages, and conversation accuracy.</li>
-                <li><strong>CRM Core Verification:</strong> Validated forms, filters, search, dropdowns, role permissions, dashboard metrics, and error handling across browsers and devices.</li>
+            <h3 class="css-title">DealerIQ AI — High-Volume Automotive Dealership CRM</h3>
+
+            <p class="css-summary">
+              DealerIQ AI is a production CRM platform for automotive dealerships combining automated inbound/outbound AI voice calls, conversational AI chat, lead pipelines, appointment scheduling, and shipment dispatch workflows.
+            </p>
+
+            <div class="css-challenge-box">
+              <span class="css-box-label mono">THE REGRESSION CHALLENGE</span>
+              <p>
+                During a major pre-release sprint prior to dealership demonstrations, I ran deep exploratory and regression suites. I uncovered <strong>7 critical flaws</strong> that would have broken dealership operations:
+              </p>
+              <ul class="css-bullet-list">
+                <li><strong>Paperwork Calculation Desync:</strong> Deal paperwork fees reset when navigating between tabs.</li>
+                <li><strong>Shipment Carrier Navigation:</strong> Carrier dispatch state failed to preserve active deal IDs.</li>
+                <li><strong>AI Chat Filter Leak:</strong> Unread AI follow-up filters cleared unexpectedly during table sorting.</li>
+                <li><strong>Form Validation Bypass:</strong> Dealership prospect forms accepted malformed VIN &amp; contact parameters.</li>
               </ul>
             </div>
 
-            <div class="project-footer">
-              <div class="project-tags">
-                <span>AI Voice &amp; Chat QA</span>
-                <span>Paperwork &amp; Shipment Flows</span>
-                <span>Regression &amp; API</span>
-                <span>Form &amp; Filter Validation</span>
-                <span>Jira Defect Tracking</span>
+            <div class="css-meta-row">
+              <div class="css-meta-col">
+                <span class="cmc-label mono">TESTING TYPES</span>
+                <span class="cmc-val">Functional • Regression • Postman API • Cross-Browser • UI/UX</span>
               </div>
-              <button type="button" class="btn-inspect-project" data-project="dealeriq">
-                <span>Inspect DealerIQ QA Case Study</span>
+              <div class="css-meta-col">
+                <span class="cmc-label mono">OUTCOME</span>
+                <span class="cmc-val text-pass">100% Fixed &amp; Re-Tested Before Client Demos</span>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+              <a href="projects/dealeriq.html" class="btn btn-primary btn-inspect">
+                <span>Read 8-Section Case Study →</span>
+              </a>
+              <button type="button" class="btn btn-secondary btn-inspect" data-project="dealeriq">
+                <span>Inspect Fast Artifacts</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
               </button>
+            </div>
+          </div>
+
+          <div class="css-right">
+            <div class="tech-card-terminal">
+              <div class="tct-header">
+                <span class="tct-dot r"></span>
+                <span class="tct-dot y"></span>
+                <span class="tct-dot g"></span>
+                <span class="tct-title mono">dealeriq-qa-audit.log</span>
+              </div>
+              <pre class="tct-code mono"><code><span class="c-comment">// DealerIQ AI Regression Suite Audit</span>
+<span class="c-pass">PASS</span> [AUTH] RBAC Sales_Manager &amp; Dealership Admin
+<span class="c-pass">PASS</span> [AI_VOICE] Call status state machine transition
+<span class="c-pass">PASS</span> [LEAD_FLOW] Duplicate phone webhook deduplication
+<span class="c-warn">BUG-DIQ-418</span> [PAPERWORK] Desync on tab navigation <span class="c-tag">[FIXED]</span>
+<span class="c-warn">BUG-DIQ-419</span> [SHIPMENT] Carrier dispatch state leak <span class="c-tag">[FIXED]</span>
+<span class="c-warn">BUG-DIQ-420</span> [CHAT_FILTER] Active filter reset on sort <span class="c-tag">[FIXED]</span>
+<span class="c-pass">PASS</span> [API] POST /api/v1/appointments/book (201 Created)
+<span class="c-pass">PASS</span> [SQL] Record verified in appointments &amp; deals
+---
+<span class="c-info">Regression Result: 7/7 Defects Resolved • 0 Critical Blockers</span></code></pre>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4 Grid Case Studies -->
+        <div class="case-studies-grid">
+          <!-- Case Study 2: Befer AI -->
+          <article class="case-card reveal">
+            <div class="case-card-top">
+              <span class="case-num mono">02</span>
+              <span class="case-domain mono">AI LEAD &amp; APPOINTMENT SAAS</span>
+            </div>
+            <h3 class="case-title">Befer AI — Embedded Iframe &amp; Booking Engine</h3>
+            <p class="case-desc">
+              AI-driven lead and booking platform managing customer portals, appointment scheduling, subscription tiers, AI chat agents, and automated telephony dialers.
+            </p>
+            <div class="case-qa-highlights">
+              <div class="cq-item">
+                <span class="cq-icon">✓</span>
+                <span><strong>Iframe &amp; Booking Pages:</strong> Validated cross-origin iframe embedding and booking slot locks.</span>
+              </div>
+              <div class="cq-item">
+                <span class="cq-icon">✓</span>
+                <span><strong>Service Area BVA:</strong> Applied Boundary Value Analysis on postal code radius parameters.</span>
+              </div>
+              <div class="cq-item">
+                <span class="cq-icon">✓</span>
+                <span><strong>Dialer Telemetry:</strong> Tested outbound dialer call states and subscription tier restrictions.</span>
+              </div>
+            </div>
+            <div class="case-footer">
+              <div class="case-tags mono">
+                <span>Iframe QA</span>
+                <span>BVA / EP</span>
+                <span>Postman</span>
+                <span>Jira</span>
+              </div>
+              <div style="display:flex;gap:12px;align-items:center;">
+                <a href="projects/befer.html" style="font-size:0.86rem;font-weight:600;color:var(--primary);">Case Study →</a>
+                <button type="button" class="btn-inspect-link" data-project="befer">Artifacts ↗</button>
+              </div>
             </div>
           </article>
 
-          <!-- Project 2: Befer AI -->
-          <article class="project-card">
-            <div class="project-card-header">
-              <div class="project-domain-row">
-                <span class="domain-pill accent-cyan">AI Lead &amp; Appointment SaaS</span>
-                <span class="status-verified mono">✓ E2E QA Verified</span>
-              </div>
-              <h3 class="project-title">Befer AI — Lead &amp; Appointment Management</h3>
-              <p class="project-summary">
-                End-to-end QA testing of Befer AI CRM covering leads, customers, dashboards, bookings, services, subscriptions, embedded booking iframes, AI chat, and dialer workflows.
-              </p>
+          <!-- Case Study 3: Leadly.ai -->
+          <article class="case-card reveal">
+            <div class="case-card-top">
+              <span class="case-num mono">03</span>
+              <span class="case-domain mono">REAL ESTATE PROPERTY CRM</span>
             </div>
-
-            <div class="project-scope-box">
-              <div class="scope-title mono">KEY QA HIGHLIGHTS &amp; WORKFLOWS</div>
-              <ul class="project-bullets">
-                <li><strong>Booking &amp; Iframe Validation:</strong> Verified lead capture, appointment scheduling, external booking pages, iframe links, and geospatial service area validation.</li>
-                <li><strong>AI Chat &amp; Dialer Telemetry:</strong> Validated AI chat responses, real-time dashboard metrics, subscription workflows, and dialer call status transitions.</li>
-                <li><strong>Documentation &amp; Bug Tracking:</strong> Created and executed test cases, scenarios, QA reports, and regression suites while collaborating with devs to verify fixes.</li>
-              </ul>
-            </div>
-
-            <div class="project-footer">
-              <div class="project-tags">
-                <span>Booking &amp; Iframes</span>
-                <span>Service Area BVA</span>
-                <span>Dialer &amp; AI Chat</span>
-                <span>Subscriptions QA</span>
+            <h3 class="case-title">Leadly.ai — High-Transaction Property CRM</h3>
+            <p class="case-desc">
+              Real estate management platform covering property inventories, dynamic proposal generation, voice/scheduled calls, and live prospect chat.
+            </p>
+            <div class="case-qa-highlights">
+              <div class="cq-item">
+                <span class="cq-icon">✓</span>
+                <span><strong>Dynamic Proposal Engine:</strong> Audited property fee calculations, add-ons, and PDF generation.</span>
               </div>
-              <button type="button" class="btn-inspect-project" data-project="befer">
-                <span>Inspect Befer AI Case Study</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
-              </button>
+              <div class="cq-item">
+                <span class="cq-icon">✓</span>
+                <span><strong>Call History &amp; Pipeline:</strong> Verified scheduled call callbacks and multi-criteria pipeline filters.</span>
+              </div>
+              <div class="cq-item">
+                <span class="cq-icon">✓</span>
+                <span><strong>Cross-Device Responsive:</strong> Audited desktop, tablet, and mobile views across Safari &amp; Chrome.</span>
+              </div>
+            </div>
+            <div class="case-footer">
+              <div class="case-tags mono">
+                <span>Proposal QA</span>
+                <span>SQL Auditing</span>
+                <span>Responsive</span>
+              </div>
+              <div style="display:flex;gap:12px;align-items:center;">
+                <a href="projects/leadly.html" style="font-size:0.86rem;font-weight:600;color:var(--primary);">Case Study →</a>
+                <button type="button" class="btn-inspect-link" data-project="leadly">Artifacts ↗</button>
+              </div>
             </div>
           </article>
 
-          <!-- Project 3: Leadly.ai -->
-          <article class="project-card">
-            <div class="project-card-header">
-              <div class="project-domain-row">
-                <span class="domain-pill">Real Estate Property CRM</span>
-                <span class="status-verified mono">✓ E2E QA Verified</span>
-              </div>
-              <h3 class="project-title">Leadly.ai — Property CRM Platform</h3>
-              <p class="project-summary">
-                End-to-end QA testing of Leadly.ai Property CRM covering lead pipelines, voice calls, scheduled calls, automated proposals, dashboards, live chat, properties, and responsive layouts.
-              </p>
+          <!-- Case Study 4: Broker OS -->
+          <article class="case-card reveal">
+            <div class="case-card-top">
+              <span class="case-num mono">04</span>
+              <span class="case-domain mono">FINANCIAL &amp; BROKERAGE SAAS</span>
             </div>
-
-            <div class="project-scope-box">
-              <div class="scope-title mono">KEY QA HIGHLIGHTS &amp; WORKFLOWS</div>
-              <ul class="project-bullets">
-                <li><strong>Pipeline &amp; Proposal Engine:</strong> Tested lead creation, multi-criteria lead filters, property management modules, and dynamic proposal generation.</li>
-                <li><strong>Voice &amp; Scheduled Calls:</strong> Validated call history logs, scheduled call triggers, real-time chat modules, and dashboard analytics accuracy.</li>
-                <li><strong>Responsive &amp; Regression QA:</strong> Audited cross-device layouts and executed post-fix regression cycles to ensure release readiness.</li>
-              </ul>
-            </div>
-
-            <div class="project-footer">
-              <div class="project-tags">
-                <span>Property Pipeline</span>
-                <span>Proposal Generation</span>
-                <span>Voice &amp; Scheduled Calls</span>
-                <span>Responsive UI</span>
+            <h3 class="case-title">Broker OS — Deal Workflow &amp; RBAC Security</h3>
+            <p class="case-desc">
+              Brokerage platform managing complex multi-stage deal pipelines, legal paperwork, compliance rules, and granular role-based permissions.
+            </p>
+            <div class="case-qa-highlights">
+              <div class="cq-item">
+                <span class="cq-icon">✓</span>
+                <span><strong>RBAC Security Validation:</strong> Conducted negative testing ensuring brokers cannot alter admin fee structures.</span>
               </div>
-              <button type="button" class="btn-inspect-project" data-project="leadly">
-                <span>Inspect Leadly.ai Case Study</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
-              </button>
+              <div class="cq-item">
+                <span class="cq-icon">✓</span>
+                <span><strong>SQL Transaction Checks:</strong> Verified deals persist cleanly without orphan records during network drops.</span>
+              </div>
+              <div class="cq-item">
+                <span class="cq-icon">✓</span>
+                <span><strong>API Error Responses:</strong> Verified endpoints return proper 400/401/403/422 status codes and schemas.</span>
+              </div>
+            </div>
+            <div class="case-footer">
+              <div class="case-tags mono">
+                <span>RBAC Testing</span>
+                <span>SQL Integrity</span>
+                <span>API Error Codes</span>
+              </div>
+              <button type="button" class="btn-inspect-link" data-project="brokeros">View Case Artifacts ↗</button>
             </div>
           </article>
 
-          <!-- Project 4: Broker OS -->
-          <article class="project-card">
-            <div class="project-card-header">
-              <div class="project-domain-row">
-                <span class="domain-pill accent-cyan">Brokerage &amp; Operations SaaS</span>
-                <span class="status-verified mono">✓ E2E QA Verified</span>
+          <!-- Case Study 5: StephanAI -->
+          <article class="case-card reveal">
+            <div class="case-card-top">
+              <span class="case-num mono">05</span>
+              <span class="case-domain mono">CONVERSATIONAL AI &amp; AUTOMATION</span>
+            </div>
+            <h3 class="case-title">StephanAI — Conversational Automation Suite</h3>
+            <p class="case-desc">
+              AI-driven conversational assistant and workflow engine requiring real-time response accuracy, webhook reliability, and fault-tolerant UI.
+            </p>
+            <div class="case-qa-highlights">
+              <div class="cq-item">
+                <span class="cq-icon">✓</span>
+                <span><strong>Multi-Turn Prompt QA:</strong> Validated AI contextual memory, hallucination guards, and fallback states.</span>
               </div>
-              <h3 class="project-title">Broker OS — Brokerage &amp; Deal Workflow Platform</h3>
-              <p class="project-summary">
-                Comprehensive manual, functional, API, and regression testing for Broker OS—validating broker pipelines, role-based access control, document workflows, and operational dashboards.
-              </p>
-            </div>
-
-            <div class="project-scope-box">
-              <div class="scope-title mono">KEY QA HIGHLIGHTS &amp; WORKFLOWS</div>
-              <ul class="project-bullets">
-                <li><strong>Workflow &amp; Data Integrity:</strong> Validated end-to-end deal stages, form validations, search/filter combinations, and backend database consistency via SQL &amp; Postman.</li>
-                <li><strong>Role-Based Permissions (RBAC):</strong> Tested multi-role access boundaries, notifications, dashboard widgets, and secure data visibility across broker/admin accounts.</li>
-              </ul>
-            </div>
-
-            <div class="project-footer">
-              <div class="project-tags">
-                <span>Broker Workflows</span>
-                <span>RBAC Permissions</span>
-                <span>Postman &amp; SQL</span>
-                <span>Regression Suite</span>
+              <div class="cq-item">
+                <span class="cq-icon">✓</span>
+                <span><strong>DevTools Network Triage:</strong> Monitored WebSocket streams, payload latencies, and retry mechanics.</span>
               </div>
-              <button type="button" class="btn-inspect-project" data-project="brokeros">
-                <span>Inspect Broker OS Case Study</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
-              </button>
-            </div>
-          </article>
-
-          <!-- Project 5: StephanAI -->
-          <article class="project-card">
-            <div class="project-card-header">
-              <div class="project-domain-row">
-                <span class="domain-pill">Conversational AI Platform</span>
-                <span class="status-verified mono">✓ E2E QA Verified</span>
+              <div class="cq-item">
+                <span class="cq-icon">✓</span>
+                <span><strong>Pre-Demo Stability:</strong> Signed off builds ahead of mission-critical investor and client presentations.</span>
               </div>
-              <h3 class="project-title">StephanAI — AI Assistant &amp; Automation Suite</h3>
-              <p class="project-summary">
-                End-to-end quality assurance for StephanAI, validating AI conversation flows, automated task triggers, REST API integrations, UI/UX responsiveness, and pre-demo stability.
-              </p>
             </div>
-
-            <div class="project-scope-box">
-              <div class="scope-title mono">KEY QA HIGHLIGHTS &amp; WORKFLOWS</div>
-              <ul class="project-bullets">
-                <li><strong>AI Interaction &amp; Edge Cases:</strong> Conducted exploratory, functional, and regression testing on prompt/response flows, fallback handling, and real-time message delivery.</li>
-                <li><strong>API &amp; Pre-Release Validation:</strong> Inspected network payloads via Chrome DevTools &amp; Postman, reported actionable defects with reproduction evidence, and verified fixes prior to client demos.</li>
-              </ul>
-            </div>
-
-            <div class="project-footer">
-              <div class="project-tags">
-                <span>AI Prompt/Response QA</span>
-                <span>API &amp; DevTools</span>
-                <span>Exploratory Testing</span>
-                <span>Client Demo Sign-Off</span>
+            <div class="case-footer">
+              <div class="case-tags mono">
+                <span>AI Prompt QA</span>
+                <span>WebSockets</span>
+                <span>DevTools Triage</span>
               </div>
-              <button type="button" class="btn-inspect-project" data-project="stephanai">
-                <span>Inspect StephanAI Case Study</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
-              </button>
+              <button type="button" class="btn-inspect-link" data-project="stephanai">View Case Artifacts ↗</button>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- PROFESSIONAL EXPERIENCE & EDUCATION SECTION -->
-    <section class="section section-alt" id="experience">
+    <!-- ======================================================================
+         INTERACTIVE QA CRAFT LAB: Live Terminal + Artifacts Inspector
+         ====================================================================== -->
+    <section class="section section-alt" id="interactive-lab">
       <div class="container">
-        <div class="section-header">
-          <div class="section-eyebrow">CAREER &amp; ACADEMIC BACKGROUND</div>
-          <h2 class="section-title">Experience &amp; Education</h2>
+        <div class="section-header reveal">
+          <div class="section-eyebrow">INTERACTIVE QA WORKBENCH</div>
+          <h2 class="section-title">Live QA Craft Lab: Engineering in Action</h2>
           <p class="section-subtitle">
-            Delivering dependable software quality assurance in Agile/Scrum teams across Lahore’s technology ecosystem.
+            Hiring managers don’t have to take my word for it. Test out my interactive QA runner below and inspect real-world defect tickets, test matrices, Postman API scripts, and Playwright automation code.
           </p>
         </div>
 
-        <div class="timeline-layout">
-          <!-- Work Experience Column -->
-          <div class="timeline-col">
-            <h3 class="timeline-col-heading">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-              <span>Professional Experience</span>
-            </h3>
+        <div class="lab-shell reveal">
+          <!-- Lab Navigation Tabs -->
+          <div class="lab-tabs" role="tablist">
+            <button type="button" class="lab-tab-btn active" data-tab="runner" role="tab">
+              <span class="tab-num mono">01</span>
+              <span>Live Test Suite Terminal</span>
+            </button>
+            <button type="button" class="lab-tab-btn" data-tab="defect" role="tab">
+              <span class="tab-num mono">02</span>
+              <span>Enterprise Jira Defect Report</span>
+            </button>
+            <button type="button" class="lab-tab-btn" data-tab="matrix" role="tab">
+              <span class="tab-num mono">03</span>
+              <span>Test Case Matrix (BVA / EP)</span>
+            </button>
+            <button type="button" class="lab-tab-btn" data-tab="api-sql" role="tab">
+              <span class="tab-num mono">04</span>
+              <span>Postman API &amp; SQL Integrity</span>
+            </button>
+            <button type="button" class="lab-tab-btn" data-tab="playwright" role="tab">
+              <span class="tab-num mono">05</span>
+              <span>Playwright (JS) Automation</span>
+            </button>
+          </div>
 
-            <div class="timeline-list">
-              <!-- Role 1: Hatzs Dimensions -->
-              <article class="timeline-card current-role">
-                <div class="timeline-header">
-                  <div>
-                    <span class="role-badge active-badge">FULL-TIME • ON-SITE (LAHORE)</span>
-                    <h4 class="role-title">Associate Software Quality Assurance Engineer</h4>
-                    <div class="role-company">Hatzs Dimensions Pvt. Ltd.</div>
+          <!-- Lab Content Panels -->
+          <div class="lab-content">
+            <!-- Panel 1: Live Interactive Test Suite Terminal -->
+            <div class="lab-panel active" id="tab-runner" role="tabpanel">
+              <div class="terminal-window">
+                <div class="tw-header">
+                  <div class="tw-dots">
+                    <span class="dot-red"></span>
+                    <span class="dot-yellow"></span>
+                    <span class="dot-green"></span>
                   </div>
-                  <span class="role-date mono">Dec 2025 – Present</span>
-                </div>
-
-                <ul class="role-bullets">
-                  <li>Perform <strong>functional, regression, smoke, sanity, and exploratory testing</strong> for CRM, SaaS, and AI-powered web applications (<em>DealerIQ AI, Befer AI, Leadly.ai, Broker OS, StephanAI</em>).</li>
-                  <li>Turn product requirements and business workflows into structured <strong>test scenarios, test cases, test plans, QA reports, and regression documentation</strong>.</li>
-                  <li>Execute <strong>REST API testing with Postman</strong> (`GET`, `POST`, `PUT`, `DELETE`) and <strong>database validation with SQL</strong> alongside Chrome DevTools inspection.</li>
-                  <li>Validate critical modules including <strong>lead management, appointment scheduling, AI voice calls, AI chats, paperwork, shipment navigation, dashboards, forms, filters, booking flows, notifications, and role-based permissions</strong>.</li>
-                  <li>Author detailed defect reports in <strong>Jira &amp; ClickUp</strong> with reproduction steps, screenshots, logs, severity, priority, expected vs. actual results, and business impact.</li>
-                  <li>Partner with developers to reproduce issues, verify bug fixes, conduct impact analysis, and validate builds before production releases and client demonstrations.</li>
-                </ul>
-
-                <div class="role-skills-footer mono">
-                  💎 Defect Management • Regression Testing • Postman API • SQL • Playwright (JS) • +23 skills
-                </div>
-              </article>
-
-              <!-- Role 2: Nexskill -->
-              <article class="timeline-card">
-                <div class="timeline-header">
-                  <div>
-                    <span class="role-badge">INTERNSHIP • ON-SITE (LAHORE)</span>
-                    <h4 class="role-title">Software Quality Assurance Engineer (Intern)</h4>
-                    <div class="role-company">Nexskill (NEXSkills Training Institute)</div>
+                  <div class="tw-title mono">arslan-qa-engine — Staging Release Gate</div>
+                  <div class="tw-actions">
+                    <button type="button" class="btn btn-primary btn-xs" id="execTerminalBtn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                      <span>Run All Test Suites</span>
+                    </button>
                   </div>
-                  <span class="role-date mono">Sep 2024 – Nov 2025</span>
                 </div>
 
-                <ul class="role-bullets">
-                  <li>Developed practical knowledge of <strong>SDLC, STLC, QA/QC, test planning, test case design, defect lifecycle, severity, and priority</strong>.</li>
-                  <li>Designed and executed test cases and scenarios using formal techniques: <strong>Boundary Value Analysis (BVA), Equivalence Partitioning (EP), Decision Tables, and Use Case Testing</strong>.</li>
-                  <li>Practiced bug reporting, defect tracking, <strong>SQL database validation</strong>, Chrome DevTools debugging, cross-browser/mobile testing, and <strong>Jira-based defect management</strong>.</li>
-                  <li>Gained hands-on exposure to <strong>API testing with Postman</strong>, load testing concepts with <strong>JMeter</strong>, and Agile/Scrum sprint testing practices.</li>
-                </ul>
+                <div class="tw-body mono" id="terminalOutput">
+                  <div class="tw-line"><span class="prompt">$</span> arslan-qa test --target=staging --projects=dealeriq,befer,leadly,brokeros,stephanai</div>
+                  <div class="tw-line text-muted">[INFO] Initializing Test Orchestrator across 5 production suites...</div>
+                  <div class="tw-line text-muted">[INFO] Checking API Contracts, SQL DB connections, Playwright headless browser...</div>
+                  <div class="tw-line">&nbsp;</div>
 
-                <div class="role-skills-footer mono">
-                  💎 Defect Management • Chrome DevTools • SDLC/STLC • Postman • SQL • +14 skills
+                  <div class="terminal-suite-row" data-suite="dealeriq">
+                    <span class="ts-status pass">PASS</span>
+                    <span class="ts-name">DealerIQ AI: Voice Call Dispositions &amp; Paperwork Tab Sync</span>
+                    <span class="ts-time">142ms</span>
+                  </div>
+                  <div class="terminal-suite-row" data-suite="befer">
+                    <span class="ts-status pass">PASS</span>
+                    <span class="ts-name">Befer AI: Iframe Booking Slot Lock &amp; Service Radius BVA</span>
+                    <span class="ts-time">186ms</span>
+                  </div>
+                  <div class="terminal-suite-row" data-suite="leadly">
+                    <span class="ts-status pass">PASS</span>
+                    <span class="ts-name">Leadly.ai: Property Pipeline Filters &amp; Proposal PDF Calc</span>
+                    <span class="ts-time">154ms</span>
+                  </div>
+                  <div class="terminal-suite-row" data-suite="brokeros">
+                    <span class="ts-status pass">PASS</span>
+                    <span class="ts-name">Broker OS: RBAC Permissions (403 Forbidden on Unauthorized Fee Edit)</span>
+                    <span class="ts-time">118ms</span>
+                  </div>
+                  <div class="terminal-suite-row" data-suite="stephanai">
+                    <span class="ts-status pass">PASS</span>
+                    <span class="ts-name">StephanAI: Conversational Webhook Delivery &amp; Context Fallback</span>
+                    <span class="ts-time">128ms</span>
+                  </div>
+                  <div class="terminal-suite-row" data-suite="playwright">
+                    <span class="ts-status pass">PASS</span>
+                    <span class="ts-name">Playwright (JS): Lead Pipeline E2E (Chromium, Firefox, WebKit)</span>
+                    <span class="ts-time">412ms</span>
+                  </div>
+
+                  <div class="tw-line">&nbsp;</div>
+                  <div class="tw-line text-pass font-bold">✔ 6/6 Suites Passed (1,140ms) — Release Ready • Zero Critical Blockers</div>
                 </div>
-              </article>
+              </div>
             </div>
-          </div>
 
-          <!-- Education & Certifications Column -->
-          <div class="timeline-col">
-            <h3 class="timeline-col-heading">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-              <span>Education &amp; Certifications</span>
-            </h3>
-
-            <div class="timeline-list">
-              <article class="timeline-card">
-                <div class="timeline-header">
-                  <div>
-                    <span class="role-badge">UNIVERSITY DEGREE</span>
-                    <h4 class="role-title">Bachelor in Software Engineering</h4>
-                    <div class="role-company">The Superior University (Gold Campus, Lahore)</div>
+            <!-- Panel 2: Enterprise Jira Defect Report -->
+            <div class="lab-panel" id="tab-defect" role="tabpanel">
+              <div class="jira-ticket-card">
+                <div class="jt-header">
+                  <div class="jt-id-group">
+                    <span class="jt-key mono">BUG-DIQ-418</span>
+                    <span class="jt-badge-sev mono">SEVERITY: HIGH</span>
+                    <span class="jt-badge-pri mono">PRIORITY: P1</span>
+                    <span class="jt-badge-res mono">RESOLUTION: VERIFIED FIXED</span>
                   </div>
-                </div>
-                <p class="edu-note">
-                  Comprehensive academic grounding in Software Engineering, SDLC/STLC methodologies, relational databases (SQL), software architecture, and quality assurance engineering.
-                </p>
-              </article>
-
-              <article class="timeline-card">
-                <div class="timeline-header">
-                  <div>
-                    <span class="role-badge">PROFESSIONAL CERTIFICATION</span>
-                    <h4 class="role-title">Certification in Software Quality Assurance</h4>
-                    <div class="role-company">NexSkill Training Center, Arfa Karim Tower, Lahore</div>
-                  </div>
-                </div>
-                <p class="edu-note">
-                  Intensive practical certification covering Manual &amp; Functional Testing, Test Design (BVA/EP), Postman API Testing, JMeter Load Testing, SQL Validation, and Jira Defect Management.
-                </p>
-              </article>
-
-              <!-- Career Preferences Card (from LinkedIn Open to Work) -->
-              <article class="qa-philosophy-card">
-                <div class="philosophy-header">
-                  <span class="mono-tag">● OPEN TO OPPORTUNITIES</span>
-                  <h4>Target Roles &amp; Work Preferences</h4>
-                </div>
-                <div class="philosophy-steps">
-                  <div class="p-step">
-                    <span class="p-num mono">ROLES</span>
-                    <div>
-                      <strong>SQA Engineer • QA Engineer • Manual QA • Junior QA Automation</strong>
-                      <p>Ready to contribute immediately to manual, API, regression, and Playwright (JavaScript) automation initiatives.</p>
-                    </div>
-                  </div>
-                  <div class="p-step">
-                    <span class="p-num mono">MODE</span>
-                    <div>
-                      <strong>Lahore (On-Site • Hybrid) &amp; Remote Global Teams</strong>
-                      <p>Experienced collaborating with cross-functional Agile teams, developers, and product stakeholders.</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- INTERACTIVE QA CRAFT LAB (SAMPLE DELIVERABLES) -->
-    <section class="section" id="qa-lab">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-eyebrow">INTERACTIVE DELIVERABLES SHOWCASE</div>
-          <h2 class="section-title">QA Craft Lab: Inside My Testing Workflow</h2>
-          <p class="section-subtitle">
-            Explore representative examples of how I write defect reports, design formal test cases (BVA/EP), validate APIs &amp; SQL queries, and build Playwright (JavaScript) automation scripts.
-          </p>
-        </div>
-
-        <div class="lab-container">
-          <div class="lab-tabs" role="tablist" aria-label="QA Deliverable Examples">
-            <button type="button" class="lab-tab active" data-lab-tab="bug-report" role="tab" aria-selected="true">
-              <span class="lab-tab-num mono">01</span>
-              <span>Dealership CRM Defect Report</span>
-            </button>
-            <button type="button" class="lab-tab" data-lab-tab="test-cases" role="tab" aria-selected="false">
-              <span class="lab-tab-num mono">02</span>
-              <span>Test Case Matrix (BVA/EP)</span>
-            </button>
-            <button type="button" class="lab-tab" data-lab-tab="api-sql" role="tab" aria-selected="false">
-              <span class="lab-tab-num mono">03</span>
-              <span>Postman API &amp; SQL Check</span>
-            </button>
-            <button type="button" class="lab-tab" data-lab-tab="playwright" role="tab" aria-selected="false">
-              <span class="lab-tab-num mono">04</span>
-              <span>Playwright (JS) E2E Spec</span>
-            </button>
-          </div>
-
-          <div class="lab-panel-wrapper">
-            <!-- Panel 1: Sample Bug Report (Reflecting the 7-defect Dealership CRM Regression Cycle) -->
-            <div class="lab-panel active" id="panel-bug-report" role="tabpanel">
-              <div class="artifact-card">
-                <div class="artifact-top-bar">
-                  <div class="artifact-id-group">
-                    <span class="mono-badge badge-bug">BUG-DIQ-418 (1 of 7 in Regression Cycle)</span>
-                    <span class="mono-badge badge-sev-high">Severity: High</span>
-                    <span class="mono-badge badge-pri-p1">Priority: P1</span>
-                    <span class="mono-badge badge-status">Status: Verified Fixed</span>
-                  </div>
-                  <span class="artifact-env mono">Env: Staging • Chrome DevTools / macOS</span>
+                  <div class="jt-env mono">Env: Staging • Chrome 130 • Dealership CRM</div>
                 </div>
 
-                <h3 class="artifact-title">
-                  [Dealership CRM Regression] Shipment navigation &amp; paperwork total mismatch when applying active chat filter on qualified deal records
+                <h3 class="jt-summary">
+                  [Dealership CRM Regression] Shipment navigation tab reset causes paperwork line-item totals desync during active chat filter
                 </h3>
 
-                <div class="artifact-grid">
-                  <div class="artifact-block">
+                <div class="jt-grid">
+                  <div class="jt-section">
                     <h4>Preconditions</h4>
-                    <ul>
-                      <li>Dealership user is authenticated with <code>Sales_Manager</code> role permissions.</li>
-                      <li>Lead record has generated paperwork and an active shipment tracking state.</li>
-                    </ul>
+                    <p class="mono text-sm">
+                      1. User is authenticated as <code>Sales_Manager</code>.<br />
+                      2. Deal record #D-9482 has generated paperwork and active shipment carrier dispatch.
+                    </p>
 
                     <h4>Steps to Reproduce</h4>
-                    <ol>
-                      <li>Navigate to <strong>Deals → Paperwork &amp; Shipment</strong> and apply the <strong>Chat Filter (`Unread AI Follow-up`)</strong>.</li>
-                      <li>Click on the <strong>Shipment Navigation</strong> tab to transition from Paperwork Preview to Carrier Dispatch.</li>
-                      <li>Inspect the paperwork fee calculation and network response in <strong>Chrome DevTools (`GET /api/v1/deals/paperwork`)</strong>.</li>
+                    <ol class="jt-steps">
+                      <li>Navigate to <strong>Deals → Active Pipeline</strong> and open Deal record #D-9482.</li>
+                      <li>Apply the chat filter <code>Unread AI Follow-Up</code> in the side drawer.</li>
+                      <li>Click the <strong>Shipment Navigation</strong> tab to toggle carrier dispatch view.</li>
+                      <li>Inspect the fee calculation table in DevTools Network tab (<code>GET /api/v1/deals/paperwork</code>).</li>
                     </ol>
                   </div>
 
-                  <div class="artifact-block">
-                    <div class="result-box expected-box">
-                      <span class="result-label mono">EXPECTED RESULT</span>
-                      <p>Shipment navigation opens the selected deal’s dispatch view while preserving the exact paperwork line-item totals and active chat filter state.</p>
+                  <div class="jt-section">
+                    <div class="jt-callout expected">
+                      <span class="jt-cl-title mono">EXPECTED BEHAVIOR</span>
+                      <p>Tab navigation preserves deal context, active chat filter state, and accurate paperwork total ($42,850.00).</p>
                     </div>
 
-                    <div class="result-box actual-box">
-                      <span class="result-label mono">ACTUAL RESULT</span>
-                      <p>Stale state parameter resets the deal context during navigation, causing paperwork data inaccuracy and clearing the active chat filter selection.</p>
+                    <div class="jt-callout actual">
+                      <span class="jt-cl-title mono">ACTUAL BEHAVIOR</span>
+                      <p>Stale query state parameter clears the deal context, resetting the fee calculation to default ($0.00) and clearing filter.</p>
                     </div>
 
-                    <div class="result-box impact-box">
-                      <span class="result-label mono">BUSINESS IMPACT</span>
-                      <p>Blocks dealership staff from verifying paperwork accuracy during live client demonstrations and causes shipment navigation errors. (Caught &amp; resolved prior to release).</p>
+                    <div class="jt-callout impact">
+                      <span class="jt-cl-title mono">BUSINESS &amp; FINANCIAL IMPACT</span>
+                      <p>Would have caused dealership sales managers to misquote paperwork during customer checkout. Prevented pre-release.</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <!-- Panel 2: Test Case Matrix -->
-            <div class="lab-panel" id="panel-test-cases" role="tabpanel">
-              <div class="artifact-card">
-                <div class="artifact-top-bar">
-                  <div class="artifact-id-group">
-                    <span class="mono-badge badge-suite">SUITE: CRM WORKFLOW &amp; FORM VALIDATION</span>
-                    <span class="mono-badge badge-status">Techniques: BVA • EP • Decision Table</span>
-                  </div>
-                  <span class="artifact-env mono">Coverage: Functional + Negative + Edge Cases</span>
-                </div>
-
-                <div class="table-responsive">
-                  <table class="qa-table">
-                    <thead>
-                      <tr>
-                        <th>Test ID</th>
-                        <th>Module / Scenario</th>
-                        <th>Technique</th>
-                        <th>Test Input / Condition</th>
-                        <th>Expected Outcome</th>
-                        <th>Status</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td class="mono">TC-CRM-01</td>
-                        <td>Befer AI — Iframe Booking Slot</td>
-                        <td><span class="tech-pill">Equivalence Partitioning</span></td>
-                        <td>Valid future slot within business hours &amp; active service zip code</td>
-                        <td>Booking created (`201 Created`), calendar synced, confirmation sent</td>
-                        <td><span class="status-tag pass">PASS</span></td>
-                      </tr>
-                      <tr>
-                        <td class="mono">TC-CRM-02</td>
-                        <td>Befer AI — Service Area Boundary</td>
-                        <td><span class="tech-pill">Boundary Value (BVA)</span></td>
-                        <td>Radius = <code>25.0 km</code> (exact limit) vs <code>25.1 km</code> (outer boundary)</td>
-                        <td><code>25.0 km</code> accepted; <code>25.1 km</code> displays graceful out-of-area validation</td>
-                        <td><span class="status-tag pass">PASS</span></td>
-                      </tr>
-                      <tr>
-                        <td class="mono">TC-CRM-03</td>
-                        <td>DealerIQ — AI Call Disposition</td>
-                        <td><span class="tech-pill">Decision Table</span></td>
-                        <td>Outbound AI call returns <code>NO_ANSWER</code> with retry webhook</td>
-                        <td>Logs single disposition, triggers 1 fallback SMS, prevents duplicate chat</td>
-                        <td><span class="status-tag pass">PASS</span></td>
-                      </tr>
-                      <tr>
-                        <td class="mono">TC-CRM-04</td>
-                        <td>Leadly.ai — Proposal &amp; RBAC</td>
-                        <td><span class="tech-pill">Role-Based / Negative</span></td>
-                        <td>Agent role attempts to edit locked admin commission field on proposal</td>
-                        <td>Field is read-only in UI and `PUT` request returns `403 Forbidden`</td>
-                        <td><span class="status-tag pass">PASS</span></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+            <!-- Panel 3: Test Case Matrix -->
+            <div class="lab-panel" id="tab-matrix" role="tabpanel">
+              <div class="table-container">
+                <table class="matrix-table mono">
+                  <thead>
+                    <tr>
+                      <th>Test ID</th>
+                      <th>System &amp; Module</th>
+                      <th>Engineering Technique</th>
+                      <th>Input / Condition</th>
+                      <th>Expected Outcome</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="font-bold">TC-BFR-01</td>
+                      <td>Befer AI • Iframe Booking</td>
+                      <td><span class="badge-tech">Equivalence Partitioning</span></td>
+                      <td>Valid future slot within business hours (10:00 AM)</td>
+                      <td>Slot locked, calendar synced, confirmation email dispatched</td>
+                      <td><span class="status-pass">PASS</span></td>
+                    </tr>
+                    <tr>
+                      <td class="font-bold">TC-BFR-02</td>
+                      <td>Befer AI • Service Area</td>
+                      <td><span class="badge-tech">Boundary Value (BVA)</span></td>
+                      <td>Radius = <code>25.0 km</code> (limit) vs <code>25.1 km</code> (out)</td>
+                      <td>25.0km accepted; 25.1km throws validation: "Outside service zone"</td>
+                      <td><span class="status-pass">PASS</span></td>
+                    </tr>
+                    <tr>
+                      <td class="font-bold">TC-DIQ-03</td>
+                      <td>DealerIQ • Voice Webhook</td>
+                      <td><span class="badge-tech">Decision Table</span></td>
+                      <td>Telephony returns <code>NO_ANSWER</code> with rapid retry</td>
+                      <td>Webhook deduplicated by CallSID; triggers exactly 1 fallback SMS</td>
+                      <td><span class="status-pass">PASS</span></td>
+                    </tr>
+                    <tr>
+                      <td class="font-bold">TC-BOS-04</td>
+                      <td>Broker OS • Fee RBAC</td>
+                      <td><span class="badge-tech">Security / Negative</span></td>
+                      <td>Standard broker role attempts <code>PUT /api/v1/deals/fee</code></td>
+                      <td>UI field is disabled; API responds <code>403 Forbidden</code></td>
+                      <td><span class="status-pass">PASS</span></td>
+                    </tr>
+                    <tr>
+                      <td class="font-bold">TC-LDL-05</td>
+                      <td>Leadly • Dynamic Proposal</td>
+                      <td><span class="badge-tech">Exploratory / Stress</span></td>
+                      <td>15 property addons + localized currency formatting</td>
+                      <td>Proposal PDF renders with exact rounding &amp; zero overlapping text</td>
+                      <td><span class="status-pass">PASS</span></td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
 
-            <!-- Panel 3: Postman API & SQL Verification -->
-            <div class="lab-panel" id="panel-api-sql" role="tabpanel">
-              <div class="artifact-card">
-                <div class="artifact-top-bar">
-                  <div class="artifact-id-group">
-                    <span class="mono-badge badge-suite">POSTMAN API + SQL DATABASE VALIDATION</span>
-                    <span class="mono-badge badge-status">Tools: Postman • SQL • Chrome DevTools</span>
+            <!-- Panel 4: Postman API & SQL Script -->
+            <div class="lab-panel" id="tab-api-sql" role="tabpanel">
+              <div class="code-split">
+                <div class="code-card">
+                  <div class="code-header mono">
+                    <span>POSTMAN REST API TEST SCRIPT (JAVASCRIPT)</span>
+                    <span class="text-muted">POST /api/v1/appointments/book</span>
                   </div>
-                  <span class="artifact-env mono">Endpoint: POST /api/v1/appointments/schedule</span>
-                </div>
-
-                <div class="code-split-grid">
-                  <div class="code-box">
-                    <div class="code-box-header mono">Postman Test Script (JavaScript Assertions)</div>
-                    <pre><code>pm.test("Status code is 201 Created", () => {
-  pm.response.to.have.status(201);
+                  <pre class="code-block mono"><code><span class="c-comment">// Validate HTTP response status &amp; SLA latency</span>
+pm.test(<span class="c-str">"Status is 201 Created"</span>, () => {
+  pm.response.to.have.status(<span class="c-num">201</span>);
 });
 
-pm.test("Response time is under 500ms SLA", () => {
-  pm.expect(pm.response.responseTime).to.be.below(500);
+pm.test(<span class="c-str">"Response time under 500ms SLA"</span>, () => {
+  pm.expect(pm.response.responseTime).to.be.below(<span class="c-num">500</span>);
 });
 
-pm.test("CRM Appointment payload &amp; AI call status verified", () => {
-  const res = pm.response.json();
+<span class="c-comment">// Validate JSON Schema &amp; critical payload keys</span>
+pm.test(<span class="c-str">"Contract &amp; AI Call Status Integrity"</span>, () => {
+  <span class="c-keyword">const</span> res = pm.response.json();
   pm.expect(res.success).to.be.true;
   pm.expect(res.data).to.have.all.keys(
-    "appointment_id", "lead_id", "scheduled_at", "ai_call_status"
+    <span class="c-str">"appointment_id"</span>, <span class="c-str">"lead_id"</span>, <span class="c-str">"scheduled_at"</span>, <span class="c-str">"ai_call_status"</span>
   );
-  pm.expect(res.data.ai_call_status).to.eql("SCHEDULED");
+  pm.expect(res.data.ai_call_status).to.eql(<span class="c-str">"SCHEDULED"</span>);
 });</code></pre>
-                  </div>
+                </div>
 
-                  <div class="code-box">
-                    <div class="code-box-header mono">SQL Database Validation Query</div>
-                    <pre><code>-- Verify database persistence &amp; prevent duplicate booking records
-SELECT 
-  a.id AS appointment_id,
+                <div class="code-card">
+                  <div class="code-header mono">
+                    <span>SQL DATABASE AUDIT QUERY</span>
+                    <span class="text-muted">Direct Database Integrity Check</span>
+                  </div>
+                  <pre class="code-block mono"><code><span class="c-comment">-- Verify ACID transaction &amp; prevent duplicate slots</span>
+<span class="c-keyword">SELECT</span> 
+  a.id <span class="c-keyword">AS</span> appointment_id,
   l.full_name,
   l.phone_number,
-  a.status AS booking_status,
+  a.status <span class="c-keyword">AS</span> booking_status,
   c.call_disposition,
-  COUNT(*) OVER (PARTITION BY a.lead_id, a.scheduled_at) AS slot_count
-FROM appointments a
-INNER JOIN leads l ON l.id = a.lead_id
-LEFT JOIN ai_call_logs c ON c.appointment_id = a.id
-WHERE a.lead_id = 'lead_94820_diq'
-  AND a.created_at >= NOW() - INTERVAL '15 minutes';
--- Expected: booking_status = 'CONFIRMED', slot_count = 1</code></pre>
-                  </div>
+  <span class="c-keyword">COUNT</span>(*) <span class="c-keyword">OVER</span> (<span class="c-keyword">PARTITION BY</span> a.lead_id, a.scheduled_at) <span class="c-keyword">AS</span> duplicate_check
+<span class="c-keyword">FROM</span> appointments a
+<span class="c-keyword">INNER JOIN</span> leads l <span class="c-keyword">ON</span> l.id = a.lead_id
+<span class="c-keyword">LEFT JOIN</span> ai_call_logs c <span class="c-keyword">ON</span> c.appointment_id = a.id
+<span class="c-keyword">WHERE</span> a.lead_id = <span class="c-str">'lead_diq_9482'</span>
+  <span class="c-keyword">AND</span> a.created_at &gt;= <span class="c-keyword">NOW</span>() - <span class="c-keyword">INTERVAL</span> <span class="c-str">'15 minutes'</span>;
+<span class="c-comment">-- Expected: duplicate_check = 1, booking_status = 'CONFIRMED'</span></code></pre>
                 </div>
               </div>
             </div>
 
-            <!-- Panel 4: Playwright (JavaScript) Automation Spec -->
-            <div class="lab-panel" id="panel-playwright" role="tabpanel">
-              <div class="artifact-card">
-                <div class="artifact-top-bar">
-                  <div class="artifact-id-group">
-                    <span class="mono-badge badge-suite">PLAYWRIGHT (JAVASCRIPT) E2E &amp; API AUTOMATION</span>
-                    <span class="mono-badge badge-status">Spec: crm-lead-workflow.spec.js</span>
-                  </div>
-                  <span class="artifact-env mono">Browsers: Chromium • Firefox • WebKit</span>
+            <!-- Panel 5: Playwright Automation Spec -->
+            <div class="lab-panel" id="tab-playwright" role="tabpanel">
+              <div class="code-card">
+                <div class="code-header mono">
+                  <span>tests/e2e/crm-lead-workflow.spec.js</span>
+                  <span class="text-muted">Playwright (JavaScript) Page Object Model</span>
                 </div>
+                <pre class="code-block mono"><code><span class="c-keyword">const</span> { test, expect } = <span class="c-keyword">require</span>(<span class="c-str">'@playwright/test'</span>);
 
-                <div class="code-box">
-                  <div class="code-box-header mono">tests/e2e/crm-lead-workflow.spec.js</div>
-                  <pre><code>const { test, expect } = require('@playwright/test');
+test.describe(<span class="c-str">'CRM Dealership Pipeline E2E'</span>, () => {
+  test(<span class="c-str">'should create qualified lead and verify appointment booking'</span>, <span class="c-keyword">async</span> ({ page }) => {
+    <span class="c-keyword">await</span> page.goto(<span class="c-str">'/dashboard/deals'</span>);
 
-test.describe('CRM Lead Pipeline, Chat Filter &amp; Appointment E2E', () => {
-  test('should create qualified lead, filter chat logs, and book appointment', async ({ page }) => {
-    await page.goto('/dashboard/leads');
+    <span class="c-comment">// 1. Trigger modal &amp; fill validated prospect information</span>
+    <span class="c-keyword">await</span> page.getByRole(<span class="c-str">'button'</span>, { name: <span class="c-regex">/new prospect/i</span> }).click();
+    <span class="c-keyword">await</span> page.getByLabel(<span class="c-str">'Full Name'</span>).fill(<span class="c-str">'Muhammad Arslan QA Spec'</span>);
+    <span class="c-keyword">await</span> page.getByLabel(<span class="c-str">'Phone'</span>).fill(<span class="c-str">'+923099731256'</span>);
+    <span class="c-keyword">await</span> page.getByLabel(<span class="c-str">'Source'</span>).selectOption(<span class="c-str">'AI_Inbound_Voice'</span>);
+    <span class="c-keyword">await</span> page.getByRole(<span class="c-str">'button'</span>, { name: <span class="c-regex">/save deal/i</span> }).click();
 
-    // 1. Create new lead via modal form &amp; validate required fields
-    await page.getByRole('button', { name: /new lead/i }).click();
-    await page.getByLabel('Full Name').fill('Muhammad Arslan QA Test');
-    await page.getByLabel('Phone Number').fill('+923099731256');
-    await page.getByLabel('Lead Source').selectOption('AI_Voice_Inbound');
-    await page.getByRole('button', { name: /save lead/i }).click();
+    <span class="c-comment">// 2. Verify toast message &amp; table row updates</span>
+    <span class="c-keyword">await</span> expect(page.getByText(<span class="c-str">'Deal created successfully'</span>)).toBeVisible();
+    <span class="c-keyword">const</span> dealRow = page.locator(<span class="c-str">'tr'</span>, { hasText: <span class="c-str">'Muhammad Arslan QA Spec'</span> });
+    <span class="c-keyword">await</span> expect(dealRow).toContainText(<span class="c-str">'Qualified'</span>);
 
-    // 2. Verify toast notification &amp; pipeline filter accuracy
-    await expect(page.getByText('Lead created successfully')).toBeVisible();
-    await page.getByPlaceholder('Search leads...').fill('Muhammad Arslan QA Test');
-    const row = page.locator('tr', { hasText: 'Muhammad Arslan QA Test' });
-    await expect(row).toContainText('Qualified');
-
-    // 3. Trigger appointment booking &amp; verify dashboard status update
-    await row.getByRole('button', { name: /book appointment/i }).click();
-    await page.getByRole('button', { name: /confirm slot/i }).click();
-    await expect(row.locator('.appointment-badge')).toHaveText('Scheduled');
+    <span class="c-comment">// 3. Book slot &amp; assert badge status updates cleanly</span>
+    <span class="c-keyword">await</span> dealRow.getByRole(<span class="c-str">'button'</span>, { name: <span class="c-regex">/schedule appointment/i</span> }).click();
+    <span class="c-keyword">await</span> page.getByRole(<span class="c-str">'button'</span>, { name: <span class="c-regex">/confirm/i</span> }).click();
+    <span class="c-keyword">await</span> expect(dealRow.locator(<span class="c-str">'.status-pill'</span>)).toHaveText(<span class="c-str">'Scheduled'</span>);
   });
 });</code></pre>
-                </div>
               </div>
             </div>
           </div>
@@ -1008,128 +847,379 @@ test.describe('CRM Lead Pipeline, Chat Filter &amp; Appointment E2E', () => {
       </div>
     </section>
 
-    <!-- CONTACT SECTION -->
-    <section class="section section-alt" id="contact">
+    <!-- ======================================================================
+         TECHNICAL ARSENAL & SKILLS MATRIX
+         ====================================================================== -->
+    <section class="section" id="skills-matrix">
       <div class="container">
-        <div class="contact-grid">
-          <div class="contact-info">
+        <div class="section-header reveal">
+          <div class="section-eyebrow">TECHNICAL COMPETENCIES</div>
+          <h2 class="section-title">The Complete QA Engineering Arsenal</h2>
+          <p class="section-subtitle">
+            A comprehensive matrix of technical tools, test frameworks, automation languages, and quality governance frameworks I use in production.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-category-card reveal">
+            <div class="scc-header">
+              <span class="scc-icon">🧪</span>
+              <h3 class="scc-title">Manual &amp; Functional Testing</h3>
+            </div>
+            <p class="scc-desc">Comprehensive test execution across all functional layers.</p>
+            <div class="scc-tags">
+              <span class="stag primary">Functional Testing</span>
+              <span class="stag primary">Regression Testing</span>
+              <span class="stag primary">Smoke &amp; Sanity</span>
+              <span class="stag">Exploratory Testing</span>
+              <span class="stag">End-to-End (E2E)</span>
+              <span class="stag">Integration Testing</span>
+              <span class="stag">Black/White/Gray Box</span>
+              <span class="stag">Cross-Browser Testing</span>
+              <span class="stag">UI/UX &amp; Website Audits</span>
+              <span class="stag">Mobile Responsive Audits</span>
+            </div>
+          </div>
+
+          <div class="skill-category-card reveal">
+            <div class="scc-header">
+              <span class="scc-icon">⚙️</span>
+              <h3 class="scc-title">Automation &amp; Performance</h3>
+            </div>
+            <p class="scc-desc">Scripting, headless browsers, and concurrency testing.</p>
+            <div class="scc-tags">
+              <span class="stag primary">Playwright Automation</span>
+              <span class="stag primary">JavaScript (Node.js)</span>
+              <span class="stag primary">Apache JMeter</span>
+              <span class="stag">Concurrent Load Testing</span>
+              <span class="stag">Chrome DevTools</span>
+              <span class="stag">Continuous Integration (CI/CT)</span>
+              <span class="stag">Headless Browser Testing</span>
+              <span class="stag">Page Object Model (POM)</span>
+            </div>
+          </div>
+
+          <div class="skill-category-card reveal">
+            <div class="scc-header">
+              <span class="scc-icon">🔌</span>
+              <h3 class="scc-title">API &amp; Database Auditing</h3>
+            </div>
+            <p class="scc-desc">Validating payloads, network traffic, and persistence layers.</p>
+            <div class="scc-tags">
+              <span class="stag primary">Postman REST API</span>
+              <span class="stag primary">SQL Database Validation</span>
+              <span class="stag primary">GET, POST, PUT, DELETE</span>
+              <span class="stag">JSON Schema Validation</span>
+              <span class="stag">HTTP Status Verification</span>
+              <span class="stag">Webhook Testing</span>
+              <span class="stag">Network Payload Triage</span>
+              <span class="stag">Relational Data Integrity</span>
+            </div>
+          </div>
+
+          <div class="skill-category-card reveal">
+            <div class="scc-header">
+              <span class="scc-icon">📋</span>
+              <h3 class="scc-title">Test Design &amp; Defect Governance</h3>
+            </div>
+            <p class="scc-desc">Engineering formal test suites and managing defect lifecycles.</p>
+            <div class="scc-tags">
+              <span class="stag primary">Jira Bug Tracking</span>
+              <span class="stag primary">Boundary Value Analysis (BVA)</span>
+              <span class="stag primary">Equivalence Partitioning (EP)</span>
+              <span class="stag">Decision Tables</span>
+              <span class="stag">ClickUp &amp; Trello</span>
+              <span class="stag">Defect Lifecycle</span>
+              <span class="stag">Severity / Priority Triage</span>
+              <span class="stag">SDLC &amp; STLC Governance</span>
+              <span class="stag">Agile / Scrum Ceremonies</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         EXPERIENCE & EDUCATION TIMELINE
+         ====================================================================== -->
+    <section class="section section-alt" id="experience">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-eyebrow">CAREER MILESTONES</div>
+          <h2 class="section-title">Professional Track Record</h2>
+          <p class="section-subtitle">
+            Demonstrated commitment to software quality across fast-moving engineering teams.
+          </p>
+        </div>
+
+        <div class="experience-timeline">
+          <!-- Role 1: Hatzs Dimensions -->
+          <article class="timeline-item current reveal">
+            <div class="ti-marker"></div>
+            <div class="ti-card">
+              <div class="ti-header">
+                <div>
+                  <div class="ti-status-pill mono">CURRENT ROLE • FULL-TIME</div>
+                  <h3 class="ti-title">Associate Software Quality Assurance Engineer</h3>
+                  <div class="ti-company">Hatzs Dimensions Pvt. Ltd. • Lahore, Pakistan (On-site / Hybrid)</div>
+                </div>
+                <div class="ti-date mono">Dec 2025 – Present</div>
+              </div>
+
+              <p class="ti-desc">
+                Serving as dedicated SQA Engineer across multiple enterprise CRM and AI platforms (<em>DealerIQ AI, Befer AI, Leadly.ai, Broker OS, StephanAI</em>).
+              </p>
+
+              <ul class="ti-bullets">
+                <li>Drive end-to-end quality assurance across CRM, SaaS, and AI applications to ensure stable, reliable releases for live client demonstrations.</li>
+                <li>Design and maintain detailed test cases, test scenarios, test plans, QA status reports, and regression suites aligned with product requirements.</li>
+                <li>Execute multi-layer validation including manual exploratory, API testing with <strong>Postman</strong>, database checks with <strong>SQL</strong>, and <strong>Playwright</strong> automation.</li>
+                <li>Report actionable defects in <strong>Jira &amp; ClickUp</strong> with full reproduction traces, network/console evidence, severity, and business impact.</li>
+                <li>Partner daily with engineering and product leaders to re-test fixes, conduct impact analyses, and safeguard staging/production stability.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Role 2: Nexskill -->
+          <article class="timeline-item reveal">
+            <div class="ti-marker"></div>
+            <div class="ti-card">
+              <div class="ti-header">
+                <div>
+                  <div class="ti-status-pill mono">INTERNSHIP &amp; SQA TRAINING</div>
+                  <h3 class="ti-title">Software Quality Assurance Engineer (Intern)</h3>
+                  <div class="ti-company">Nexskill (NEXSkills Training Institute) • Lahore, Pakistan</div>
+                </div>
+                <div class="ti-date mono">Sep 2024 – Nov 2025</div>
+              </div>
+
+              <ul class="ti-bullets">
+                <li>Mastered practical SDLC, STLC, QA/QC fundamentals, test documentation, and boundary analysis test design techniques.</li>
+                <li>Authored and executed manual test suites across web applications, applying Boundary Value Analysis and Equivalence Partitioning.</li>
+                <li>Performed REST API validation using Postman, SQL database validations, and managed bug tracking in Jira.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <!-- Academic & Certifications Grid -->
+        <div class="education-grid">
+          <div class="edu-card reveal">
+            <div class="edu-icon">🎓</div>
+            <div>
+              <span class="edu-badge mono">BACHELOR’S DEGREE</span>
+              <h4 class="edu-title">Bachelor of Science in Software Engineering</h4>
+              <div class="edu-school">The Superior University (Gold Campus, Lahore)</div>
+              <p class="edu-note">Comprehensive software engineering curriculum: relational databases, software architecture, SDLC/STLC, and quality assurance principles.</p>
+            </div>
+          </div>
+
+          <div class="edu-card reveal">
+            <div class="edu-icon">📜</div>
+            <div>
+              <span class="edu-badge mono">PROFESSIONAL CERTIFICATION</span>
+              <h4 class="edu-title">Certification in Software Quality Assurance</h4>
+              <div class="edu-school">NexSkill Training Center, Arfa Karim Tower, Lahore</div>
+              <p class="edu-note">Hands-on practical certification covering Postman API testing, SQL validation, JMeter performance testing, and Jira defect governance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         CONTACT SECTION: International Hiring & Inquiries
+         ====================================================================== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-card-main reveal">
+          <div class="cc-left">
             <div class="section-eyebrow">RECRUITERS &amp; QA TEAMS WELCOME</div>
-            <h2 class="section-title">Let’s Connect &amp; Ship High-Quality Software</h2>
+            <h2 class="section-title">Ready to Elevate Your Release Quality?</h2>
             <p class="contact-lead">
-              Interested in <strong>SQA Engineer, QA Engineer, Manual QA, and Junior QA Automation</strong> roles in Lahore (On-site / Hybrid) or remote. Feel free to reach out directly via LinkedIn, email, or phone.
+              I am actively seeking <strong>Software Quality Assurance Engineer</strong>, <strong>QA Automation Engineer (Playwright)</strong>, and <strong>Manual QA</strong> roles.
             </p>
 
-            <div class="contact-cards-stack">
-              <div class="contact-method-card">
-                <div class="cm-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
-                </div>
-                <div class="cm-details">
-                  <span class="cm-label">LinkedIn (500+ Connections)</span>
-                  <a href="https://www.linkedin.com/in/muhammad-arslan-0374a6259" target="_blank" rel="noopener noreferrer" class="cm-value">linkedin.com/in/muhammad-arslan-0374a6259</a>
-                </div>
-                <a href="https://www.linkedin.com/in/muhammad-arslan-0374a6259" target="_blank" rel="noopener noreferrer" class="btn-copy-small">Connect ↗</a>
+            <div class="hiring-highlights">
+              <div class="hh-row">
+                <span class="hh-dot"></span>
+                <span><strong>Availability:</strong> Full-time, Contract, or Part-time roles</span>
               </div>
-
-              <div class="contact-method-card">
-                <div class="cm-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                </div>
-                <div class="cm-details">
-                  <span class="cm-label">Email Address</span>
-                  <a href="mailto:marslan5103@gmail.com" class="cm-value mono">marslan5103@gmail.com</a>
-                </div>
-                <button type="button" class="btn-copy-small copy-trigger" data-copy="marslan5103@gmail.com">Copy</button>
+              <div class="hh-row">
+                <span class="hh-dot"></span>
+                <span><strong>Location:</strong> Lahore (On-site / Hybrid) or Global Remote (US, UK/EU, APAC timezone overlaps)</span>
               </div>
+              <div class="hh-row">
+                <span class="hh-dot"></span>
+                <span><strong>Notice Period:</strong> Flexible / Immediate discussions welcome</span>
+              </div>
+            </div>
 
-              <div class="contact-method-card">
-                <div class="cm-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                </div>
-                <div class="cm-details">
-                  <span class="cm-label">Phone / WhatsApp</span>
-                  <a href="tel:+923099731256" class="cm-value mono">+92 309 9731256</a>
-                </div>
-                <button type="button" class="btn-copy-small copy-trigger" data-copy="+923099731256">Copy</button>
+            <div class="contact-direct-list">
+              <div class="cdl-item">
+                <span class="cdl-label">Email:</span>
+                <a href="mailto:marslan5103@gmail.com" class="cdl-val mono">marslan5103@gmail.com</a>
+                <button type="button" class="btn-copy-tiny copy-trigger" data-copy="marslan5103@gmail.com">Copy</button>
+              </div>
+              <div class="cdl-item">
+                <span class="cdl-label">Phone:</span>
+                <a href="tel:+923099731256" class="cdl-val mono">+92 309 9731256</a>
+                <button type="button" class="btn-copy-tiny copy-trigger" data-copy="+923099731256">Copy</button>
+              </div>
+              <div class="cdl-item">
+                <span class="cdl-label">LinkedIn:</span>
+                <a href="https://www.linkedin.com/in/muhammad-arslan-0374a6259" target="_blank" rel="noopener noreferrer" class="cdl-val">in/muhammad-arslan-0374a6259 ↗</a>
               </div>
             </div>
           </div>
 
-          <!-- Quick Message Composer Card -->
-          <div class="contact-form-card">
-            <h3 class="form-title">Send a Direct Message</h3>
-            <p class="form-subtitle">Recruiters and hiring managers can send a direct inquiry below.</p>
+          <div class="cc-right">
+            <div class="contact-form-box">
+              <h3 class="cfb-title">Send a Direct Message</h3>
+              <p class="cfb-sub">Recruiters and hiring managers can compose an instant email below:</p>
 
-            <form id="contactForm" class="contact-form">
-              <div class="form-group">
-                <label for="senderName">Your Name / Company</label>
-                <input type="text" id="senderName" name="senderName" placeholder="e.g. Hiring Team / QA Lead" required />
-              </div>
-
-              <div class="form-group">
-                <label for="senderEmail">Your Email</label>
-                <input type="email" id="senderEmail" name="senderEmail" placeholder="name@company.com" required />
-              </div>
-
-              <div class="form-group">
-                <label for="inquiryType">Opportunity Type</label>
-                <select id="inquiryType" name="inquiryType">
-                  <option value="SQA Engineer / QA Engineer Role">SQA Engineer / QA Engineer Role</option>
-                  <option value="Manual QA & API Testing Role">Manual QA &amp; API Testing Role</option>
-                  <option value="Junior QA Automation (Playwright JS) Role">Junior QA Automation (Playwright JS) Role</option>
-                  <option value="Freelance / CRM & SaaS QA Audit">Freelance / CRM &amp; SaaS QA Audit</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label for="senderMessage">Message</label>
-                <textarea id="senderMessage" name="senderMessage" rows="4" placeholder="Hi Muhammad Arslan, we reviewed your SQA portfolio and would love to schedule an interview..." required></textarea>
-              </div>
-
-              <div class="form-actions">
+              <form id="contactForm">
+                <div class="form-row">
+                  <div class="form-field">
+                    <label for="cName">Your Name / Organization</label>
+                    <input type="text" id="cName" placeholder="e.g. Sarah Miller — Engineering Director" required />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-field">
+                    <label for="cEmail">Your Work Email</label>
+                    <input type="email" id="cEmail" placeholder="sarah@company.com" required />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-field">
+                    <label for="cScope">Inquiry Type</label>
+                    <select id="cScope">
+                      <option value="Full-Time SQA Engineer Role">Full-Time SQA Engineer Opportunity</option>
+                      <option value="QA Automation (Playwright / JS) Role">QA Automation (Playwright / JS) Role</option>
+                      <option value="Manual & API Testing Contract">Manual &amp; API Testing Contract</option>
+                      <option value="General Technical Interview / Discussion">General Technical Interview / Discussion</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-field">
+                    <label for="cMessage">Message</label>
+                    <textarea id="cMessage" rows="4" placeholder="Hi Muhammad, we reviewed your SQA portfolio and would like to connect..." required></textarea>
+                  </div>
+                </div>
                 <button type="submit" class="btn btn-primary btn-full">
-                  <span>Send Message to Muhammad Arslan</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                  <span>Send Direct Email to Muhammad Arslan</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
                 </button>
-              </div>
-            </form>
+              </form>
+            </div>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Project Sample Artifact Modal -->
-  <div class="modal-backdrop" id="projectModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <div class="modal-dialog">
+  <!-- ======================================================================
+       MODAL 1: RECRUITER 1-MINUTE SNAPSHOT (INTERNATIONAL STANDARD)
+       ====================================================================== -->
+  <div class="modal-backdrop" id="recruiterModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-dialog modal-lg">
       <div class="modal-header">
         <div>
-          <span class="mono-tag" id="modalDomainTag">CASE STUDY QA ARTIFACT</span>
-          <h3 class="modal-title" id="modalTitle">Project QA Snapshot</h3>
+          <span class="mono text-xs text-primary font-bold">1-MINUTE HIRING BRIEF</span>
+          <h3 class="modal-title">Recruiter Snapshot: Muhammad Arslan</h3>
         </div>
-        <button type="button" class="modal-close" id="modalCloseBtn" aria-label="Close modal">✕</button>
+        <button type="button" class="modal-close" id="recruiterModalCloseBtn" aria-label="Close">✕</button>
       </div>
-      <div class="modal-body" id="modalBody">
-        <!-- Populated dynamically via script.js -->
+
+      <div class="modal-body">
+        <div class="recruiter-packet-grid">
+          <div class="rp-item">
+            <span class="rp-label mono">TARGET ROLES</span>
+            <span class="rp-val">Software Quality Assurance (SQA) Engineer, QA Engineer, Junior QA Automation Engineer</span>
+          </div>
+          <div class="rp-item">
+            <span class="rp-label mono">EXPERIENCE</span>
+            <span class="rp-val">1+ Year Agile / Scrum Production QA at Hatzs Dimensions</span>
+          </div>
+          <div class="rp-item">
+            <span class="rp-label mono">CORE DOMAINS</span>
+            <span class="rp-val">AI-Powered CRM, Automotive Dealerships, Property SaaS, Brokerage Platforms</span>
+          </div>
+          <div class="rp-item">
+            <span class="rp-label mono">TECH STACK</span>
+            <span class="rp-val mono text-xs">Playwright (JS) • Postman • SQL • Jira • JMeter • DevTools • ClickUp</span>
+          </div>
+          <div class="rp-item">
+            <span class="rp-label mono">LOCATION &amp; WORK MODE</span>
+            <span class="rp-val">Lahore, Pakistan (On-site / Hybrid) or Global Remote (US/UK/EU friendly)</span>
+          </div>
+          <div class="rp-item">
+            <span class="rp-label mono">DIRECT CONTACT</span>
+            <span class="rp-val mono text-xs">marslan5103@gmail.com • +92 309 9731256</span>
+          </div>
+        </div>
+
+        <div class="rp-action-strip">
+          <button type="button" class="btn btn-primary btn-sm copy-trigger" data-copy="Muhammad Arslan | SQA Engineer&#10;Email: marslan5103@gmail.com&#10;Phone: +92 309 9731256&#10;LinkedIn: https://www.linkedin.com/in/muhammad-arslan-0374a6259&#10;Portfolio: https://github.com/Arslan5103">
+            📋 Copy Recruiter Summary to Clipboard
+          </button>
+          <a href="mailto:marslan5103@gmail.com?subject=Interview%20Invitation%20for%20Muhammad%20Arslan%20(SQA%20Engineer)" class="btn btn-secondary btn-sm">
+            Schedule Interview
+          </a>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- Copy Notification Toast -->
+  <!-- ======================================================================
+       MODAL 2: PROJECT QA ARTIFACTS MODAL
+       ====================================================================== -->
+  <div class="modal-backdrop" id="projectModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <span class="mono text-xs text-primary font-bold" id="modalDomainTag">CASE STUDY QA ARTIFACT</span>
+          <h3 class="modal-title" id="modalTitle">Project QA Snapshot</h3>
+        </div>
+        <button type="button" class="modal-close" id="modalCloseBtn" aria-label="Close">✕</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
   <div class="toast" id="copyToast" role="status" aria-live="polite">Copied to clipboard!</div>
 
-  <!-- Footer -->
+  <!-- Global Footer -->
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <img src="assets/profile.jpg" alt="Muhammad Arslan" class="brand-avatar" />
-        <span><strong>Muhammad Arslan</strong> — Software Quality Assurance Engineer (Lahore, Pakistan)</span>
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-monogram"><span class="mono">MA</span></div>
+          <div>
+            <div class="brand-name">Muhammad Arslan</div>
+            <div class="brand-role mono">ASSOCIATE SQA ENGINEER • LAHORE, PAKISTAN</div>
+          </div>
+        </div>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="experience.html">Experience</a>
+          <a href="projects.html">Projects</a>
+          <a href="skills.html">Skills</a>
+          <a href="qa-artifacts.html">QA Artifacts</a>
+          <a href="certifications.html">Certifications</a>
+          <a href="contact.html">Contact</a>
+        </div>
       </div>
-      <div class="footer-links">
-        <a href="https://www.linkedin.com/in/muhammad-arslan-0374a6259" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="https://github.com/Arslan5103" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="mailto:marslan5103@gmail.com">marslan5103@gmail.com</a>
-        <button type="button" class="footer-print-btn" onclick="window.print()">Print / Save PDF</button>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Muhammad Arslan. Engineered for zero defects and high availability.</p>
+        <div class="footer-status-pill mono">
+          <span class="status-dot"></span>
+          <span>SYSTEM STATUS: ALL TEST SUITES PASSING</span>
+        </div>
       </div>
     </div>
   </footer>

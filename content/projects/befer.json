@@ -1,0 +1,75 @@
+{
+  "title": "Befer AI — Lead & Appointment Management System",
+  "slug": "befer",
+  "type": ["Web", "API", "Regression"],
+  "domain": "AI Lead & Appointment SaaS",
+  "role": "Associate SQA Engineer",
+  "duration": "Dec 2025 – Present",
+  "teamSize": "5 Engineers, 1 Product Manager",
+  "tools": ["Jira", "Postman", "SQL", "Chrome DevTools", "ClickUp"],
+  "keyResult": "Validated 100% of geospatial service area boundaries and embeddable iframe booking flows",
+  "featured": true,
+  "overview": {
+    "product": "Befer AI is an AI-powered CRM and booking platform enabling service businesses to embed real-time booking widgets into third-party websites, automate customer appointments, manage subscription tiers, and dispatch automated dialer calls.",
+    "domain": "Field Services & Appointment Automation",
+    "role": "Associate SQA Engineer responsible for booking engine test suites, iframe security checks, and service area boundary verification.",
+    "duration": "Dec 2025 – Present"
+  },
+  "challenge": "Service area zip-code filtering frequently allowed out-of-zone customer bookings due to floating point rounding in geospatial distance queries. Cross-domain iframe widgets also faced message passing race conditions on mobile Safari.",
+  "testStrategy": {
+    "scope": "Iframe embed scripts, appointment slot locking, calendar sync, service radius boundary checks, and outbound dialer queues.",
+    "testTypes": ["Functional Testing", "Boundary Value Analysis (BVA)", "Equivalence Partitioning (EP)", "Postman API Testing", "Iframe Cross-Browser"],
+    "environments": ["Staging (iOS Safari, Android Chrome, macOS Chrome)", "Test database sandbox"],
+    "tools": ["Postman", "SQL", "Chrome DevTools", "Jira"]
+  },
+  "execution": {
+    "testCasesWritten": 95,
+    "sampleTestCases": [
+      {
+        "id": "TC-BFR-01",
+        "title": "Service Area Radius Boundary Value Check (25.0km Limit)",
+        "steps": "Input customer address at 24.9km, 25.0km (exact threshold), and 25.1km from business headquarters.",
+        "expected": "24.9km and 25.0km are accepted; 25.1km displays graceful 'Outside service zone' validation.",
+        "actual": "Exact boundary validated; out-of-zone bookings blocked.",
+        "status": "PASS"
+      },
+      {
+        "id": "TC-BFR-02",
+        "title": "Cross-Origin Iframe Booking Slot Lock",
+        "steps": "Embed booking widget in mock client origin; select 10:00 AM slot and verify database lock status.",
+        "expected": "Slot locks for 10 minutes (`201 Created`); duplicate browser session cannot select same slot.",
+        "actual": "Lock persists; second user receives slot unavailable notice.",
+        "status": "PASS"
+      }
+    ],
+    "sampleBug": {
+      "id": "BUG-BFR-104",
+      "severity": "High",
+      "priority": "P2",
+      "environment": "Mobile Safari / iOS 17",
+      "steps": "1. Embed booking widget into HTTPS client site.\n2. Submit appointment on iPhone Safari.\n3. Observe parent window height postMessage.",
+      "expected": "Iframe dynamically resizes to confirmation screen height.",
+      "actual": "Iframe height clipped at 300px, cutting off confirm button on mobile Safari.",
+      "impact": "Prevented mobile customers from completing booking confirmation. Fixed before production deployment."
+    }
+  },
+  "automation": {
+    "framework": "Playwright (JavaScript)",
+    "pattern": "Iframe frameLocator selector automation",
+    "snippet": "test('iframe booking form submission', async ({ page }) => {\n  await page.goto('/demo-embed');\n  const frame = page.frameLocator('#befer-booking-iframe');\n  await frame.getByLabel('Service').selectOption('Consultation');\n  await frame.getByRole('button', { name: /confirm time/i }).click();\n  await expect(frame.getByText('Slot reserved')).toBeVisible();\n});",
+    "ciIntegration": "Configured for daily regression passes."
+  },
+  "results": {
+    "bugsFound": 21,
+    "severitySplit": "3 Critical, 9 High, 7 Medium, 2 Low",
+    "regressionTimeSaved": "Cut booking regression verification from 8 hours to 1.5 hours",
+    "releaseQuality": "Zero customer complaints regarding out-of-area booking dispatch"
+  },
+  "learnings": "Applying formal Boundary Value Analysis on mathematical calculations (such as geospatial radii) prevents silent business logic defects that simple exploratory testing easily misses.",
+  "links": {
+    "repo": "https://github.com/Arslan5103",
+    "demo": "",
+    "report": "qa-artifacts.html"
+  }
+}
+

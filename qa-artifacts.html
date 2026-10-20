@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QA Artifacts — Muhammad Arslan | SQA Engineer</title>
+  <meta name="description" content="Authentic SQA artifacts by Muhammad Arslan: IEEE 829 Master Test Plan, searchable test cases table, professional bug cards, and Playwright automation suite." />
+  <meta name="author" content="Muhammad Arslan" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="glow-orb glow-orb-1" aria-hidden="true"></div>
+  <div class="glow-orb glow-orb-2" aria-hidden="true"></div>
+
+  <!-- Shared Header -->
+  <header class="site-header" id="top">
+    <div class="container nav-container">
+      <a href="index.html" class="brand" aria-label="Muhammad Arslan Home">
+        <div class="brand-monogram">
+          <span class="mono">MA</span>
+          <span class="brand-pulse-dot" title="Available for SQA Roles"></span>
+        </div>
+        <div class="brand-info">
+          <span class="brand-name">Muhammad Arslan</span>
+          <span class="brand-role mono">SQA ENGINEER • HATZS DIMENSIONS</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="experience.html" class="nav-link">Experience</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="skills.html" class="nav-link">Skills</a>
+        <a href="qa-artifacts.html" class="nav-link active">QA Artifacts</a>
+        <a href="certifications.html" class="nav-link">Certifications</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle Light/Dark Theme" title="Switch Theme">
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
+
+        <a href="assets/cv.pdf" download class="btn btn-primary btn-sm">Download CV</a>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" type="button" aria-label="Toggle Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumbs -->
+  <nav class="breadcrumbs-bar" aria-label="Breadcrumb">
+    <div class="container">
+      <ol class="breadcrumbs-list">
+        <li><a href="index.html">Home</a></li>
+        <li class="breadcrumbs-separator" aria-hidden="true">/</li>
+        <li class="breadcrumbs-current" aria-current="page">QA Artifacts</li>
+      </ol>
+    </div>
+  </nav>
+
+  <main>
+    <header class="page-header">
+      <div class="container">
+        <div class="page-header-badge mono">AUTHENTIC PRODUCTION DELIVERABLES</div>
+        <h1 class="page-title">QA Artifacts &amp; Test Documentation</h1>
+        <p class="page-subtitle">
+          Real evidence of engineering craft: IEEE 829 Master Test Plan, searchable test cases, exhaustive bug reports, and Playwright automated execution suites.
+        </p>
+
+        <!-- Navigation jump chips -->
+        <div style="display: flex; gap: 12px; margin-top: 24px; flex-wrap: wrap;">
+          <a href="#test-plan" class="btn btn-secondary btn-sm">1. IEEE Test Plan</a>
+          <a href="#test-cases" class="btn btn-secondary btn-sm">2. Test Cases Table</a>
+          <a href="#bug-reports" class="btn btn-secondary btn-sm">3. Bug Reports (Jira Standard)</a>
+          <a href="#automation-suite" class="btn btn-secondary btn-sm">4. Automation &amp; CI Runner</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <!-- 1. Master Test Plan (IEEE 829) -->
+      <section class="section" id="test-plan">
+        <div class="section-header">
+          <div class="section-eyebrow">FORMAL SQA DOCUMENTATION</div>
+          <h2 class="section-title">Master Test Plan (TP-DIQ-2026-Q1)</h2>
+          <p class="section-subtitle">
+            Automotive Dealership CRM (DealerIQ AI) — IEEE 829 Compliant Test Plan
+          </p>
+        </div>
+
+        <div class="artifact-card">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px; margin-bottom: 24px; border-bottom: 1px solid var(--border-subtle); padding-bottom: 20px;">
+            <div>
+              <span class="mono" style="font-size: 0.8rem; color: var(--primary); font-weight: 700;">DOCUMENT ID: TP-DIQ-2026-Q1 • VERSION 1.3</span>
+              <h3 style="font-size: 1.35rem; font-weight: 700; margin: 6px 0 2px;">Master Test Plan: Automotive Dealership CRM</h3>
+              <p style="color: var(--text-muted); font-size: 0.88rem; margin: 0;">Author: Muhammad Arslan (Associate SQA Engineer)</p>
+            </div>
+            <div style="display: flex; gap: 8px; align-items: center;">
+              <span class="badge-pill pass">STATUS: APPROVED &amp; EXECUTED</span>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: 24px;">
+            <div>
+              <strong style="display: block; font-size: 0.82rem; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px;">1. In-Scope Modules</strong>
+              <ul style="padding-left: 20px; font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; display: flex; flex-direction: column; gap: 6px;">
+                <li>AI Telephony &amp; Voice Agent call disposition logging and webhook retries</li>
+                <li>Lead pipeline management and Kanban stage movements</li>
+                <li>Deal negotiation module: trade-in appraisals, dealer fee calculations, tax logic</li>
+                <li>Paperwork document generation and carrier shipment dispatch status</li>
+                <li>Role-Based Access Control (Admin, Sales Manager, BDC Rep, Viewer)</li>
+                <li>REST API contract testing via Postman (Auth, Leads, Deals, Webhooks)</li>
+                <li>Cross-browser compatibility (Chrome, Edge, Safari, Firefox)</li>
+              </ul>
+            </div>
+
+            <div>
+              <strong style="display: block; font-size: 0.82rem; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px;">2. Out-of-Scope Items</strong>
+              <ul style="padding-left: 20px; font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; display: flex; flex-direction: column; gap: 6px;">
+                <li>Core AI LLM model training weights and fine-tuning datasets</li>
+                <li>Direct carrier logistics telematics hardware sensors</li>
+                <li>Payment gateway banking infrastructure compliance (external provider)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div style="background: var(--surface-raised); padding: 20px; border-radius: 8px; margin-bottom: 24px;">
+            <strong style="display: block; font-size: 0.82rem; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px;">3. Test Strategy &amp; Execution Levels</strong>
+            <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6; margin: 0;">
+              Methodology incorporates <strong>Shift-Left API contract validation</strong> using Postman collections before UI integration passes. Releases proceed through Smoke Testing → Functional Ticket Validation → Comprehensive Pre-Release Regression → Playwright Automated CI Gates.
+            </p>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div style="background: var(--surface-raised); padding: 18px; border-radius: 8px;">
+              <strong style="display: block; font-size: 0.8rem; text-transform: uppercase; color: var(--primary); margin-bottom: 6px;">Entry Criteria</strong>
+              <ul style="padding-left: 18px; font-size: 0.88rem; color: var(--text-secondary); margin: 0; line-height: 1.5;">
+                <li>Code deployed to Staging with clean build status</li>
+                <li>Jira ticket has clear acceptance criteria and Figma specs</li>
+                <li>Automated smoke suite passes 100% on target environment</li>
+              </ul>
+            </div>
+            <div style="background: var(--surface-raised); padding: 18px; border-radius: 8px;">
+              <strong style="display: block; font-size: 0.8rem; text-transform: uppercase; color: var(--accent); margin-bottom: 6px;">Exit Criteria</strong>
+              <ul style="padding-left: 18px; font-size: 0.88rem; color: var(--text-secondary); margin: 0; line-height: 1.5;">
+                <li>100% of planned regression test cases executed</li>
+                <li>0 open Critical or High severity defects</li>
+                <li>Automated Playwright regression suite passing on CI/CD</li>
+                <li>Official QA sign-off document issued to engineering lead</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. Test Cases Table (Interactive Search & Filter) -->
+      <section class="section" id="test-cases">
+        <div class="section-header">
+          <div class="section-eyebrow">REPRESENTATIVE TEST SUITES</div>
+          <h2 class="section-title">Searchable Test Cases Table</h2>
+          <p class="section-subtitle">
+            Filter and search across real test cases authored for DealerIQ AI, Befer AI, and Leadly.ai.
+          </p>
+        </div>
+
+        <div class="qa-table-controls">
+          <input type="text" id="qaSearchInput" class="qa-search-input" placeholder="Search test cases by ID, title, module..." aria-label="Search Test Cases" />
+          
+          <div style="display: flex; gap: 10px; align-items: center;">
+            <label for="qaFilterSelect" style="font-size: 0.85rem; color: var(--text-muted); font-family: 'JetBrains Mono', monospace;">MODULE FILTER:</label>
+            <select id="qaFilterSelect" class="qa-search-input" style="min-width: 180px; padding: 8px 12px;">
+              <option value="all">All Modules</option>
+              <option value="Paperwork">Paperwork &amp; Deals</option>
+              <option value="Telephony">AI Telephony</option>
+              <option value="Lead">Lead Chat &amp; Filters</option>
+              <option value="Geofencing">Geofencing &amp; BVA</option>
+              <option value="Iframe">Iframe Widget</option>
+              <option value="RBAC">RBAC &amp; Security</option>
+              <option value="Outreach">Outreach Engine</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="qa-table-wrapper">
+          <table class="qa-table" aria-label="Test Cases Table">
+            <thead>
+              <tr>
+                <th style="width: 110px;">Case ID</th>
+                <th style="width: 130px;">Project</th>
+                <th style="width: 160px;">Module</th>
+                <th>Test Scenario &amp; Verification Steps</th>
+                <th style="width: 100px;">Priority</th>
+                <th style="width: 90px;">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- TC 1 -->
+              <tr data-module="Paperwork" data-status="pass">
+                <td class="mono" style="color: var(--primary); font-weight: 700;">TC-DIQ-001</td>
+                <td><strong>DealerIQ AI</strong></td>
+                <td>Paperwork &amp; Deals</td>
+                <td>
+                  <strong>Verify deal paperwork fee recalculation when adding line-item accessory</strong>
+                  <p style="font-size: 0.82rem; color: var(--text-muted); margin: 4px 0 0;">
+                    <em>Steps:</em> Open Deal #9482 ($42,000 MSRP). Add Custom Accessory ($850.00). Switch to Carrier Shipment tab, then return to Paperwork.<br />
+                    <em>Expected:</em> Total recalculates to $42,850.00 and persists across tab navigation.
+                  </p>
+                </td>
+                <td><span class="badge-pill high">P1 - High</span></td>
+                <td><span class="status-pill-pass">PASS</span></td>
+              </tr>
+
+              <!-- TC 2 -->
+              <tr data-module="Telephony" data-status="pass">
+                <td class="mono" style="color: var(--primary); font-weight: 700;">TC-DIQ-002</td>
+                <td><strong>DealerIQ AI</strong></td>
+                <td>AI Telephony</td>
+                <td>
+                  <strong>Idempotent handling of duplicate webhook payloads on carrier retry</strong>
+                  <p style="font-size: 0.82rem; color: var(--text-muted); margin: 4px 0 0;">
+                    <em>Steps:</em> Send POST /api/v1/telephony/webhook with CallSID 'CA-98234-XYZ'. Resend duplicate within 350ms retry window.<br />
+                    <em>Expected:</em> Exactly 1 CRM activity logged; duplicate payload discarded with 200 OK header.
+                  </p>
+                </td>
+                <td><span class="badge-pill crit">P1 - Crit</span></td>
+                <td><span class="status-pill-pass">PASS</span></td>
+              </tr>
+
+              <!-- TC 3 -->
+              <tr data-module="Lead" data-status="pass">
+                <td class="mono" style="color: var(--primary); font-weight: 700;">TC-DIQ-003</td>
+                <td><strong>DealerIQ AI</strong></td>
+                <td>Lead Chat &amp; Filters</td>
+                <td>
+                  <strong>Preserve active multi-criteria filters during column header sorting</strong>
+                  <p style="font-size: 0.82rem; color: var(--text-muted); margin: 4px 0 0;">
+                    <em>Steps:</em> Apply filters 'Unread AI Follow-Up' + 'Contacted'. Click 'Last Contacted At' column to sort.<br />
+                    <em>Expected:</em> Sort order updates while preserving active filter chips; 8 rows remain filtered.
+                  </p>
+                </td>
+                <td><span class="badge-pill pass">P2 - Med</span></td>
+                <td><span class="status-pill-pass">PASS</span></td>
+              </tr>
+
+              <!-- TC 4 -->
+              <tr data-module="Geofencing" data-status="pass">
+                <td class="mono" style="color: var(--primary); font-weight: 700;">TC-BFR-001</td>
+                <td><strong>Befer AI</strong></td>
+                <td>Geofencing &amp; BVA</td>
+                <td>
+                  <strong>Boundary Value Analysis on 25.0km service radius constraint</strong>
+                  <p style="font-size: 0.82rem; color: var(--text-muted); margin: 4px 0 0;">
+                    <em>Steps:</em> Test address at 24.9km (Valid), 25.0km (Boundary Valid), and 25.1km (Invalid).<br />
+                    <em>Expected:</em> 24.9km and 25.0km accepted; 25.1km displays localized 'Outside service zone' error.
+                  </p>
+                </td>
+                <td><span class="badge-pill high">P1 - High</span></td>
+                <td><span class="status-pill-pass">PASS</span></td>
+              </tr>
+
+              <!-- TC 5 -->
+              <tr data-module="Iframe" data-status="pass">
+                <td class="mono" style="color: var(--primary); font-weight: 700;">TC-BFR-002</td>
+                <td><strong>Befer AI</strong></td>
+                <td>Iframe Widget</td>
+                <td>
+                  <strong>Cross-origin iframe dynamic resize and modal positioning on mobile viewport</strong>
+                  <p style="font-size: 0.82rem; color: var(--text-muted); margin: 4px 0 0;">
+                    <em>Steps:</em> Embed booking widget into third-party HTTPS test page on iOS Safari. Select appointment slot.<br />
+                    <em>Expected:</em> Container expands dynamically via postMessage; confirmation CTA remains fully tappable.
+                  </p>
+                </td>
+                <td><span class="badge-pill high">P2 - High</span></td>
+                <td><span class="status-pill-pass">PASS</span></td>
+              </tr>
+
+              <!-- TC 6 -->
+              <tr data-module="RBAC" data-status="pass">
+                <td class="mono" style="color: var(--primary); font-weight: 700;">TC-LDL-001</td>
+                <td><strong>Leadly.ai</strong></td>
+                <td>RBAC &amp; Security</td>
+                <td>
+                  <strong>Enforce Role-Based Access Control on workspace bulk lead export</strong>
+                  <p style="font-size: 0.82rem; color: var(--text-muted); margin: 4px 0 0;">
+                    <em>Steps:</em> Log in with SDR role. Attempt direct UI action and POST /api/v1/export/leads request.<br />
+                    <em>Expected:</em> UI button hidden; API returns 403 Forbidden with audit logging.
+                  </p>
+                </td>
+                <td><span class="badge-pill crit">P1 - Crit</span></td>
+                <td><span class="status-pill-pass">PASS</span></td>
+              </tr>
+
+              <!-- TC 7 -->
+              <tr data-module="Outreach" data-status="pass">
+                <td class="mono" style="color: var(--primary); font-weight: 700;">TC-LDL-002</td>
+                <td><strong>Leadly.ai</strong></td>
+                <td>Outreach Engine</td>
+                <td>
+                  <strong>CSV lead ingestion with unescaped international names and UTF-8 characters</strong>
+                  <p style="font-size: 0.82rem; color: var(--text-muted); margin: 4px 0 0;">
+                    <em>Steps:</em> Upload CSV with 250 records containing accents (é, ñ, ü) and apostrophes (O'Connor).<br />
+                    <em>Expected:</em> All records stored accurately in PostgreSQL; worker queue executes with zero crashes.
+                  </p>
+                </td>
+                <td><span class="badge-pill high">P1 - High</span></td>
+                <td><span class="status-pill-pass">PASS</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 3. Bug Reports (Jira Standard BugCards) -->
+      <section class="section" id="bug-reports">
+        <div class="section-header">
+          <div class="section-eyebrow">PRODUCTION DEFECT DISCOVERY</div>
+          <h2 class="section-title">Granular Bug Reports (Jira Standard)</h2>
+          <p class="section-subtitle">
+            Examples of real, high-severity defects identified, documented, and verified before production release.
+          </p>
+        </div>
+
+        <!-- Bug Card 1: BUG-DIQ-418 -->
+        <article class="bug-ticket-card">
+          <div class="bug-ticket-header">
+            <div>
+              <span class="bug-id-tag">BUG-DIQ-418</span>
+              <h3 class="bug-title">State reset in Deal Paperwork fees table upon navigating to Carrier Shipment tab</h3>
+              <p style="color: var(--text-muted); font-size: 0.82rem; margin: 4px 0 0;">Project: DealerIQ AI • Environment: Staging (v2.4.1) • Reporter: Muhammad Arslan</p>
+            </div>
+            <div class="bug-meta-pills">
+              <span class="badge-pill crit">Severity: High</span>
+              <span class="badge-pill high">Priority: P1</span>
+              <span class="badge-pill pass">Status: Verified &amp; Closed</span>
+            </div>
+          </div>
+
+          <div class="bug-steps-box">
+            <strong style="display: block; font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); margin-bottom: 6px;">Steps to Reproduce</strong>
+            <ol>
+              <li>Open active Deal #9482 in pipeline.</li>
+              <li>Verify active paperwork shows itemized accessory fee ($850.00) and Total = $42,850.00.</li>
+              <li>Click "Carrier Shipment" tab to inspect dispatch details.</li>
+              <li>Click back to "Paperwork &amp; Fees" tab.</li>
+              <li>Observe accessories table and total calculation field.</li>
+            </ol>
+          </div>
+
+          <div class="bug-details-grid">
+            <div class="bug-field">
+              <strong>Expected Result</strong>
+              <p>Paperwork state and accessories persist across view changes within the same session.</p>
+            </div>
+            <div class="bug-field">
+              <strong>Actual Result</strong>
+              <p>Tab routing unmounted component without saving cache, clearing accessories and resetting total to $42,000.00.</p>
+            </div>
+          </div>
+
+          <div class="bug-impact-banner">
+            <strong>Business Impact:</strong> Dealership sales managers would quote inaccurate discounted contracts during in-person negotiations. Fixed with state persistence hook and verified on Chrome, Edge, Safari.
+          </div>
+        </article>
+
+        <!-- Bug Card 2: BUG-LDL-209 -->
+        <article class="bug-ticket-card">
+          <div class="bug-ticket-header">
+            <div>
+              <span class="bug-id-tag">BUG-LDL-209</span>
+              <h3 class="bug-title">Backend email worker crashed on CSV leads containing unescaped apostrophes</h3>
+              <p style="color: var(--text-muted); font-size: 0.82rem; margin: 4px 0 0;">Project: Leadly.ai • Environment: Staging Worker / Node.js • Reporter: Muhammad Arslan</p>
+            </div>
+            <div class="bug-meta-pills">
+              <span class="badge-pill crit">Severity: Critical</span>
+              <span class="badge-pill high">Priority: P1</span>
+              <span class="badge-pill pass">Status: Verified &amp; Closed</span>
+            </div>
+          </div>
+
+          <div class="bug-steps-box">
+            <strong style="display: block; font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); margin-bottom: 6px;">Steps to Reproduce</strong>
+            <ol>
+              <li>Upload CSV with contact names containing apostrophes (e.g., "Patrick O'Connor").</li>
+              <li>Trigger multi-step email sequence using variable {{first_name}}.</li>
+              <li>Monitor BullMQ worker process logs.</li>
+            </ol>
+          </div>
+
+          <div class="bug-details-grid">
+            <div class="bug-field">
+              <strong>Expected Result</strong>
+              <p>String sanitized; emails dispatched cleanly to all 500 contacts.</p>
+            </div>
+            <div class="bug-field">
+              <strong>Actual Result</strong>
+              <p>Apostrophe broke raw SQL query concatenation, crashing queue worker process and dropping 142 campaign emails.</p>
+            </div>
+          </div>
+
+          <div class="bug-impact-banner">
+            <strong>Business Impact:</strong> High prospect data loss and stalled sales pipelines. Prevented by introducing parameterized template compiler.
+          </div>
+        </article>
+
+        <!-- Bug Card 3: BUG-BFR-104 -->
+        <article class="bug-ticket-card">
+          <div class="bug-ticket-header">
+            <div>
+              <span class="bug-id-tag">BUG-BFR-104</span>
+              <h3 class="bug-title">Embeddable booking modal fails to expand height on iOS Safari iframe container</h3>
+              <p style="color: var(--text-muted); font-size: 0.82rem; margin: 4px 0 0;">Project: Befer AI • Environment: Mobile Safari (iOS 17) • Reporter: Muhammad Arslan</p>
+            </div>
+            <div class="bug-meta-pills">
+              <span class="badge-pill crit">Severity: High</span>
+              <span class="badge-pill high">Priority: P2</span>
+              <span class="badge-pill pass">Status: Verified &amp; Closed</span>
+            </div>
+          </div>
+
+          <div class="bug-steps-box">
+            <strong style="display: block; font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); margin-bottom: 6px;">Steps to Reproduce</strong>
+            <ol>
+              <li>Open embedded client booking form on iPhone Safari.</li>
+              <li>Select service category and pick an appointment slot.</li>
+              <li>Observe confirmation screen layout.</li>
+            </ol>
+          </div>
+
+          <div class="bug-details-grid">
+            <div class="bug-field">
+              <strong>Expected Result</strong>
+              <p>Iframe expands to full content height via window postMessage communication.</p>
+            </div>
+            <div class="bug-field">
+              <strong>Actual Result</strong>
+              <p>Container clipped at 320px, hiding Confirm CTA below viewport fold with no scrollbar.</p>
+            </div>
+          </div>
+
+          <div class="bug-impact-banner">
+            <strong>Business Impact:</strong> 100% bounce rate on mobile iOS users attempting to complete contractor bookings.
+          </div>
+        </article>
+      </section>
+
+      <!-- 4. Automation Suite & Simulated Playwright Runner -->
+      <section class="section" id="automation-suite">
+        <div class="section-header">
+          <div class="section-eyebrow">CONTINUOUS INTEGRATION &amp; AUTOMATION</div>
+          <h2 class="section-title">Automated Playwright Test Suite</h2>
+          <p class="section-subtitle">
+            Execute a simulated live Playwright test runner verifying the portfolio and production application suites.
+          </p>
+        </div>
+
+        <div style="background: #0B1120; border: 1px solid var(--border-strong); border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-lg);">
+          <div style="background: #111827; padding: 12px 20px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-subtle); flex-wrap: wrap; gap: 10px;">
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <div style="display: flex; gap: 6px;">
+                <span style="width: 10px; height: 10px; border-radius: 50%; background: #f87171; display: inline-block;"></span>
+                <span style="width: 10px; height: 10px; border-radius: 50%; background: #fbbf24; display: inline-block;"></span>
+                <span style="width: 10px; height: 10px; border-radius: 50%; background: #34d399; display: inline-block;"></span>
+              </div>
+              <span class="mono" style="font-size: 0.82rem; color: #9CA3AF;">npx playwright test --project=chromium,webkit</span>
+            </div>
+            
+            <button type="button" class="btn btn-primary btn-sm" id="execTerminalBtn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              <span>Run Automated Suites</span>
+            </button>
+          </div>
+
+          <div style="padding: 24px; font-family: 'JetBrains Mono', monospace; font-size: 0.88rem; color: #E5E7EB; line-height: 1.8;" id="terminalOutput">
+            <div class="terminal-suite-row" style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.06); padding: 8px 0;">
+              <span>✓ tests/e2e/dealeriq-deals.spec.js: Deal paperwork fee persistence across tab switch</span>
+              <div>
+                <span class="ts-status pass" style="color: var(--primary); font-weight: 700; margin-right: 12px;">PASS</span>
+                <span class="ts-time" style="color: #6B7280;">142ms</span>
+              </div>
+            </div>
+            <div class="terminal-suite-row" style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.06); padding: 8px 0;">
+              <span>✓ tests/e2e/dealeriq-telephony.spec.js: Webhook deduplication on carrier retry</span>
+              <div>
+                <span class="ts-status pass" style="color: var(--primary); font-weight: 700; margin-right: 12px;">PASS</span>
+                <span class="ts-time" style="color: #6B7280;">188ms</span>
+              </div>
+            </div>
+            <div class="terminal-suite-row" style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.06); padding: 8px 0;">
+              <span>✓ tests/e2e/befer-bva-radius.spec.js: Boundary Value Analysis on 25.0km service boundary</span>
+              <div>
+                <span class="ts-status pass" style="color: var(--primary); font-weight: 700; margin-right: 12px;">PASS</span>
+                <span class="ts-time" style="color: #6B7280;">115ms</span>
+              </div>
+            </div>
+            <div class="terminal-suite-row" style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.06); padding: 8px 0;">
+              <span>✓ tests/e2e/befer-iframe.spec.js: Mobile Safari cross-origin iframe dynamic height postMessage</span>
+              <div>
+                <span class="ts-status pass" style="color: var(--primary); font-weight: 700; margin-right: 12px;">PASS</span>
+                <span class="ts-time" style="color: #6B7280;">210ms</span>
+              </div>
+            </div>
+            <div class="terminal-suite-row" style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.06); padding: 8px 0;">
+              <span>✓ tests/e2e/leadly-rbac.spec.js: SDR role restricted from bulk export API endpoint</span>
+              <div>
+                <span class="ts-status pass" style="color: var(--primary); font-weight: 700; margin-right: 12px;">PASS</span>
+                <span class="ts-time" style="color: #6B7280;">164ms</span>
+              </div>
+            </div>
+            <div class="terminal-suite-row" style="display: flex; justify-content: space-between; padding: 8px 0;">
+              <span>✓ tests/e2e/portfolio-integrity.spec.js: Zero 404 links, theme toggle, and form validation</span>
+              <div>
+                <span class="ts-status pass" style="color: var(--primary); font-weight: 700; margin-right: 12px;">PASS</span>
+                <span class="ts-time" style="color: #6B7280;">98ms</span>
+              </div>
+            </div>
+
+            <div style="margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.12); display: flex; justify-content: space-between; color: var(--primary);">
+              <strong>Results: 6 passed, 0 failed, 0 skipped (6 test suites)</strong>
+              <span>CI Sign-off: Ready for Production Release</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Shared Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-monogram"><span class="mono">MA</span></div>
+          <div>
+            <div class="brand-name">Muhammad Arslan</div>
+            <div class="brand-role mono">ASSOCIATE SQA ENGINEER • LAHORE, PAKISTAN</div>
+          </div>
+        </div>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="experience.html">Experience</a>
+          <a href="projects.html">Projects</a>
+          <a href="skills.html">Skills</a>
+          <a href="qa-artifacts.html">QA Artifacts</a>
+          <a href="certifications.html">Certifications</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Muhammad Arslan. Engineered for zero defects and high availability.</p>
+        <div class="footer-status-pill mono">
+          <span class="status-dot"></span>
+          <span>SYSTEM STATUS: ALL TEST SUITES PASSING</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

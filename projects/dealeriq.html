@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case Study: DealerIQ AI CRM — Muhammad Arslan | SQA Engineer</title>
+  <meta name="description" content="In-depth SQA Case Study: How Muhammad Arslan validated DealerIQ AI automotive dealership CRM, uncovered 7 critical pre-release defects, and implemented Playwright automation." />
+  <meta name="author" content="Muhammad Arslan" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="glow-orb glow-orb-1" aria-hidden="true"></div>
+  <div class="glow-orb glow-orb-2" aria-hidden="true"></div>
+
+  <!-- Shared Header -->
+  <header class="site-header" id="top">
+    <div class="container nav-container">
+      <a href="../index.html" class="brand" aria-label="Muhammad Arslan Home">
+        <div class="brand-monogram">
+          <span class="mono">MA</span>
+          <span class="brand-pulse-dot" title="Available for SQA Roles"></span>
+        </div>
+        <div class="brand-info">
+          <span class="brand-name">Muhammad Arslan</span>
+          <span class="brand-role mono">SQA ENGINEER • HATZS DIMENSIONS</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main Navigation">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="../about.html" class="nav-link">About</a>
+        <a href="../experience.html" class="nav-link">Experience</a>
+        <a href="../projects.html" class="nav-link active">Projects</a>
+        <a href="../skills.html" class="nav-link">Skills</a>
+        <a href="../qa-artifacts.html" class="nav-link">QA Artifacts</a>
+        <a href="../certifications.html" class="nav-link">Certifications</a>
+        <a href="../contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle Light/Dark Theme" title="Switch Theme">
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
+
+        <a href="../assets/cv.pdf" download class="btn btn-primary btn-sm">Download CV</a>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" type="button" aria-label="Toggle Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumbs -->
+  <nav class="breadcrumbs-bar" aria-label="Breadcrumb">
+    <div class="container">
+      <ol class="breadcrumbs-list">
+        <li><a href="../index.html">Home</a></li>
+        <li class="breadcrumbs-separator" aria-hidden="true">/</li>
+        <li><a href="../projects.html">Projects</a></li>
+        <li class="breadcrumbs-separator" aria-hidden="true">/</li>
+        <li class="breadcrumbs-current" aria-current="page">DealerIQ AI</li>
+      </ol>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Case Study Hero -->
+    <header class="case-study-hero">
+      <div class="container">
+        <div class="page-header-badge mono">ENTERPRISE CASE STUDY • 8-SECTION SPEC</div>
+        <h1 class="page-title">DealerIQ AI — Automotive Dealership CRM</h1>
+        <p class="page-subtitle">
+          How rigorous regression testing, API contract validation, and Playwright automation uncovered 7 critical defects before a high-stakes dealership demonstration.
+        </p>
+
+        <!-- Meta Grid: Section 1 (Product, Domain, Role, Duration, Team Size, Tools) -->
+        <div class="case-meta-grid">
+          <div class="case-meta-item">
+            <small>Domain</small>
+            <span>Automotive Retail &amp; AI Telephony</span>
+          </div>
+          <div class="case-meta-item">
+            <small>Role</small>
+            <span>Associate SQA Engineer</span>
+          </div>
+          <div class="case-meta-item">
+            <small>Duration</small>
+            <span>Dec 2025 – Present</span>
+          </div>
+          <div class="case-meta-item">
+            <small>Team Size</small>
+            <span>Cross-functional engineering &amp; product team</span>
+          </div>
+          <div class="case-meta-item">
+            <small>Key Result</small>
+            <span style="color: var(--primary);">7 Critical Regressions Caught</span>
+          </div>
+          <div class="case-meta-item">
+            <small>Tools</small>
+            <span>Jira, Postman, SQL, Playwright</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- 8 Standard Sections -->
+    <div class="container">
+      <!-- Section 1: Project Overview -->
+      <section class="cs-section">
+        <div class="cs-section-header">
+          <span class="cs-section-number">01</span>
+          <h2 class="cs-section-title">Project Overview</h2>
+        </div>
+        <div class="cs-content-box">
+          <p>
+            <strong>DealerIQ AI</strong> is a production enterprise CRM platform tailored specifically for automotive dealerships. The application orchestrates high-concurrency workflows including automated inbound and outbound AI voice agents, conversational prospect chatbots, inventory appraisals, sales negotiation pipelines, contract paperwork fee generation, and carrier logistics shipment dispatch.
+          </p>
+          <p>
+            As the Associate SQA Engineer at Hatzs Dimensions, my mandate was to lead regression cycles, perform systematic API testing via Postman, audit database records via SQL queries, and author maintainable Playwright end-to-end regression suites to protect release stability.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 2: The Challenge -->
+      <section class="cs-section">
+        <div class="cs-section-header">
+          <span class="cs-section-number">02</span>
+          <h2 class="cs-section-title">The Challenge</h2>
+        </div>
+        <div class="cs-content-box">
+          <p>
+            Automotive dealerships operate on razor-thin timelines with complex financial calculations. Testing DealerIQ AI presented several unique architectural challenges:
+          </p>
+          <ul style="padding-left: 20px; color: var(--text-secondary); line-height: 1.7; display: flex; flex-direction: column; gap: 8px;">
+            <li><strong>High-Frequency Telephony Webhooks:</strong> Telephony providers dispatch asynchronous webhook retries within milliseconds. Duplicate call dispositions frequently caused ghost follow-up SMS triggers or race conditions.</li>
+            <li><strong>State Desynchronization in Complex Forms:</strong> The Deal paperwork calculator handles dynamic line items (dealer add-ons, documentation fees, trade-in valuations, sales tax). Navigating to other tabs caused React state unmounting and fee drops.</li>
+            <li><strong>Active Filter Memory Loss:</strong> Dealership BDC managers rely on compound filters (e.g., "Unread AI Follow-Up" + "High Intent"). Re-sorting table columns wiped active URL query parameters.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Section 3: Test Strategy & Plan -->
+      <section class="cs-section">
+        <div class="cs-section-header">
+          <span class="cs-section-number">03</span>
+          <h2 class="cs-section-title">Test Strategy &amp; Plan</h2>
+        </div>
+        <div class="cs-content-box">
+          <p>
+            I formulated an IEEE 829-aligned Master Test Plan (<a href="../qa-artifacts.html" style="color: var(--primary); text-decoration: underline;">TP-DIQ-2026-Q1</a>) prioritizing high-risk customer touchpoints:
+          </p>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 18px 0;">
+            <div style="background: var(--surface-raised); padding: 16px; border-radius: 8px;">
+              <strong style="color: var(--text-primary); display: block; margin-bottom: 6px;">Test Types</strong>
+              <p style="font-size: 0.88rem; margin: 0; color: var(--text-secondary);">Functional, Regression, Postman REST API, Smoke/Sanity, UI/UX, Cross-Browser.</p>
+            </div>
+            <div style="background: var(--surface-raised); padding: 16px; border-radius: 8px;">
+              <strong style="color: var(--text-primary); display: block; margin-bottom: 6px;">Environments</strong>
+              <p style="font-size: 0.88rem; margin: 0; color: var(--text-secondary);">Staging (v2.4.1), Mock Telephony Sandbox, PostgreSQL 16 replica.</p>
+            </div>
+            <div style="background: var(--surface-raised); padding: 16px; border-radius: 8px;">
+              <strong style="color: var(--text-primary); display: block; margin-bottom: 6px;">Exit Criteria</strong>
+              <p style="font-size: 0.88rem; margin: 0; color: var(--text-secondary);">100% test cases executed, 0 Sev-1 / Sev-2 defects open, QA sign-off issued.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Execution & Artifacts -->
+      <section class="cs-section">
+        <div class="cs-section-header">
+          <span class="cs-section-number">04</span>
+          <h2 class="cs-section-title">Execution &amp; Artifacts</h2>
+        </div>
+        <div class="cs-content-box">
+          <p>
+            Authored and executed <strong>140+ test cases</strong> in Jira and ClickUp. During the pre-release sprint, I identified <strong>7 critical defects</strong> that were logged with exhaustive reproduction steps:
+          </p>
+
+          <!-- Sample Bug Card -->
+          <div class="bug-ticket-card" style="margin-top: 20px;">
+            <div class="bug-ticket-header">
+              <div>
+                <span class="bug-id-tag">BUG-DIQ-418</span>
+                <h3 class="bug-title">Deal paperwork fees table reset upon navigating to Carrier Shipment tab</h3>
+              </div>
+              <div class="bug-meta-pills">
+                <span class="badge-pill crit">Severity: High</span>
+                <span class="badge-pill high">Priority: P1</span>
+                <span class="badge-pill pass">Status: Verified &amp; Closed</span>
+              </div>
+            </div>
+
+            <div class="bug-steps-box">
+              <strong style="display: block; font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); margin-bottom: 6px;">Steps to Reproduce</strong>
+              <ol>
+                <li>Open Deal #9482 with active paperwork and custom $850 ceramic coating fee.</li>
+                <li>Verify calculated contract subtotal displays $42,850.00.</li>
+                <li>Click "Carrier Shipment" tab to inspect dispatch details.</li>
+                <li>Click back to "Paperwork &amp; Fees" tab.</li>
+              </ol>
+            </div>
+
+            <div class="bug-details-grid">
+              <div class="bug-field">
+                <strong>Expected Result</strong>
+                <p>State preserved: line items intact and total remains $42,850.00.</p>
+              </div>
+              <div class="bug-field">
+                <strong>Actual Result</strong>
+                <p>Component unmounted; draft accessories dropped; total reset to base MSRP ($42,000.00).</p>
+              </div>
+            </div>
+
+            <div class="bug-impact-banner">
+              <strong>Business Impact:</strong> Dealership sales managers would have delivered underquoted paperwork during live customer negotiations. Caught and fixed prior to production rollout.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: Automation (Playwright) -->
+      <section class="cs-section">
+        <div class="cs-section-header">
+          <span class="cs-section-number">05</span>
+          <h2 class="cs-section-title">Automation &amp; Playwright Suite</h2>
+        </div>
+        <div class="cs-content-box">
+          <p>
+            To prevent these regressions from ever recurring, I engineered an automated regression suite using <strong>Playwright (JavaScript)</strong> following the Page Object Model (POM):
+          </p>
+
+          <div class="code-window">
+            <div class="code-window-bar">
+              <div class="code-window-dots">
+                <span></span><span></span><span></span>
+              </div>
+              <span class="mono">tests/e2e/dealeriq-deals.spec.js</span>
+            </div>
+            <pre><code>const { test, expect } = require('@playwright/test');
+
+test.describe('DealerIQ AI — Deals &amp; Paperwork Integrity', () => {
+  test('should persist dealer add-ons across tab switches without calculation loss', async ({ page }) => {
+    // 1. Navigate to Active Pipeline
+    await page.goto('/deals/pipeline');
+    await page.getByRole('row', { name: /#9482/i }).click();
+
+    // 2. Add custom accessory line-item
+    await page.getByRole('tab', { name: /paperwork/i }).click();
+    await page.getByRole('button', { name: /add accessory/i }).click();
+    await page.getByLabel('Item Name').fill('Ceramic Coating Protection');
+    await page.getByLabel('Price ($)').fill('850.00');
+    await page.getByRole('button', { name: /apply/i }).click();
+
+    // Assert calculated total
+    await expect(page.locator('#deal-total-display')).toHaveText('$42,850.00');
+
+    // 3. Switch tabs to Carrier Shipment &amp; return
+    await page.getByRole('tab', { name: /carrier shipment/i }).click();
+    await expect(page.getByText('Carrier Dispatch Parameters')).toBeVisible();
+
+    await page.getByRole('tab', { name: /paperwork/i }).click();
+
+    // Assert state retention
+    await expect(page.getByText('Ceramic Coating Protection')).toBeVisible();
+    await expect(page.locator('#deal-total-display')).toHaveText('$42,850.00');
+  });
+});</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6: Results & Impact -->
+      <section class="cs-section">
+        <div class="cs-section-header">
+          <span class="cs-section-number">06</span>
+          <h2 class="cs-section-title">Results &amp; Impact</h2>
+        </div>
+        <div class="cs-content-box">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+            <div style="background: var(--surface-raised); padding: 20px; border-radius: 10px; text-align: center;">
+              <span class="mono" style="font-size: 2rem; font-weight: 800; color: var(--primary);">28</span>
+              <span style="display: block; font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;">Total Defects Logged</span>
+              <small style="color: var(--text-secondary); font-size: 0.75rem;">5 Critical, 12 High, 8 Medium, 3 Low</small>
+            </div>
+            <div style="background: var(--surface-raised); padding: 20px; border-radius: 10px; text-align: center;">
+              <span class="mono" style="font-size: 2rem; font-weight: 800; color: var(--accent);">85%</span>
+              <span style="display: block; font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;">Regression Time Saved</span>
+              <small style="color: var(--text-secondary); font-size: 0.75rem;">Reduced cycle from 2 days to 3.5 hrs</small>
+            </div>
+            <div style="background: var(--surface-raised); padding: 20px; border-radius: 10px; text-align: center;">
+              <span class="mono" style="font-size: 2rem; font-weight: 800; color: var(--fail);">0</span>
+              <span style="display: block; font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;">Prod / Demo Escapes</span>
+              <small style="color: var(--text-secondary); font-size: 0.75rem;">Flawless executive client demonstration</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 7: Key Learnings -->
+      <section class="cs-section">
+        <div class="cs-section-header">
+          <span class="cs-section-number">07</span>
+          <h2 class="cs-section-title">Key Learnings &amp; Reflections</h2>
+        </div>
+        <div class="cs-content-box">
+          <p>
+            This project underscored that modern single-page applications with complex tab routing cannot rely on naive in-memory state. Implementing automated test assertions that deliberately switch views, sort columns, and simulate network hiccups is essential to discovering desynchronization bugs before customers encounter them.
+          </p>
+          <p>
+            Furthermore, working hand-in-hand with frontend and backend developers by providing curl reproduction commands and DevTools traces established high engineering trust and accelerated bug fix verification.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 8: Links & References -->
+      <section class="cs-section">
+        <div class="cs-section-header">
+          <span class="cs-section-number">08</span>
+          <h2 class="cs-section-title">Links &amp; Artifacts</h2>
+        </div>
+        <div class="cs-content-box" style="display: flex; gap: 14px; flex-wrap: wrap;">
+          <a href="../qa-artifacts.html" class="btn btn-primary btn-sm">Inspect Full QA Artifacts</a>
+          <a href="https://github.com/Arslan5103" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">GitHub Repository ↗</a>
+          <a href="../projects.html" class="btn btn-secondary btn-sm">← All Projects</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Shared Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-monogram"><span class="mono">MA</span></div>
+          <div>
+            <div class="brand-name">Muhammad Arslan</div>
+            <div class="brand-role mono">ASSOCIATE SQA ENGINEER • LAHORE, PAKISTAN</div>
+          </div>
+        </div>
+        <div class="footer-links">
+          <a href="../index.html">Home</a>
+          <a href="../about.html">About</a>
+          <a href="../experience.html">Experience</a>
+          <a href="../projects.html">Projects</a>
+          <a href="../skills.html">Skills</a>
+          <a href="../qa-artifacts.html">QA Artifacts</a>
+          <a href="../certifications.html">Certifications</a>
+          <a href="../contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Muhammad Arslan. Engineered for zero defects and high availability.</p>
+        <div class="footer-status-pill mono">
+          <span class="status-dot"></span>
+          <span>SYSTEM STATUS: ALL TEST SUITES PASSING</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
+
