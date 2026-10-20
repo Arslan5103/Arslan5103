@@ -143,6 +143,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // 6.5. 2026 Interactive Spotlight Mouse Tracking (Linear / Raycast Style)
+  const spotlightTargets = document.querySelectorAll(
+    '.method-card, .case-card, .case-study-showcase, .kpi-block, .skill-category-card, .timeline-card, .edu-card, .tech-card-terminal, .jira-ticket-card, .contact-card-main, .rp-card, .lab-shell'
+  );
+
+  spotlightTargets.forEach((card) => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      card.style.setProperty('--mouse-x', `${x}px`);
+      card.style.setProperty('--mouse-y', `${y}px`);
+    });
+  });
+
   // 7. Navbar Active Link Highlighting on Scroll
   const navLinks = document.querySelectorAll('.main-nav .nav-link');
   const sections = document.querySelectorAll('section[id]');
